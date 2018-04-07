@@ -3,7 +3,7 @@ package com.marianoProgra.Game_Screen;
 import java.awt.Canvas;
 import java.awt.Graphics2D;
 
-import com.marianoPrograma.State.SuperStateMachine;
+import com.marianoProgra.State.SuperStateMachine;
 
 public class GameScreen implements SuperStateMachine {
 

@@ -1,4 +1,4 @@
-package com.marianoPrograma.Display;
+package com.marianoProgra.Display;
 
 import java.awt.BorderLayout;
 

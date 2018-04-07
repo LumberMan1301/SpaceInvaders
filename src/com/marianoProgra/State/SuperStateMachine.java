@@ -1,4 +1,4 @@
-package com.marianoPrograma.State;
+package com.marianoProgra.State;
 
 import java.awt.Canvas;
 import java.awt.Graphics2D;
