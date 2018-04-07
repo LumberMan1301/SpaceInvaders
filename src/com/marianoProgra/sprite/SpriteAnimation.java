@@ -9,6 +9,7 @@ public class SpriteAnimation {
 	
 	
 	private Lista<BufferedImage> sprites = new Lista<BufferedImage>();
+	private byte currentSprite;
 	
 	private boolean loop = false;
 	private boolean play = false;
@@ -25,20 +26,76 @@ public class SpriteAnimation {
 	}
 	
 	public void draw(Graphics2D g) {
-		
+		g.drawImage(sprites.get(currentSprite),(int)getxPos(),(int)getyPos(), null);
 	}
 	public void update(double delta) {
+		if(isDestroyAfterAnimation())
+			return;
+		if(loop && !play)
+			loopAnimation();
+		if(play && !loop)
+			playAnimation();
+	}
+	
+	public void stopAnimation() {
+		loop = false;
+		play = false;
 		
 	}
 	
+	public void resetSprite() {
+		loop = false;
+		play = false;
+		currentSprite = 0;
+	}
+	
+	private void playAnimation() {
+		
+	}
+	
+	private void loopAnimation() {
+		
+	}
+	
+	public boolean isSpriteDestroyed() {
+		if (sprites == null)
+			return true;
+		return false;
+	}
+	
 	public void addSprite(BufferedImage spriteMap, int xPos, int yPos, int width, int height) {
-		sprites.agregar(spriteMap.get);
+		sprites.agregar(spriteMap.getSubimage(xPos, yPos, width, height));
 	}
 	
 	public void PlayerAnimation(boolean play, boolean destroyAfterAnimation) {
 		this.play = play;
 		this.destroyAfterAnimation = destroyAfterAnimation;
 	}
+
+	public double getxPos() {
+		return xPos;
+	}
+
+	public void setxPos(double xPos) {
+		this.xPos = xPos;
+	}
+
+	public double getyPos() {
+		return yPos;
+	}
+
+	public void setyPos(double yPos) {
+		this.yPos = yPos;
+	}
+
+	public boolean isDestroyAfterAnimation() {
+		return destroyAfterAnimation;
+	}
+
+	public void setDestroyAfterAnimation(boolean destroyAfterAnimation) {
+		this.destroyAfterAnimation = destroyAfterAnimation;
+	}
+	
 	
 	
 }

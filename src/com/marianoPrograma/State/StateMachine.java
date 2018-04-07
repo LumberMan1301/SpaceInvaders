@@ -2,6 +2,7 @@ package com.marianoPrograma.State;
 
 import java.awt.Canvas;
 
+import com.marianoProgra.Game_Screen.GameScreen;
 import com.marianoPrograma.EstructurasDeDatosLineales.Listas.Lista;
 
 public class StateMachine {
@@ -11,6 +12,8 @@ public class StateMachine {
 	
 	public StateMachine(Canvas canvas) {
 		this.canvas = canvas;
+		SuperStateMachine game = new GameScreen();
+		states.agregar(game);
 		
 	}
 }
