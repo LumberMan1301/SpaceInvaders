@@ -1,6 +1,10 @@
 package com.marianoPrograma.Display;
 
 import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.font.GraphicAttribute;
+import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
 
@@ -62,16 +66,38 @@ public class Display extends Canvas implements Runnable{
 		final long 	OPTIMAL_TIME=100000000 / TARGET_FPS;
 		int frames = 0;
 		
-		
+		this.createBufferStrategy(3);
+		BufferStrategy bs = this.getBufferStrategy();
 		while(running) {
 			long now = System.nanoTime();
 			long updateLength = now - lastLoopTime;
 			lastLoopTime = now;
+			double delta = updateLength / ((double)OPTIMAL_TIME);
 			
+			frames ++;
 			
-			System.out.println("Running");
+			if (System.currentTimeMillis()-timer > 1000) {
+				timer +=1000;
+				FPS = frames;
+				frames = 0;
+			}
+			draw(bs);
+			try {
+				thread.sleep(((lastLoopTime - System.nanoTime())+OPTIMAL_TIME)/1000000);
+			}catch (Exception e) {}
 		}
 		
+	}
+	
+	public void draw(BufferStrategy bs) {
+		do {
+			do {
+				Graphics2D g = (Graphics2D) bs.getDrawGraphics();
+				g.setColor(Color.BLACK);
+				g.fillRect(0,0,WIDTH+50, HEIGHT+50);
+			}while(bs.contentsRestored());
+			bs.show();
+		}while(bs.contentsLost());
 	}
 	
 	
