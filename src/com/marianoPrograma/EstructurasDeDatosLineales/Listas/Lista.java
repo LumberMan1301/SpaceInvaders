@@ -207,4 +207,9 @@ public class Lista<T> {
         }
         return aux.getDato();
     }
+    
+    public void nul() {
+    	this.setPrimero(null);;
+    	this.setCapacidad(0);;
+    }
 }

@@ -2,25 +2,37 @@ package com.marianoProgra.timer;
 
 public class Timer {
 	
-	private long currentTimer;
+	private long prevTime;
 	
 	public Timer() {
-		currentTimer = System.currentTimeMillis();
+		prevTime = System.currentTimeMillis();
 	}
 
-	public long getCurrentTimer() {
-		return currentTimer;
+	public long getPrevTimer() {
+		return prevTime;
 	}
 
-	public void setCurrentTimer(long currentTimer) {
-		this.currentTimer = currentTimer;
+	public void setPrevTimer(long currentTimer) {
+		this.prevTime = currentTimer;
+	}
+	
+	public void resetTimer() {
+		prevTime = System.currentTimeMillis();
+		
 	}
 	
 	public boolean timerEvent(int timer) {
 		
-		if(System.currentTimeMillis() -  getCurrentTimer() >timer)
+		if(System.currentTimeMillis() -  getPrevTimer() >timer) {
+			resetTimer();
 			return true;
-		
+		}
+		return false;
+	}
+	
+	public boolean isTimerReady(int timer) {
+		if(System.currentTimeMillis() -  getPrevTimer() >timer)
+			return true;
 		return false;
 	}
 }

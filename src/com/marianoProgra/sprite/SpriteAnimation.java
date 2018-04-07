@@ -3,6 +3,7 @@ package com.marianoProgra.sprite;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
+import com.marianoProgra.timer.Timer;
 import com.marianoPrograma.EstructurasDeDatosLineales.Listas.Lista;
 
 public class SpriteAnimation {
@@ -15,6 +16,7 @@ public class SpriteAnimation {
 	private boolean play = false;
 	private boolean destroyAfterAnimation = false;
 	
+	private Timer timer;
 
 	private int animationSpeed;
 	private double xPos, yPos;
@@ -23,11 +25,17 @@ public class SpriteAnimation {
 		this.animationSpeed = animationSpeed;
 		this.xPos = xPos;
 		this.yPos = yPos;
+		
+		timer = new Timer();
 	}
 	
 	public void draw(Graphics2D g) {
+		if(isSpriteDestroyed())
+			return;
 		g.drawImage(sprites.get(currentSprite),(int)getxPos(),(int)getyPos(), null);
 	}
+	
+	
 	public void update(double delta) {
 		if(isDestroyAfterAnimation())
 			return;
@@ -49,12 +57,25 @@ public class SpriteAnimation {
 		currentSprite = 0;
 	}
 	
-	private void playAnimation() {
-		
-	}
 	
 	private void loopAnimation() {
-		
+		if(timer.isTimerReady(animationSpeed)&&currentSprite == sprites.getCapacidad()-1){
+			currentSprite = 0;
+			timer.resetTimer();
+		}else if(timer.timerEvent(animationSpeed)&&currentSprite != sprites.getCapacidad()-1) {
+			currentSprite ++;
+		} 
+	}
+	
+	private void playAnimation() {
+		if(timer.timerEvent(animationSpeed)&&currentSprite != sprites.getCapacidad()-1 && !isDestroyAfterAnimation()) {
+			play = false;
+			currentSprite = 0;
+		}else if(timer.timerEvent(animationSpeed)&&currentSprite == sprites.getCapacidad()-1 && isDestroyAfterAnimation()){
+			sprites.nul();
+		}else if (timer.timerEvent(animationSpeed)&&currentSprite == sprites.getCapacidad()-1) {
+			currentSprite++;
+		}
 	}
 	
 	public boolean isSpriteDestroyed() {
@@ -94,6 +115,22 @@ public class SpriteAnimation {
 
 	public void setDestroyAfterAnimation(boolean destroyAfterAnimation) {
 		this.destroyAfterAnimation = destroyAfterAnimation;
+	}
+
+	public byte getCurrentSprite() {
+		return currentSprite;
+	}
+
+	public void setCurrentSprite(byte currentSprite) {
+		this.currentSprite = currentSprite;
+	}
+
+	public boolean isLoop() {
+		return loop;
+	}
+
+	public void setLoop(boolean loop) {
+		this.loop = loop;
 	}
 	
 	
