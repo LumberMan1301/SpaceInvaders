@@ -81,7 +81,10 @@ public class Display extends Canvas implements Runnable{
 				FPS = frames;
 				frames = 0;
 			}
+			
 			draw(bs);
+			update(delta);
+			
 			try {
 				thread.sleep(((lastLoopTime - System.nanoTime())+OPTIMAL_TIME)/1000000);
 			}catch (Exception e) {}
@@ -95,11 +98,14 @@ public class Display extends Canvas implements Runnable{
 				Graphics2D g = (Graphics2D) bs.getDrawGraphics();
 				g.setColor(Color.BLACK);
 				g.fillRect(0,0,WIDTH+50, HEIGHT+50);
+				g.dispose();
 			}while(bs.contentsRestored());
 			bs.show();
 		}while(bs.contentsLost());
 	}
-	
+	public void update(double delta) {
+		
+	}
 	
 
 }
