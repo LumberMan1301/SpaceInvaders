@@ -2,15 +2,23 @@ package com.marianoProgra.Display;
 
 import java.awt.Canvas;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.desktop.ScreenSleepEvent;
 import java.awt.font.GraphicAttribute;
 import java.awt.image.BufferStrategy;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 import com.marianoProgra.State.StateMachine;
 
 public class Display extends Canvas implements Runnable{
+
+	
+	private static final long serialVersionUID = 1L;
 
 	public static void main(String [] args) {
 		Display display = new Display();
@@ -22,6 +30,9 @@ public class Display extends Canvas implements Runnable{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
 		frame.setVisible(true);
+		frame.setLocationRelativeTo(null);
+		
+		
 		display.start();
 		
 	}
@@ -49,7 +60,10 @@ public class Display extends Canvas implements Runnable{
 		}
 	}
 	
-	private static int WIDTH = 800, HEIGHT = 600;
+	
+	
+	private static int WIDTH = (int)(Toolkit.getDefaultToolkit().getScreenSize().width)-50;
+	private static int HEIGHT = (int)(Toolkit.getDefaultToolkit().getScreenSize().height)-80;
 	
 	private int FPS;
 	
@@ -58,6 +72,9 @@ public class Display extends Canvas implements Runnable{
 	public Display() {
 		this.setSize(WIDTH, HEIGHT);
 		this.setFocusable(true);
+		
+		
+		
 		
 		state = new StateMachine(this);
 		state.setState((byte) 0);

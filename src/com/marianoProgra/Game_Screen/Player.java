@@ -28,7 +28,7 @@ public class Player implements KeyListener{
 	
 	public Player() {
 		this.xPos = (Display.getWIDTH()/2)-40;
-		this.yPos = 530;
+		this.yPos = Display.getHEIGHT()-60;
 		this.height = 50;
 		this.width = 50;
 		
