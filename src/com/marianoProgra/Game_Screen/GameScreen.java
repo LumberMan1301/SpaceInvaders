@@ -11,8 +11,8 @@ public class GameScreen implements SuperStateMachine {
 	private Player player;
 	
 	public GameScreen() {
-		player = new Player(150,150,50,50);
-		System.out.print("CreadoNuevo jugador");
+		player = new Player();
+		
 	}
 	
 	@Override

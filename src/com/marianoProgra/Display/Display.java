@@ -115,6 +115,14 @@ public class Display extends Canvas implements Runnable{
 	public void update(double delta) {
 		state.update(delta);
 	}
+	public static int getWIDTH() {
+		return WIDTH;
+	}
+	public static int getHEIGHT() {
+		return HEIGHT;
+	}
+	
+	
 	
 
 }
