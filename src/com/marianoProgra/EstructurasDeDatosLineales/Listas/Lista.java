@@ -1,6 +1,6 @@
-package com.marianoPrograma.EstructurasDeDatosLineales.Listas;
+package com.marianoProgra.EstructurasDeDatosLineales.Listas;
 
-import com.marianoPrograma.EstructurasDeDatosLineales.Nodo.Nodo;
+import com.marianoProgra.EstructurasDeDatosLineales.Nodo.Nodo;
 
 /**
  * clase Principal de EstructuraDeDatosLineal.Listas
@@ -177,7 +177,7 @@ public class Lista<T> {
      * metodo para obtener la capacidad de la lista
      * @return capacidad
      */
-    public int getCapacidad() {
+    public int size() {
         System.out.println(capacidad);
         return capacidad;
     }

@@ -1,4 +1,4 @@
-package com.marianoPrograma.EstructurasDeDatosLineales.Nodo;
+package com.marianoProgra.EstructurasDeDatosLineales.Nodo;
 
 /**
  * clase EstructuraDeDatosLineal.Nodo, para almacenar datos, estos forman las listas y sus variaciones

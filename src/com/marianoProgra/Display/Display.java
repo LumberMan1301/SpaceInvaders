@@ -8,6 +8,8 @@ import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
 
+import com.marianoProgra.State.StateMachine;
+
 public class Display extends Canvas implements Runnable{
 
 	public static void main(String [] args) {
@@ -22,7 +24,6 @@ public class Display extends Canvas implements Runnable{
 		frame.setVisible(true);
 		display.start();
 		
-		
 	}
 	
 	private boolean running = false;
@@ -34,6 +35,7 @@ public class Display extends Canvas implements Runnable{
 		running = true;
 		thread = new Thread(this);
 		thread.start();
+		
 	}
 	public synchronized void stop() {
 		if(!running)
@@ -51,11 +53,14 @@ public class Display extends Canvas implements Runnable{
 	
 	private int FPS;
 	
-	
+	public static StateMachine state;
 	
 	public Display() {
 		this.setSize(WIDTH, HEIGHT);
 		this.setFocusable(true);
+		
+		state = new StateMachine(this);
+		state.setState((byte) 0);
 	}
 	@Override
 	public void run() {
@@ -80,13 +85,14 @@ public class Display extends Canvas implements Runnable{
 				timer +=1000;
 				FPS = frames;
 				frames = 0;
+				
 			}
 			
 			draw(bs);
 			update(delta);
 			
 			try {
-				thread.sleep(((lastLoopTime - System.nanoTime())+OPTIMAL_TIME)/1000000);
+				Thread.sleep(((lastLoopTime - System.nanoTime())+OPTIMAL_TIME)/1000000);
 			}catch (Exception e) {}
 		}
 		
@@ -98,13 +104,16 @@ public class Display extends Canvas implements Runnable{
 				Graphics2D g = (Graphics2D) bs.getDrawGraphics();
 				g.setColor(Color.BLACK);
 				g.fillRect(0,0,WIDTH+50, HEIGHT+50);
+				
+				state.draw(g);
+				
 				g.dispose();
 			}while(bs.contentsRestored());
 			bs.show();
 		}while(bs.contentsLost());
 	}
 	public void update(double delta) {
-		
+		state.update(delta);
 	}
 	
 

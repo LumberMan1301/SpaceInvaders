@@ -32,8 +32,9 @@ public class Player implements KeyListener{
 		rect = new Rectangle((int)xPos, (int)yPos, width, height);
 		
 		try {
-			URL url = this.getClass().getResource("/com/marianoProgra/imagenes/Player(1).png");
+			URL url = this.getClass().getResource("/com/marianoProgra/imagenes/Player.png");
 			pSprite = ImageIO.read(url);
+			System.out.print("x");
 		}catch (IOException e) {}
 		
 	}

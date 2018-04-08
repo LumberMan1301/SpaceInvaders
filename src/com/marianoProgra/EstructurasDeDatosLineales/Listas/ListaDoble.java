@@ -1,6 +1,6 @@
-package com.marianoPrograma.EstructurasDeDatosLineales.Listas;
+package com.marianoProgra.EstructurasDeDatosLineales.Listas;
 
-import com.marianoPrograma.EstructurasDeDatosLineales.Nodo.Nodo;
+import com.marianoProgra.EstructurasDeDatosLineales.Nodo.Nodo;
 
 /**
  * Se crea la clase Lista Doble que es una derivada de la clase Lista

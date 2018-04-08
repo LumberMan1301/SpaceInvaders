@@ -3,8 +3,9 @@ package com.marianoProgra.sprite;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
+
 import com.marianoProgra.timer.Timer;
-import com.marianoPrograma.EstructurasDeDatosLineales.Listas.Lista;
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 
 public class SpriteAnimation {
 	
@@ -59,21 +60,21 @@ public class SpriteAnimation {
 	
 	
 	private void loopAnimation() {
-		if(timer.isTimerReady(animationSpeed)&&currentSprite == sprites.getCapacidad()-1){
+		if(timer.isTimerReady(animationSpeed)&&currentSprite == sprites.size()-1){
 			currentSprite = 0;
 			timer.resetTimer();
-		}else if(timer.timerEvent(animationSpeed)&&currentSprite != sprites.getCapacidad()-1) {
+		}else if(timer.timerEvent(animationSpeed)&&currentSprite != sprites.size()-1) {
 			currentSprite ++;
 		} 
 	}
 	
 	private void playAnimation() {
-		if(timer.timerEvent(animationSpeed)&&currentSprite != sprites.getCapacidad()-1 && !isDestroyAfterAnimation()) {
+		if(timer.timerEvent(animationSpeed)&&currentSprite != sprites.size()-1 && !isDestroyAfterAnimation()) {
 			play = false;
 			currentSprite = 0;
-		}else if(timer.timerEvent(animationSpeed)&&currentSprite == sprites.getCapacidad()-1 && isDestroyAfterAnimation()){
-			sprites.nul();
-		}else if (timer.timerEvent(animationSpeed)&&currentSprite == sprites.getCapacidad()-1) {
+		}else if(timer.timerEvent(animationSpeed)&&currentSprite == sprites.size()-1 && isDestroyAfterAnimation()){
+			sprites=null;
+		}else if (timer.timerEvent(animationSpeed)&&currentSprite == sprites.size()-1) {
 			currentSprite++;
 		}
 	}
@@ -86,6 +87,7 @@ public class SpriteAnimation {
 	
 	public void addSprite(BufferedImage spriteMap, int xPos, int yPos, int width, int height) {
 		sprites.agregar(spriteMap.getSubimage(xPos, yPos, width, height));
+		//sprites.imprimirL();
 	}
 	
 	public void PlayerAnimation(boolean play, boolean destroyAfterAnimation) {
