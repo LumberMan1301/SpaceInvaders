@@ -58,7 +58,7 @@ public class Player implements KeyListener{
 		}
 		playerWeapons.update(delta);
 		if(shoot) {
-			playerWeapons.shootBullet(xPos, yPos, 5, 5);
+			playerWeapons.shootBullet(xPos, yPos, 5, 8);
 		}
 	}
 	

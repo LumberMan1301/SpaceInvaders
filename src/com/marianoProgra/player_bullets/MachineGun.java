@@ -10,7 +10,7 @@ import com.marianoProgra.Display.Display;
 public class MachineGun extends PlayerWeaponType{
 
 	private Rectangle bullet;
-	private final double speed = 1.5d;
+	private final double speed = 2.0d;
 	
 	public MachineGun(double xPos, double yPos, int width, int height) {
 		this.setxPos(xPos);
@@ -25,7 +25,7 @@ public class MachineGun extends PlayerWeaponType{
 	public void draw(Graphics2D g) {
 		if(bullet==null)
 			return;
-		g.setColor(Color.green);
+		g.setColor(Color.YELLOW);
 		g.fill(bullet);
 	}
 

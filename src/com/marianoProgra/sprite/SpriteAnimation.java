@@ -21,11 +21,14 @@ public class SpriteAnimation {
 
 	private int animationSpeed;
 	private double xPos, yPos;
+	private int width, height;
 	
-	public SpriteAnimation(double xPos, double yPos, int animationSpeed) {
+	public SpriteAnimation(double xPos, double yPos,int width, int height, int animationSpeed) {
 		this.animationSpeed = animationSpeed;
 		this.xPos = xPos;
 		this.yPos = yPos;
+		this.width = width;
+		this.height = height;
 		
 		timer = new Timer();
 	}

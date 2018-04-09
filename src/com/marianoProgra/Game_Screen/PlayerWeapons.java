@@ -32,7 +32,7 @@ public class PlayerWeapons {
 	}
 	
 	public void shootBullet(double xPos, double yPos, int width, int height) {
-		if(timer.timerEvent(250))
+		if(timer.timerEvent(200))
 			weapons.agregar(new MachineGun(xPos+22, yPos+15, width, height));
 	}
 
