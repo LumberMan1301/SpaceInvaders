@@ -16,7 +16,7 @@ import com.marianoProgra.sprite.SpriteAnimation;
 
 public class EnemyTypeBasic implements EnemyType{
 	
-	private double speed = 0.5;
+	private double speed = 0.5d;
 	
 	private Rectangle rect;	
 	private SpriteAnimation enemySprite;
@@ -26,12 +26,12 @@ public class EnemyTypeBasic implements EnemyType{
 	private String ImPath;
 	
 	public EnemyTypeBasic(double xPos, double yPos, int width, int heigtht, String ImPath) {
-		 enemySprite = new SpriteAnimation(xPos, yPos,width, heigtht, 500); 
+		 enemySprite = new SpriteAnimation(xPos, yPos,width, heigtht, 200); 
 		 try {
 				URL url = this.getClass().getResource(ImPath);
 				BufferedImage pSprite = ImageIO.read(url);
 				for(int i= 0; i<2; i++) {
-					enemySprite.addSprite(pSprite, 0 + (i*88), 0 , 88,64 );
+					enemySprite.addSprite(pSprite, 0 + (i*44), 0 , 44,32);
 				}
 			}catch (IOException e) {}
 		 
@@ -62,12 +62,12 @@ public class EnemyTypeBasic implements EnemyType{
 
 	@Override
 	public void changeDirection(double delta) {
-		speed *= -1.5d;
+		speed *= -1.005d;
 		
 		enemySprite.setxPos(enemySprite.getxPos()-(delta * speed));
 		this.getRect().x = (int) enemySprite.getxPos();
 		
-		enemySprite.setyPos(enemySprite.getyPos()-(delta * 5));
+		enemySprite.setyPos(enemySprite.getyPos()+(delta * 20));
 		this.getRect().y = (int)enemySprite.getyPos();
 	}
 
@@ -77,13 +77,18 @@ public class EnemyTypeBasic implements EnemyType{
 	}
 
 	@Override
-	public boolean collide(int i, Player player, Lista<EnemyType> enemy) {
+	public boolean collide(int i, Player player, Lista<EnemyType> enemys) {
+		for(int w=0; w< player.getPlayerWeapons().weapons.size();w++) {
+			if(enemys != null && player.getPlayerWeapons().weapons.get(w).colisionRect(((EnemyTypeBasic)enemys.get(i)).getRect()))
+				return true;
+		}
+		
 		return false;
 	}
 
 	@Override
 	public boolean isOutOfBounds() {
-		if(rect.x > 0 && rect.x < Display.getWIDTH()-rect.width)
+		if(rect.x > 10 && rect.x < Display.getWIDTH()-rect.width-20)
 			return false;
 		return true;
 	}

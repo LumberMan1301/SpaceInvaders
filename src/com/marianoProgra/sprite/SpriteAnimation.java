@@ -90,7 +90,7 @@ public class SpriteAnimation {
 	
 	public void addSprite(BufferedImage spriteMap, int xPos, int yPos, int width, int height) {
 		sprites.agregar(spriteMap.getSubimage(xPos, yPos, width, height));
-		//sprites.imprimirL();
+		
 	}
 	
 	public void PlayerAnimation(boolean play, boolean destroyAfterAnimation) {

@@ -95,4 +95,13 @@ public class Player implements KeyListener{
 		
 	}
 
+	public PlayerWeapons getPlayerWeapons() {
+		return playerWeapons;
+	}
+
+	public void setPlayerWeapons(PlayerWeapons playerWeapons) {
+		this.playerWeapons = playerWeapons;
+	}
+
+	
 }

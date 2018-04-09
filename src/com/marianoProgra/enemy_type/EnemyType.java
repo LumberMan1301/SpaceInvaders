@@ -12,7 +12,7 @@ public interface EnemyType {
 	void changeDirection(double delta);
 	
 	boolean deathScene();
-	boolean collide(int i, Player player, Lista<EnemyType> enemy);
+	boolean collide(int i, Player player, Lista<EnemyType> enemies);
 	boolean isOutOfBounds();
 	
 
