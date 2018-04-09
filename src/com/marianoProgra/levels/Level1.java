@@ -16,9 +16,9 @@ public class Level1 implements SuperLevel{
 	
 	public Level1(Player player) {
 		this.player = player;
-		for(int y = 0; y<2; y++) {
-			for (int x=0; x < 2; x++) {
-				EnemyType e = new EnemyTypeBasic(350 + (x*30), 25  + (y*30), 15, 15, "/com/marianoProgra/imagenes/Enemigo2.png");
+		for(int y = 0; y<5; y++) {
+			for (int x=0; x < 10; x++) {
+				EnemyType e = new EnemyTypeBasic(150 + (x * 100), 25  + (y*50), 25, 25, "/com/marianoProgra/imagenes/Invaders.png");
 				enemies.agregar(e);
 			}
 		}
