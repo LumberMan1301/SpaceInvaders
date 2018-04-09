@@ -9,11 +9,14 @@ import java.net.URL;
 
 import javax.imageio.ImageIO;
 
+import com.marianoProgra.Display.Display;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 import com.marianoProgra.Game_Screen.Player;
 import com.marianoProgra.sprite.SpriteAnimation;
 
 public class EnemyTypeBasic implements EnemyType{
+	
+	private double speed = 0.5;
 	
 	private Rectangle rect;	
 	private SpriteAnimation enemySprite;
@@ -23,16 +26,16 @@ public class EnemyTypeBasic implements EnemyType{
 	private String ImPath;
 	
 	public EnemyTypeBasic(double xPos, double yPos, int width, int heigtht, String ImPath) {
-		 enemySprite = new SpriteAnimation(xPos, yPos,width, heigtht, 300); 
+		 enemySprite = new SpriteAnimation(xPos, yPos,width, heigtht, 500); 
 		 try {
 				URL url = this.getClass().getResource(ImPath);
-				BufferedImage eSprite = ImageIO.read(url);
+				BufferedImage pSprite = ImageIO.read(url);
 				for(int i= 0; i<2; i++) {
-					enemySprite.addSprite(eSprite, 0 + (i*88), 0 , 88,64 );
+					enemySprite.addSprite(pSprite, 0 + (i*88), 0 , 88,64 );
 				}
 			}catch (IOException e) {}
 		 
-		 this.setRect(new Rectangle((int)xPos,(int)yPos, width, heigtht));
+		 this.setRect(new Rectangle((int)enemySprite.getxPos(),(int)enemySprite.getyPos(), width, heigtht));
 		 enemySprite.setLoop(true);
 	}
 
@@ -50,13 +53,22 @@ public class EnemyTypeBasic implements EnemyType{
 	}
 
 	@Override
-	public void update(double delta) {
+	public void update(double delta, Player player) {
 		enemySprite.update(delta);
+		
+		enemySprite.setxPos(enemySprite.getxPos()-(delta*speed));
+		this.getRect().x = (int)enemySprite.getxPos();
 	}
 
 	@Override
 	public void changeDirection(double delta) {
-
+		speed *= -1.5d;
+		
+		enemySprite.setxPos(enemySprite.getxPos()-(delta * speed));
+		this.getRect().x = (int) enemySprite.getxPos();
+		
+		enemySprite.setyPos(enemySprite.getyPos()-(delta * 5));
+		this.getRect().y = (int)enemySprite.getyPos();
 	}
 
 	@Override
@@ -71,7 +83,9 @@ public class EnemyTypeBasic implements EnemyType{
 
 	@Override
 	public boolean isOutOfBounds() {
-		return false;
+		if(rect.x > 0 && rect.x < Display.getWIDTH()-rect.width)
+			return false;
+		return true;
 	}
 
 }

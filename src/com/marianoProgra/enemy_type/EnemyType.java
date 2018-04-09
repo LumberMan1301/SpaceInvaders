@@ -8,7 +8,7 @@ import com.marianoProgra.Game_Screen.Player;
 public interface EnemyType {
 	
 	void draw(Graphics2D g);
-	void update (double delta);
+	void update (double delta, Player player);
 	void changeDirection(double delta);
 	
 	boolean deathScene();
