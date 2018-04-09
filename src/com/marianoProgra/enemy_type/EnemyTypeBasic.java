@@ -21,9 +21,7 @@ public class EnemyTypeBasic implements EnemyType{
 	private Rectangle rect;	
 	private SpriteAnimation enemySprite;
 	
-	private double xPos, yPos;
-	private int width, height;
-	private String ImPath;
+	
 	
 	public EnemyTypeBasic(double xPos, double yPos, int width, int heigtht, String ImPath) {
 		 enemySprite = new SpriteAnimation(xPos, yPos,width, heigtht, 200); 

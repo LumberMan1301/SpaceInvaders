@@ -17,12 +17,10 @@ import com.marianoProgra.State.StateMachine;
 
 public class Display extends Canvas implements Runnable{
 
-	
 	private static final long serialVersionUID = 1L;
 
 	public static void main(String [] args) {
 		Display display = new Display();
-		
 		JFrame frame = new JFrame();
 		frame.add(display);
 		frame.pack();
@@ -31,8 +29,6 @@ public class Display extends Canvas implements Runnable{
 		frame.setResizable(false);
 		frame.setVisible(true);
 		frame.setLocationRelativeTo(null);
-		
-		
 		display.start();
 		
 	}
