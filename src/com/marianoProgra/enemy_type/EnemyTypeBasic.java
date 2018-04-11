@@ -23,27 +23,21 @@ public class EnemyTypeBasic implements EnemyType{
 	
 	
 	
-	public EnemyTypeBasic(double xPos, double yPos, int width, int heigtht, String ImPath) {
-		 enemySprite = new SpriteAnimation(xPos, yPos,width, heigtht, 200); 
-		 try {
-				URL url = this.getClass().getResource(ImPath);
-				BufferedImage pSprite = ImageIO.read(url);
-				for(int i= 0; i<2; i++) {
-					enemySprite.addSprite(pSprite, 0 + (i*44), 0 , 44,32);
-				}
-			}catch (IOException e) {}
+	public EnemyTypeBasic(double xPos, double yPos, int rows, int columns) {
+		 enemySprite = new SpriteAnimation(xPos, yPos,rows, columns, 300,"/com/marianoProgra/imagenes/Enemigo1.png");
+		 enemySprite.setWidth(50);
+		 enemySprite.setHeight(50);
 		 
-		 this.setRect(new Rectangle((int)enemySprite.getxPos(),(int)enemySprite.getyPos(), width, heigtht));
+		 this.setRect(
+				 new Rectangle(
+						 (int)enemySprite.getxPos(),
+						 (int)enemySprite.getyPos(), 
+						 enemySprite.getWidth(), 
+						 enemySprite.getHeight()));
 		 enemySprite.setLoop(true);
 	}
 
-	public Rectangle getRect() {
-		return rect;
-	}
-
-	public void setRect(Rectangle rect) {
-		this.rect = rect;
-	}
+	
 
 	@Override
 	public void draw(Graphics2D g) {
@@ -60,12 +54,12 @@ public class EnemyTypeBasic implements EnemyType{
 
 	@Override
 	public void changeDirection(double delta) {
-		speed *= -1.005d;
+		speed *= -1.05d;
 		
 		enemySprite.setxPos(enemySprite.getxPos()-(delta * speed));
 		this.getRect().x = (int) enemySprite.getxPos();
 		
-		enemySprite.setyPos(enemySprite.getyPos()+(delta * 20));
+		enemySprite.setyPos(enemySprite.getyPos()+(delta * 5));
 		this.getRect().y = (int)enemySprite.getyPos();
 	}
 
@@ -86,9 +80,17 @@ public class EnemyTypeBasic implements EnemyType{
 
 	@Override
 	public boolean isOutOfBounds() {
-		if(rect.x > 10 && rect.x < Display.getWIDTH()-rect.width-20)
+		if(rect.x > 10 && rect.x < Display.getWIDTH()-rect.width-50)
 			return false;
 		return true;
+	}
+	
+	public Rectangle getRect() {
+		return rect;
+	}
+
+	public void setRect(Rectangle rect) {
+		this.rect = rect;
 	}
 
 }

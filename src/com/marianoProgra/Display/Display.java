@@ -2,15 +2,11 @@ package com.marianoProgra.Display;
 
 import java.awt.Canvas;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
-import java.awt.Image;
 import java.awt.Toolkit;
-import java.awt.desktop.ScreenSleepEvent;
-import java.awt.font.GraphicAttribute;
 import java.awt.image.BufferStrategy;
 
-import javax.swing.ImageIcon;
+
 import javax.swing.JFrame;
 
 import com.marianoProgra.State.StateMachine;
@@ -58,7 +54,7 @@ public class Display extends Canvas implements Runnable{
 	
 	
 	
-	private static int WIDTH = (int)(Toolkit.getDefaultToolkit().getScreenSize().width)-50;
+	private static int WIDTH =(int)(Toolkit.getDefaultToolkit().getScreenSize().width)-50;
 	private static int HEIGHT = (int)(Toolkit.getDefaultToolkit().getScreenSize().height)-80;
 	
 	private int FPS;

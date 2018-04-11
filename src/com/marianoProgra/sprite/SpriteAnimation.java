@@ -2,7 +2,10 @@ package com.marianoProgra.sprite;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.URL;
 
+import javax.imageio.ImageIO;
 
 import com.marianoProgra.timer.Timer;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
@@ -23,12 +26,27 @@ public class SpriteAnimation {
 	private double xPos, yPos;
 	private int width, height;
 	
-	public SpriteAnimation(double xPos, double yPos,int width, int height, int animationSpeed) {
+	public SpriteAnimation(double xPos, double yPos,int rows, int columns, int animationSpeed, String ImgPath) {
 		this.animationSpeed = animationSpeed;
 		this.xPos = xPos;
 		this.yPos = yPos;
-		this.width = width;
-		this.height = height;
+		
+		
+		try {
+			URL url = this.getClass().getResource(ImgPath);
+			BufferedImage pSprite = ImageIO.read(url);
+			int spriteWidth = pSprite.getWidth()/columns;
+			int spriteHeight = pSprite.getHeight()/rows;
+			for(int y = 0; y < rows; y++) {
+				for(int x= 0; x < columns; x++) {
+					addSprite(pSprite
+							, 0 + (x * spriteWidth)
+							, 0 + (y * spriteHeight)
+							,spriteWidth
+							,spriteHeight);
+				}
+			}
+		}catch (IOException e) {}
 		
 		timer = new Timer();
 	}
@@ -136,6 +154,22 @@ public class SpriteAnimation {
 
 	public void setLoop(boolean loop) {
 		this.loop = loop;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
 	}
 	
 	

@@ -10,24 +10,24 @@ public class GameScreen implements SuperStateMachine {
 
 	
 	private Player player;
-	private Level1 level1;
+	private Level1 level;
 	
 	public GameScreen() {
 		player = new Player();
-		level1 = new Level1(player);
+		level = new Level1(player);
 		
 	}
 	
 	@Override
 	public void update(double delta) {
 		player.update(delta);
-		level1.update(delta);
+		level.update(delta);
 	}
 
 	@Override
 	public void draw(Graphics2D g) {
 		player.draw(g);
-		level1.draw(g);
+		level.draw(g);
 		
 	}
 
