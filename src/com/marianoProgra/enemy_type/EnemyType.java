@@ -2,6 +2,7 @@ package com.marianoProgra.enemy_type;
 
 import java.awt.Graphics2D;
 
+
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 import com.marianoProgra.Game_Screen.Player;
 
@@ -13,6 +14,7 @@ public interface EnemyType {
 	
 	boolean deathScene();
 	boolean collide(int i, Player player, Lista<EnemyType> enemies);
+	
 	boolean isOutOfBounds();
 	
 

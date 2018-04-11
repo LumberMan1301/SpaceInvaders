@@ -20,7 +20,7 @@ public abstract class PlayerWeaponType {
 	protected abstract void isOutOfBounds();
 	
 	public double getxPos() {
-		return xPos;
+		return xPos; 
 	}
 	public void setxPos(double xPos) {
 		this.xPos = xPos;

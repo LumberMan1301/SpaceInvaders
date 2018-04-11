@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
@@ -27,6 +28,7 @@ public class EnemyTypeBasic implements EnemyType{
 		 enemySprite = new SpriteAnimation(xPos, yPos,rows, columns, 300,"/com/marianoProgra/imagenes/Enemigo1.png");
 		 enemySprite.setWidth(50);
 		 enemySprite.setHeight(50);
+		 enemySprite.setLimit(2);
 		 
 		 this.setRect(
 				 new Rectangle(
@@ -54,7 +56,7 @@ public class EnemyTypeBasic implements EnemyType{
 
 	@Override
 	public void changeDirection(double delta) {
-		speed *= -1.05d;
+		speed *= -1.0d;
 		
 		enemySprite.setxPos(enemySprite.getxPos()-(delta * speed));
 		this.getRect().x = (int) enemySprite.getxPos();
@@ -65,18 +67,38 @@ public class EnemyTypeBasic implements EnemyType{
 
 	@Override
 	public boolean deathScene() {
+		if(!enemySprite.isPlay()) {
+			return false;
+		}
+		if(enemySprite.isSpriteDestroyed()) {
+			return true;
+		}
 		return false;
+		
 	}
 
 	@Override
 	public boolean collide(int i, Player player, Lista<EnemyType> enemys) {
+		if(enemySprite.isPlay()) {
+			if(enemys.get(i).deathScene()) {
+				enemys.eliminar(i);
+			}
+			return false;
+		} 
+		
 		for(int w=0; w< player.getPlayerWeapons().weapons.size();w++) {
-			if(enemys != null && player.getPlayerWeapons().weapons.get(w).colisionRect(((EnemyTypeBasic)enemys.get(i)).getRect()))
+			if(enemys != null && player.getPlayerWeapons().weapons.get(w).colisionRect(((EnemyTypeBasic)enemys.get(i)).getRect())) {
+				enemySprite.resetLimit();
+				enemySprite.setAnimationSpeed(120);
+				enemySprite.setPlay(true, true);
 				return true;
+			}
+			
 		}
 		
 		return false;
 	}
+
 
 	@Override
 	public boolean isOutOfBounds() {
@@ -93,4 +115,7 @@ public class EnemyTypeBasic implements EnemyType{
 		this.rect = rect;
 	}
 
+
+
+	
 }

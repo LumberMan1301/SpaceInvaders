@@ -26,6 +26,8 @@ public class SpriteAnimation {
 	private double xPos, yPos;
 	private int width, height;
 	
+	private int limit; 
+	
 	public SpriteAnimation(double xPos, double yPos,int rows, int columns, int animationSpeed, String ImgPath) {
 		this.animationSpeed = animationSpeed;
 		this.xPos = xPos;
@@ -35,8 +37,10 @@ public class SpriteAnimation {
 		try {
 			URL url = this.getClass().getResource(ImgPath);
 			BufferedImage pSprite = ImageIO.read(url);
+			
 			int spriteWidth = pSprite.getWidth()/columns;
 			int spriteHeight = pSprite.getHeight()/rows;
+			
 			for(int y = 0; y < rows; y++) {
 				for(int x= 0; x < columns; x++) {
 					addSprite(pSprite
@@ -49,6 +53,7 @@ public class SpriteAnimation {
 		}catch (IOException e) {}
 		
 		timer = new Timer();
+		limit = sprites.size()-1; 
 	}
 	
 	public void draw(Graphics2D g) {
@@ -81,27 +86,27 @@ public class SpriteAnimation {
 	
 	
 	private void loopAnimation() {
-		if(timer.isTimerReady(animationSpeed)&&currentSprite == sprites.size()-1){
+		if(timer.isTimerReady(animationSpeed)&&currentSprite == limit){
 			currentSprite = 0;
 			timer.resetTimer();
-		}else if(timer.timerEvent(animationSpeed)&&currentSprite != sprites.size()-1) {
+		}else if(timer.timerEvent(animationSpeed)&&currentSprite != limit) {
 			currentSprite ++;
 		} 
 	}
 	
 	private void playAnimation() {
-		if(timer.timerEvent(animationSpeed)&&currentSprite != sprites.size()-1 && !isDestroyAfterAnimation()) {
+		if(timer.timerEvent(animationSpeed)&&currentSprite != limit && !isDestroyAfterAnimation()) {
 			play = false;
 			currentSprite = 0;
-		}else if(timer.timerEvent(animationSpeed)&&currentSprite == sprites.size()-1 && isDestroyAfterAnimation()){
+		}else if(timer.timerEvent(animationSpeed)&&currentSprite == limit && isDestroyAfterAnimation()){
 			sprites=null;
-		}else if (timer.timerEvent(animationSpeed)&&currentSprite == sprites.size()-1) {
+		}else if (timer.timerEvent(animationSpeed)&&currentSprite == limit) {
 			currentSprite++;
 		}
 	}
 	
 	public boolean isSpriteDestroyed() {
-		if (sprites == null)
+		if (sprites.estaVacia())
 			return true;
 		return false;
 	}
@@ -111,7 +116,10 @@ public class SpriteAnimation {
 		
 	}
 	
-	public void PlayerAnimation(boolean play, boolean destroyAfterAnimation) {
+	public void setPlay(boolean play, boolean destroyAfterAnimation) {
+		if(loop==true) {
+			loop = false;
+		}
 		this.play = play;
 		this.destroyAfterAnimation = destroyAfterAnimation;
 	}
@@ -170,6 +178,32 @@ public class SpriteAnimation {
 
 	public void setHeight(int height) {
 		this.height = height;
+	}
+
+	public int getAnimationSpeed() {
+		return animationSpeed;
+	}
+
+	public void setAnimationSpeed(int animationSpeed) {
+		this.animationSpeed = animationSpeed;
+	}
+
+	public int getLimit() {
+		return limit;
+	}
+
+	public void setLimit(int limit) {
+		if(limit > 0)
+			this.limit = limit - 1; 
+		else
+			this.limit = limit;
+	}
+	public void resetLimit() {
+		limit = sprites.size() - 1;
+	}
+
+	public boolean isPlay() {
+		return play;
 	}
 	
 	

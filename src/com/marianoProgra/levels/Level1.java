@@ -1,6 +1,7 @@
 package com.marianoProgra.levels;
 
 import java.awt.Graphics2D;
+import java.util.ArrayList;
 
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 import com.marianoProgra.Game_Screen.Player;
@@ -18,7 +19,7 @@ public class Level1 implements SuperLevel{
 		this.player = player;
 		for(int y = 0; y<2; y++) {
 			for (int x = 0; x < 10; x++) {
-				EnemyType e = new EnemyTypeBasic(150 + (x*80), 50+(y*60), 1, 2);
+				EnemyType e = new EnemyTypeBasic(150 + (x*80), 50+(y*60), 1, 3);
 				enemies.agregar(e);
 			}
 		}
