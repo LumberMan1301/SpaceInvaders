@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="969bcdf8-55b2-45bc-b325-a2c88aeb745e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseA.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseB.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/PlayerWeapons.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/PlayerWeapons.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/enemy_types/EnemyTypeBasic.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/images/Enemigo1.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/levels/Level1.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/levels/Level1.class" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/PlayerWeapons.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/PlayerWeapons.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/EnemyTypeBasic.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Basic.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/images/Enemigo1.png" afterPath="$PROJECT_DIR$/src/com/marianoProgra/images/ClaseA.png" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/levels/Level1.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/levels/Level1.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseB.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseB.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Level1.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Level1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/levels/Level1.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="596">
@@ -89,12 +82,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClaseB.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClaseB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="94">
+              <caret line="90" column="37" lean-forward="false" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,8 +97,8 @@
       <file leaf-file-name="ClaseA.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-29">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="499">
+              <caret line="116" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -177,6 +172,7 @@
         <option value="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/EnemyType.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseA.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/levels/Level1.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseB.java" />
       </list>
     </option>
   </component>
@@ -485,7 +481,7 @@
       <workItem from="1523428235987" duration="722000" />
       <workItem from="1523492567510" duration="130000" />
       <workItem from="1523492762112" duration="1045000" />
-      <workItem from="1523493846717" duration="8693000" />
+      <workItem from="1523493846717" duration="8854000" />
     </task>
     <task id="LOCAL-00001" summary="Comienzo de la introduccion de diferentes tipos de enemigos">
       <created>1523495248235</created>
@@ -494,11 +490,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523495248236</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ya se puede apreciar las diferentes clases de enemigos">
+      <created>1523503742704</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1523503742704</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10590000" />
+    <option name="totallyTimeSpent" value="10751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -570,7 +573,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Comienzo de la introduccion de diferentes tipos de enemigos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comienzo de la introduccion de diferentes tipos de enemigos" />
+    <MESSAGE value="Ya se puede apreciar las diferentes clases de enemigos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ya se puede apreciar las diferentes clases de enemigos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -883,24 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/levels/Level1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="596">
@@ -914,6 +900,26 @@
             <element signature="e#2425#2426#0" expanded="true" />
             <element signature="e#2466#2467#0" expanded="true" />
             <element signature="e#2487#2488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="116" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="90" column="37" lean-forward="false" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
