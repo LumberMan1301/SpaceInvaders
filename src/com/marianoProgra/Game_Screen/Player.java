@@ -1,4 +1,4 @@
-package com.marianoProgra.game_screen;
+package com.marianoProgra.Game_Screen;
 
 import java.awt.Graphics2D;
 import java.awt.Rectangle;

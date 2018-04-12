@@ -6,11 +6,10 @@ import java.awt.Rectangle;
 
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 import com.marianoProgra.display.Display;
-import com.marianoProgra.game_screen.GameScreen;
-import com.marianoProgra.game_screen.Player;
+import com.marianoProgra.Game_Screen.GameScreen;
+import com.marianoProgra.Game_Screen.Player;
 import com.marianoProgra.sound.Sound;
 import com.marianoProgra.sprite.SpriteAnimation;
-import com.marianoProgra.timer.Timer;
 
 public class EnemyTypeBasic extends EnemyType{
 

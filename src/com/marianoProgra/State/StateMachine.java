@@ -1,23 +1,23 @@
-package com.marianoProgra.state;
+package com.marianoProgra.State;
 
 import java.awt.Canvas;
 import java.awt.Graphics2D;
-import java.util.ArrayList;
 
-import com.marianoProgra.game_screen.GameScreen;
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
+import com.marianoProgra.Game_Screen.GameScreen;
 import com.marianoProgra.menu_screen.MenuScreen;
 
 public class StateMachine {
 
-	private ArrayList<SuperStateMachine> states = new ArrayList<SuperStateMachine>();
+	private Lista<SuperStateMachine> states = new Lista<SuperStateMachine>();
 	private Canvas canvas;
 	private byte selectState = 0;
 	
 	public StateMachine(Canvas canvas){
 		SuperStateMachine game = new GameScreen(this);
 		SuperStateMachine menu = new MenuScreen(this);
-		states.add(menu);
-		states.add(game);
+		states.agregar(menu);
+		states.agregar(game);
 		
 		this.canvas = canvas;
 	}

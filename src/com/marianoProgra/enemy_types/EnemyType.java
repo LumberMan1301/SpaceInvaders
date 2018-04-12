@@ -3,7 +3,7 @@ package com.marianoProgra.enemy_types;
 import java.awt.Graphics2D;
 
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
-import com.marianoProgra.game_screen.Player;
+import com.marianoProgra.Game_Screen.Player;
 
 public abstract class EnemyType {
 	

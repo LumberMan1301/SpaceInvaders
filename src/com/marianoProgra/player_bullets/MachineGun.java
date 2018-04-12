@@ -2,7 +2,6 @@ package com.marianoProgra.player_bullets;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.awt.Polygon;
 import java.awt.Rectangle;
 
 import com.marianoProgra.display.Display;

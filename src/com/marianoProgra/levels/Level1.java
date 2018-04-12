@@ -5,7 +5,7 @@ import java.awt.Graphics2D;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 import com.marianoProgra.enemy_types.EnemyType;
 import com.marianoProgra.enemy_types.EnemyTypeBasic;
-import com.marianoProgra.game_screen.Player;
+import com.marianoProgra.Game_Screen.Player;
 import com.marianoProgra.sound.Sound;
 
 public class Level1 implements SuperLevel{

@@ -5,7 +5,7 @@ import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
 
-import com.marianoProgra.state.StateMachine;
+import com.marianoProgra.State.StateMachine;
 
 public class Display extends Canvas implements Runnable {
 

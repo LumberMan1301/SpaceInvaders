@@ -8,8 +8,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import com.marianoProgra.display.Display;
-import com.marianoProgra.state.StateMachine;
-import com.marianoProgra.state.SuperStateMachine;
+import com.marianoProgra.State.StateMachine;
+import com.marianoProgra.State.SuperStateMachine;
 
 public class MenuScreen extends SuperStateMachine implements KeyListener {
 

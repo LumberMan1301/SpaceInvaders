@@ -1,4 +1,4 @@
-package com.marianoProgra.game_screen;
+package com.marianoProgra.Game_Screen;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -7,9 +7,10 @@ import java.awt.Graphics2D;
 
 import com.marianoProgra.display.Display;
 import com.marianoProgra.levels.Level1;
-import com.marianoProgra.state.StateMachine;
-import com.marianoProgra.state.SuperStateMachine;
+import com.marianoProgra.State.StateMachine;
+import com.marianoProgra.State.SuperStateMachine;
 import com.marianoProgra.timer.TickTimer;
+
 
 public class GameScreen extends SuperStateMachine {
 	
@@ -30,7 +31,7 @@ public class GameScreen extends SuperStateMachine {
 		player = new Player(Display.getWIDTH()/2-50, Display.getHEIGHT()-75, 50, 50);
 		level = new Level1(player);
 	}
-	
+
 	@Override
 	public void update(double delta) {
 		player.update(delta);
