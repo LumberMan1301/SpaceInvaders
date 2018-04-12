@@ -5,22 +5,19 @@ import java.awt.Polygon;
 import java.awt.Rectangle;
 
 public abstract class PlayerWeaponType {
-	
+
 	protected double xPos, yPos;
 	protected int width, height;
 	
-	
-	
 	public abstract void draw(Graphics2D g);
 	public abstract void update(double delta);
-	public abstract boolean colisionRect(Rectangle rect);
-	public abstract boolean colisionPoly(Polygon poly);
-	public abstract boolean destroy();
-
-	protected abstract void isOutOfBounds();
+	public abstract boolean collisionRect(Rectangle rect);
+	public abstract boolean destory();
+	
+	protected abstract void isOutofBounds();
 	
 	public double getxPos() {
-		return xPos; 
+		return xPos;
 	}
 	public void setxPos(double xPos) {
 		this.xPos = xPos;
@@ -43,7 +40,6 @@ public abstract class PlayerWeaponType {
 	public void setHeight(int height) {
 		this.height = height;
 	}
-	
 	
 	
 }

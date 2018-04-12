@@ -3,15 +3,15 @@ package com.marianoProgra.levels;
 import java.awt.Graphics2D;
 
 public interface SuperLevel {
-	
-	public void draw(Graphics2D g);
-	public void update(double delta);
-	public void hasDirectionChange(double delta);
-	public void changeDirectionAllEnemies(double delta);
+
+	void draw(Graphics2D g);
+	void update(double delta);
+	void hasDirectionChange(double delta);
+	void changeDurectionAllEnemys(double delta);
 	
 	boolean isGameOver();
+	boolean isComplete();
 	
-	void destroy();
-	void reset();	
-
+	void destory();
+	void reset();
 }

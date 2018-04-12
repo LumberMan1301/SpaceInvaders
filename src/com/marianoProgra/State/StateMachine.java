@@ -1,43 +1,42 @@
-package com.marianoProgra.State;
+package com.marianoProgra.state;
 
 import java.awt.Canvas;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 
-import com.marianoProgra.Game_Screen.GameScreen;
-import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
+import com.marianoProgra.game_screen.GameScreen;
+import com.marianoProgra.menu_screen.MenuScreen;
 
 public class StateMachine {
-	
-	private Lista<SuperStateMachine> states = new Lista <SuperStateMachine>();
-	
+
+	private ArrayList<SuperStateMachine> states = new ArrayList<SuperStateMachine>();
 	private Canvas canvas;
 	private byte selectState = 0;
 	
-	
-	public StateMachine(Canvas canvas) {
-		this.canvas = canvas;
-		SuperStateMachine game = new GameScreen();
-		states.agregar(game);
-	
+	public StateMachine(Canvas canvas){
+		SuperStateMachine game = new GameScreen(this);
+		SuperStateMachine menu = new MenuScreen(this);
+		states.add(menu);
+		states.add(game);
 		
+		this.canvas = canvas;
 	}
-	public void draw(Graphics2D g) {
+	
+	public void draw(Graphics2D g){
 		states.get(selectState).draw(g);
 	}
 	
-	public void update(double delta) {
+	public void update(double delta){
 		states.get(selectState).update(delta);
 	}
 	
-	public void setState(byte i) {
-		for(int r = 0; r < canvas.getKeyListeners().length; r++) {
+	public void setState(byte i){
+		for(int r = 0; r < canvas.getKeyListeners().length; r++)
 			canvas.removeKeyListener(canvas.getKeyListeners()[r]);
-		}
-		selectState = 0;
+		selectState = i;
 		states.get(selectState).init(canvas);
 	}
-	
+
 	public byte getStates() {
 		return selectState;
 	}

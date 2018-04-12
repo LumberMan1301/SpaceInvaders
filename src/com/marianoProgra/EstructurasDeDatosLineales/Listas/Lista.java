@@ -26,19 +26,20 @@ public class Lista<T> {
     /**
      * metodo para revisar si la lista esta vacia
      */
-    public boolean estaVacia(){
+    public boolean isEmpty(){
         if (this.capacidad==0)
             return true;
         else
             return false;
     }
 
+
     /**
      * metodo para comprobar si un nodo Existe
      * @param nodo
      */
     public boolean existe(Nodo nodo){
-        if (this.estaVacia()){
+        if (this.isEmpty()){
             return false;
         }else{
             Nodo aux = this.primero;
@@ -51,13 +52,14 @@ public class Lista<T> {
         }
     }
 
+
     /**
      * metodo para agregar al final de la lista
      * @param data
      */
     public void agregar(T data){
         Nodo nodo = new Nodo(data);
-        if (this.estaVacia()) {
+        if (this.isEmpty()) {
             this.primero = nodo;
             this.capacidad ++;
 
@@ -72,11 +74,12 @@ public class Lista<T> {
 
     }
 
+
     /**
      * metodo para imprimir la Lista
      */
     public void imprimirL(){
-        if(this.estaVacia())
+        if(this.isEmpty())
             System.out.println("La Lista Esta Vacia");
         else {
             Nodo aux = this.primero;
@@ -93,7 +96,7 @@ public class Lista<T> {
      * @param indice
      */
     public void eliminar(int indice){
-        if (this.estaVacia())
+        if (this.isEmpty())
             System.out.println("Lista Vacia");
         else{
             Nodo aux = this.primero;
@@ -120,7 +123,7 @@ public class Lista<T> {
      * @param data
      */
     public void eliminarDato(T data){
-        if(this.estaVacia()){
+        if(this.isEmpty()){
             System.out.println("Lista Vacia");
         }else{
             Nodo aux = this.primero;
@@ -177,7 +180,7 @@ public class Lista<T> {
      * metodo para obtener la capacidad de la lista
      * @return capacidad
      */
-    public int size() {
+    public int capacidad() {
         System.out.println(capacidad);
         return capacidad;
     }
@@ -208,8 +211,10 @@ public class Lista<T> {
         return aux.getDato();
     }
     
-    public void nul() {
+    public void vaciar() {
     	this.setPrimero(null);;
     	this.setCapacidad(0);;
     }
+
+
 }

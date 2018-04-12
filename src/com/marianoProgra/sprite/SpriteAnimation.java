@@ -7,121 +7,134 @@ import java.net.URL;
 
 import javax.imageio.ImageIO;
 
-import com.marianoProgra.timer.Timer;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
+import com.marianoProgra.timer.Timer;
 
 public class SpriteAnimation {
-	
-	
+
 	private Lista<BufferedImage> sprites = new Lista<BufferedImage>();
 	private byte currentSprite;
-	
+
 	private boolean loop = false;
 	private boolean play = false;
-	private boolean destroyAfterAnimation = false;
-	
-	private Timer timer;
+	private boolean destoryAfterAnim = false;
 
+	private Timer timer;
 	private int animationSpeed;
 	private double xPos, yPos;
 	private int width, height;
-	
-	private int limit; 
-	
-	public SpriteAnimation(double xPos, double yPos,int rows, int columns, int animationSpeed, String ImgPath) {
+	private int limit;
+
+	public SpriteAnimation(double xPos, double yPos, int rows, int columns, int animationSpeed, String imgPath) {
 		this.animationSpeed = animationSpeed;
 		this.xPos = xPos;
 		this.yPos = yPos;
 		
-		
-		try {
-			URL url = this.getClass().getResource(ImgPath);
+		try{
+			URL url = this.getClass().getResource(imgPath);
 			BufferedImage pSprite = ImageIO.read(url);
-			
-			int spriteWidth = pSprite.getWidth()/columns;
-			int spriteHeight = pSprite.getHeight()/rows;
-			
+			int spriteWidth = pSprite.getWidth() / columns;
+			int spriteHeight = pSprite.getHeight() / rows;
 			for(int y = 0; y < rows; y++) {
-				for(int x= 0; x < columns; x++) {
+				for(int x = 0; x < columns; x++){
 					addSprite(pSprite
 							, 0 + (x * spriteWidth)
 							, 0 + (y * spriteHeight)
-							,spriteWidth
-							,spriteHeight);
+							, spriteWidth
+							, spriteHeight);
 				}
 			}
-		}catch (IOException e) {}
-		
+					
+			
+		}catch(IOException e){};
+
 		timer = new Timer();
-		limit = sprites.size()-1; 
+		limit = sprites.capacidad() - 1;
 	}
-	
+
 	public void draw(Graphics2D g) {
-		if(isSpriteDestroyed())
+		if (isSpriteAnimDestroyed())
 			return;
-		g.drawImage(sprites.get(currentSprite),(int)getxPos(),(int)getyPos(), null);
+		
+		g.drawImage(sprites.get(currentSprite), (int) getxPos(), (int) getyPos(), width, height, null);
 	}
-	
-	
+
 	public void update(double delta) {
-		if(isDestroyAfterAnimation())
+		if (isSpriteAnimDestroyed())
 			return;
-		if(loop && !play)
+
+		if (loop && !play)
 			loopAnimation();
-		if(play && !loop)
+		if (play && !loop)
 			playAnimation();
 	}
-	
+
 	public void stopAnimation() {
 		loop = false;
 		play = false;
-		
 	}
-	
+
 	public void resetSprite() {
 		loop = false;
 		play = false;
 		currentSprite = 0;
 	}
-	
-	
+
 	private void loopAnimation() {
-		if(timer.isTimerReady(animationSpeed)&&currentSprite == limit){
+		if (timer.isTimerReady(animationSpeed) && currentSprite == limit) {
 			currentSprite = 0;
 			timer.resetTimer();
-		}else if(timer.timerEvent(animationSpeed)&&currentSprite != limit) {
-			currentSprite ++;
+		}else if (timer.timerEvent(animationSpeed) && currentSprite != limit) {
+			currentSprite++;
 		} 
 	}
-	
+
 	private void playAnimation() {
-		if(timer.timerEvent(animationSpeed)&&currentSprite != limit && !isDestroyAfterAnimation()) {
+		if (timer.isTimerReady(animationSpeed) && currentSprite != limit && !isDestoryAfterAnim()) {
 			play = false;
 			currentSprite = 0;
-		}else if(timer.timerEvent(animationSpeed)&&currentSprite == limit && isDestroyAfterAnimation()){
-			sprites=null;
-		}else if (timer.timerEvent(animationSpeed)&&currentSprite == limit) {
+		} else if (timer.isTimerReady(animationSpeed) && currentSprite == limit && isDestoryAfterAnim()) {
+			sprites = null;
+		}else if (timer.timerEvent(animationSpeed) && currentSprite != limit) {
 			currentSprite++;
 		}
 	}
 	
-	public boolean isSpriteDestroyed() {
-		if (sprites.estaVacia())
+	public byte getCurrentSprite() {
+		return currentSprite;
+	}
+
+	public void setCurrentSprite(byte currentSprite) {
+		this.currentSprite = currentSprite;
+	}
+
+	public boolean isLoop() {
+		return loop;
+	}
+
+	public void setLoop(boolean loop) {
+		this.loop = loop;
+	}
+
+	public boolean isSpriteAnimDestroyed() {
+		if (sprites == null)
 			return true;
+
 		return false;
 	}
-	
-	public void addSprite(BufferedImage spriteMap, int xPos, int yPos, int width, int height) {
+
+	public void addSprite(BufferedImage spriteMap, int xPos, int yPos,
+			int width, int height) {
 		sprites.agregar(spriteMap.getSubimage(xPos, yPos, width, height));
-		
 	}
-	
-	public void setPlay(boolean play, boolean destroyAfterAnimation) {
-		if(loop==true) {
+
+	public void setPlay(boolean play, boolean destoryAfterAnim) {
+		if(loop) {
 			loop = false;
 		}
+		
 		this.play = play;
-		this.destroyAfterAnimation = destroyAfterAnimation;
+		this.setDestoryAfterAnim(destoryAfterAnim);
 	}
 
 	public double getxPos() {
@@ -140,28 +153,12 @@ public class SpriteAnimation {
 		this.yPos = yPos;
 	}
 
-	public boolean isDestroyAfterAnimation() {
-		return destroyAfterAnimation;
+	public boolean isDestoryAfterAnim() {
+		return destoryAfterAnim;
 	}
 
-	public void setDestroyAfterAnimation(boolean destroyAfterAnimation) {
-		this.destroyAfterAnimation = destroyAfterAnimation;
-	}
-
-	public byte getCurrentSprite() {
-		return currentSprite;
-	}
-
-	public void setCurrentSprite(byte currentSprite) {
-		this.currentSprite = currentSprite;
-	}
-
-	public boolean isLoop() {
-		return loop;
-	}
-
-	public void setLoop(boolean loop) {
-		this.loop = loop;
+	public void setDestoryAfterAnim(boolean destoryAfterAnim) {
+		this.destoryAfterAnim = destoryAfterAnim;
 	}
 
 	public int getWidth() {
@@ -193,19 +190,18 @@ public class SpriteAnimation {
 	}
 
 	public void setLimit(int limit) {
-		if(limit > 0)
-			this.limit = limit - 1; 
-		else
+		if(limit > 0) {
+			this.limit = limit - 1;
+		} else {
 			this.limit = limit;
+		}
 	}
+	
 	public void resetLimit() {
-		limit = sprites.size() - 1;
+		limit = sprites.capacidad() - 1;
 	}
 
 	public boolean isPlay() {
 		return play;
 	}
-	
-	
-	
 }
