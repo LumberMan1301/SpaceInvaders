@@ -11,30 +11,28 @@ import com.marianoProgra.Game_Screen.Player;
 import com.marianoProgra.sound.Sound;
 import com.marianoProgra.sprite.SpriteAnimation;
 
-public class EnemyTypeBasic extends EnemyType{
+public class Basic extends EnemyType{
 
 	private double speed = 2.0d;
 	
 	private Rectangle rect;
 	private SpriteAnimation enemySprite;
-	
 
-	
 	private Sound explosionSound;
 	
-	public EnemyTypeBasic(double xPos, double yPos, int rows, int columns){
+	public Basic(double xPos, double yPos, int rows, int columns){
 
 		
 		enemySprite = new SpriteAnimation(xPos, yPos, rows, columns, 300, "/com/marianoProgra/images/Invaders.png");
 		enemySprite.setWidth(30);
 		enemySprite.setHeight(30);
 		enemySprite.setLimit(2);
-		
+
 		this.setRect(new Rectangle((int) enemySprite.getxPos(), (int) enemySprite.getyPos(), enemySprite.getWidth(), enemySprite.getHeight()));
 		enemySprite.setLoop(true);
-		
 
-		
+
+
 		explosionSound = new Sound("/com/marianoProgra/sounds/explosion.wav");
 	}
 	
@@ -88,7 +86,7 @@ public class EnemyTypeBasic extends EnemyType{
 		}
 
 		for(int w = 0; w < player.playerWeapons.weapons.size(); w++) {
-			if(enemys != null && player.playerWeapons.weapons.get(w).collisionRect(((EnemyTypeBasic) enemys.get(i)).getRect())) {
+			if(enemys != null && player.playerWeapons.weapons.get(w).collisionRect(((Basic) enemys.get(i)).getRect())) {
 				enemySprite.resetLimit();
 				enemySprite.setAnimationSpeed(120);
 				enemySprite.setPlay(true, true);

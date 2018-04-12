@@ -3,13 +3,15 @@ package com.marianoProgra.levels;
 import java.awt.Graphics2D;
 
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
+import com.marianoProgra.enemy_types.ClaseA;
 import com.marianoProgra.enemy_types.EnemyType;
-import com.marianoProgra.enemy_types.EnemyTypeBasic;
+import com.marianoProgra.enemy_types.Basic;
 import com.marianoProgra.Game_Screen.Player;
 import com.marianoProgra.sound.Sound;
 
 public class Level1 implements SuperLevel{
 
+	private static int flag=0;
 	private Player player;
 	private Lista<EnemyType> enemies = new Lista<EnemyType>();
 
@@ -97,16 +99,30 @@ public class Level1 implements SuperLevel{
 	}
 	
 	public void addEnemies() {
-		for(int y = 0; y < 5; y++){
-			for(int x = 0; x < 10; x++){
-				EnemyType e = new EnemyTypeBasic(150 + (x * 40), 25 + (y * 40), 1 , 3);
-				enemies.agregar(e);
+
+		int variable = (int)(Math.random()*10);
+			for (int y = 0; y < 2; y++) {
+				for (int x = 0; x < 10; x++) {
+					if (variable % 2 == 0) {
+						EnemyType e = new Basic(150 + (x * 40), 25 + (y * 40), 1, 3);
+						enemies.agregar(e);
+					}
+					if (variable % 2 == 1) {
+						EnemyType e = new ClaseA(150 + (x * 40), 25 + (y * 40), 1, 3);
+						enemies.agregar(e);
+
+					}
 			}
 		}
 	}
 
+
 	@Override
 	public boolean isComplete() {
 		return enemies.isEmpty();
+	}
+
+	public Lista<EnemyType> getEnemies() {
+		return enemies;
 	}
 }
