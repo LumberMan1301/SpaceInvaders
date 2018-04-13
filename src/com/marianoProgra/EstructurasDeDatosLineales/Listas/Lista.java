@@ -212,8 +212,8 @@ public class Lista<T> {
     }
     
     public void vaciar() {
-    	this.setPrimero(null);;
-    	this.setCapacidad(0);;
+    	this.setPrimero(null);
+    	this.setCapacidad(0);
     }
 
 

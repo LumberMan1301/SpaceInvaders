@@ -13,8 +13,7 @@ import javax.imageio.ImageIO;
 import com.marianoProgra.display.Display;
 
 public class Player implements KeyListener{
-	
-	private final double speed = 5.0d;
+		private final double speed = 5.0d;
 
 	
 	private BufferedImage pSprite;
@@ -53,10 +52,10 @@ public class Player implements KeyListener{
 	
 	public void update(double delta){
 		if(right && !left && xPos < Display.getWIDTH()-width){
-			xPos += speed * delta;
+			xPos += speed * delta*2;
 			rect.x = (int) xPos;
 		}if(!right && left && xPos > 10){
-			xPos -= speed * delta;
+			xPos -= speed * delta*2;
 			rect.x = (int) xPos;
 		}
 		

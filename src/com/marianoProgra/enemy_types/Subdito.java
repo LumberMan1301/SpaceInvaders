@@ -11,19 +11,21 @@ import com.marianoProgra.Game_Screen.Player;
 import com.marianoProgra.sound.Sound;
 import com.marianoProgra.sprite.SpriteAnimation;
 
-public class Basic extends EnemyType{
+public class Subdito extends EnemyType{
 
-	private double speed = 2.0d;
-	
+	private double speed;
+	private int vida;
 	private Rectangle rect;
 	private SpriteAnimation enemySprite;
 
 	private Sound explosionSound;
 	
-	public Basic(double xPos, double yPos, int rows, int columns){
+	public Subdito(double xPos, double yPos, int rows, int columns, int vida, double speed){
 
+		this.vida = vida;
+		this.speed = speed;
 		
-		enemySprite = new SpriteAnimation(xPos, yPos, rows, columns, 300, "/com/marianoProgra/images/Invaders.png");
+		enemySprite = new SpriteAnimation(xPos, yPos, rows, columns, 300, "/com/marianoProgra/images/Subdito.png");
 		enemySprite.setWidth(30);
 		enemySprite.setHeight(30);
 		enemySprite.setLimit(2);
@@ -86,15 +88,18 @@ public class Basic extends EnemyType{
 		}
 
 		for(int w = 0; w < player.playerWeapons.weapons.size(); w++) {
-			if(enemys != null && player.playerWeapons.weapons.get(w).collisionRect(((Basic) enemys.get(i)).getRect())) {
-				enemySprite.resetLimit();
-				enemySprite.setAnimationSpeed(120);
-				enemySprite.setPlay(true, true);
-				GameScreen.SCORE += 8;
-				return true;
-			}
-		}
 
+				if (enemys != null && player.playerWeapons.weapons.get(w).collisionRect(((Subdito) enemys.get(i)).getRect())) {
+					this.vida--;
+				}if(vida==0){
+					enemySprite.resetLimit();
+					enemySprite.setAnimationSpeed(120);
+					enemySprite.setPlay(true, true);
+					GameScreen.aumentarSCORE(5);
+					return true;
+
+			}
+			}
 		return false;
 	}
 

@@ -6,7 +6,8 @@ import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 import com.marianoProgra.Game_Screen.Player;
 
 public abstract class EnemyType {
-	
+
+
 
 	
 	public EnemyType() {
@@ -20,6 +21,6 @@ public abstract class EnemyType {
 	public abstract boolean deathScene();
 	public abstract boolean collide(int i, Player player, Lista<EnemyType> enemys);
 	public abstract boolean isOutOfBounds();
-	
+
 
 }
