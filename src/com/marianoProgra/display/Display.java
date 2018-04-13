@@ -3,13 +3,14 @@ package com.marianoProgra.display;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
 import com.marianoProgra.State.StateMachine;
 
 public class Display extends Canvas implements Runnable {
 
 	private static final long serialVersionUID = 1L;
+
 
 	public static void main(String[] args) {
 		Display display = new Display();
@@ -20,7 +21,9 @@ public class Display extends Canvas implements Runnable {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
 		frame.setVisible(true);
+
 		display.start();
+
 	}
 
 	private boolean running = false;
@@ -85,7 +88,7 @@ public class Display extends Canvas implements Runnable {
 				timer += 1000;
 				FPS = frames;
 				frames = 0;
-				//System.out.println(FPS);
+
 			}
 
 			draw(bs);

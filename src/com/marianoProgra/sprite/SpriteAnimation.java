@@ -56,7 +56,7 @@ public class SpriteAnimation {
 		if (isSpriteAnimDestroyed())
 			return;
 		
-		g.drawImage(sprites.get(currentSprite), (int) getxPos(), (int) getyPos(), width, height, null);
+		g.drawImage(sprites.getDato(currentSprite), (int) getxPos(), (int) getyPos(), width, height, null);
 	}
 
 	public void update(double delta) {

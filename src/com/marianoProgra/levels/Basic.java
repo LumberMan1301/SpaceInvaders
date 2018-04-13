@@ -4,7 +4,6 @@ import java.awt.Graphics2D;
 
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 import com.marianoProgra.enemy_types.EnemyType;
-import com.marianoProgra.enemy_types.Jefe;
 import com.marianoProgra.enemy_types.Subdito;
 import com.marianoProgra.Game_Screen.Player;
 import com.marianoProgra.sound.Sound;
@@ -32,7 +31,7 @@ public class Basic implements SuperLevel{
 			return;
 		
 		for(int i = 0; i < enemies.capacidad(); i++){
-			enemies.get(i).draw(g);
+			enemies.getDato(i).draw(g);
 		}
 
 	}
@@ -43,10 +42,10 @@ public class Basic implements SuperLevel{
 			return;
 		
 		for(int i = 0; i < enemies.capacidad(); i++){
-			enemies.get(i).update(delta, player);
+			enemies.getDato(i).update(delta, player);
 		}
 		for(int i = 0; i < enemies.capacidad(); i++){
-			enemies.get(i).collide(i, player, enemies);
+			enemies.getDato(i).collide(i, player, enemies);
 		}
 		hasDirectionChange(delta);
 
@@ -58,7 +57,7 @@ public class Basic implements SuperLevel{
 			return;
 		
 		for(int i = 0; i < enemies.capacidad(); i++){
-			if(enemies.get(i).isOutOfBounds()){
+			if(enemies.getDato(i).isOutOfBounds()){
 				changeDurectionAllEnemys(delta);
 			}
 		}
@@ -67,7 +66,7 @@ public class Basic implements SuperLevel{
 	@Override
 	public void changeDurectionAllEnemys(double delta) {
 		for(int i = 0; i < enemies.capacidad(); i++){
-			enemies.get(i).changeDirection(delta);
+			enemies.getDato(i).changeDirection(delta);
 		}
 		if (beepboop) {
 			beepboop = false;

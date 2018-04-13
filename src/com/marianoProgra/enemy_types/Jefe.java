@@ -79,7 +79,7 @@ public class Jefe extends EnemyType{
     @Override
     public boolean collide(int i, Player player, Lista<EnemyType> enemys) {
         if(enemySprite.isPlay()) {
-            if(enemys.get(i).deathScene()) {
+            if(enemys.getDato(i).deathScene()) {
                 enemys.eliminar(i);
             }
             return false;
@@ -87,7 +87,7 @@ public class Jefe extends EnemyType{
 
         for(int w = 0; w < player.playerWeapons.weapons.size(); w++) {
 
-            if (enemys != null && player.playerWeapons.weapons.get(w).collisionRect(((Jefe) enemys.get(i)).getRect())) {
+            if (enemys != null && player.playerWeapons.weapons.get(w).collisionRect(((Jefe) enemys.getDato(i)).getRect())) {
                 this.vida--;
             }if(vida==0){
                 enemySprite.resetLimit();
