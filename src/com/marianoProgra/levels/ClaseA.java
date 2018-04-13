@@ -48,6 +48,8 @@ public class ClaseA implements SuperLevel {
             enemies.getDato(i).collide(i, player, enemies);
         }
         hasDirectionChange(delta);
+        enemies.vaciar();
+        addEnemies();
 
     }
 

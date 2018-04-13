@@ -9,7 +9,6 @@ import com.marianoProgra.display.Display;
 import com.marianoProgra.levels.Basic;
 import com.marianoProgra.State.StateMachine;
 import com.marianoProgra.State.SuperStateMachine;
-import com.marianoProgra.levels.ClaseB;
 import com.marianoProgra.levels.SuperLevel;
 import com.marianoProgra.timer.TickTimer;
 
@@ -20,7 +19,9 @@ public class GameScreen extends SuperStateMachine {
 	private SuperLevel level;
 
 
-	private static int SCORE = 0;
+	private static int Puntuacion = 0;
+	private static int Nivel = 1;
+	private static double speed = 1.0d;
 	private Font gameScreen = new Font("Berlin Sans FB Demi", Font.PLAIN, 48);
 
 
@@ -49,7 +50,9 @@ public class GameScreen extends SuperStateMachine {
 				level.reset();
 
 				getStateMachine().setState((byte) 0);
-				SCORE = 0;
+				Puntuacion = 0;
+				Nivel = 1;
+				speed=1.0d;
 			}
 		}
 		
@@ -57,6 +60,8 @@ public class GameScreen extends SuperStateMachine {
 			completeTimer.tick(delta);
 			if (completeTimer.isEventReady()) {
 				level.reset();
+				Nivel++;
+				speed+=0.5d;
 			}
 		}
 	}
@@ -64,7 +69,10 @@ public class GameScreen extends SuperStateMachine {
 	@Override
 	public void draw(Graphics2D g) {
 		g.setColor(Color.CYAN);
-		g.drawString("PUNTUACION: " + SCORE, 5, 15);
+		g.drawString("PUNTUACION: " + Puntuacion, 5, 15);
+
+		g.setColor(Color.CYAN);
+		g.drawString("NIVEL: "+Nivel, 5,25 );
 
 		player.draw(g);
 		level.draw(g);
@@ -92,6 +100,14 @@ public class GameScreen extends SuperStateMachine {
 	}
 
 	public static void aumentarSCORE(int aumento) {
-		SCORE+=aumento;
+		Puntuacion +=aumento;
+	}
+
+	public static int getNivel() {
+		return Nivel;
+	}
+
+	public static double getSpeed() {
+		return speed;
 	}
 }

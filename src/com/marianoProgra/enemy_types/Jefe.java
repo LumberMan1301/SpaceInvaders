@@ -46,7 +46,7 @@ public class Jefe extends EnemyType{
     public void update(double delta, Player player) {
         enemySprite.update(delta);
 
-        enemySprite.setxPos(enemySprite.getxPos() + (delta * speed));
+        enemySprite.setxPos(enemySprite.getxPos() - (delta * speed));
         this.getRect().x = (int) enemySprite.getxPos();
 
 

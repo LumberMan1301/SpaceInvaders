@@ -43,7 +43,7 @@ public class PlayerWeapons {
 	}
 	
 	public void shootBullet(double xPos, double yPos, int width, int height){
-		if(timer.timerEvent(150)) {
+		if(timer.timerEvent(100)) {
 			if (shootSound.isPlaying()) {
 				shootSound.stop();
 			}

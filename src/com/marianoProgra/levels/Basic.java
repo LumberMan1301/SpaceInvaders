@@ -3,6 +3,7 @@ package com.marianoProgra.levels;
 import java.awt.Graphics2D;
 
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
+import com.marianoProgra.Game_Screen.GameScreen;
 import com.marianoProgra.enemy_types.EnemyType;
 import com.marianoProgra.enemy_types.Subdito;
 import com.marianoProgra.Game_Screen.Player;
@@ -107,9 +108,9 @@ public class Basic implements SuperLevel{
 	}
 	
 	public void addEnemies() {
-			for (int y = 0; y < 2; y++) {
-				for (int x = 0; x < 20; x++) {
-					EnemyType e = new Subdito(150 + (x * 40), 35 + (y * 40), 1, 3, 2,1.5d);
+			for (int y = 0; y <1+ GameScreen.getNivel(); y++) {
+				for (int x = 0; x < 10; x++) {
+					EnemyType e = new Subdito(150 + (x * 40), 35 + (y * 40), 1, 3, 2,1.5d+GameScreen.getSpeed());
 					enemies.agregar(e);
 			}
 		}
