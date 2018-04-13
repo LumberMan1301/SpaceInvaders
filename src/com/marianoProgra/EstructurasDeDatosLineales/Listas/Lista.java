@@ -181,7 +181,6 @@ public class Lista<T> {
      * @return capacidad
      */
     public int capacidad() {
-        System.out.println(capacidad);
         return capacidad;
     }
 

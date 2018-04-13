@@ -98,7 +98,7 @@ public class ListaDoble<T>
             current.setSiguiente(null);
             this.capacidad -= 1;
         }
-        else if (pos_aux >= getCapacidad())
+        else if (pos_aux >= capacidad())
         {
             System.out.println("No se encuentra el elemento");
         }
@@ -201,8 +201,7 @@ public class ListaDoble<T>
         this.capacidad = 0;
     }
 
-    public int getCapacidad()
-    {
+    public int capacidad() {
         return this.capacidad;
     }
 
@@ -230,9 +229,9 @@ public class ListaDoble<T>
             Nodo aux = this.primero;
             System.out.print("[");
             while (aux.getSiguiente()!=null){
-                System.out.print(aux.getDato()+",");
+                System.out.print(aux.getDato().toString()+",");
                 aux=aux.getSiguiente();
-            }System.out.println(aux.getDato()+"]");
+            }System.out.println(aux.getDato().toString()+"]");
         }
     }
 

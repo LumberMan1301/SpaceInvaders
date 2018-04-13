@@ -1,6 +1,7 @@
 package com.marianoProgra.levels;
 
-import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
+
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaDoble;
 import com.marianoProgra.Game_Screen.Player;
 import com.marianoProgra.enemy_types.EnemyType;
 import com.marianoProgra.enemy_types.Jefe;
@@ -11,10 +12,16 @@ import java.awt.*;
 
 public class ClaseB implements SuperLevel {
     private Player player;
-    private Lista<EnemyType> enemies = new Lista<EnemyType>();
+    private ListaDoble<EnemyType> enemies = new ListaDoble<EnemyType>();
 
     private Sound beep, boop;
     private boolean beepboop;
+    private int posJefe = (int) Math.floor(Math.random()*10);
+    private int posR = (int) Math.floor((Math.random()*4)+1);
+
+    private static int x2 = 0;
+    private static int flag = 0;
+    private static int cant = 10;
 
     public ClaseB(Player player){
         this.player = player;
@@ -40,15 +47,17 @@ public class ClaseB implements SuperLevel {
     public void update(double delta) {
         if(enemies == null)
             return;
-
         for(int i = 0; i < enemies.capacidad(); i++){
             enemies.getDato(i).update(delta, player);
+
         }
         for(int i = 0; i < enemies.capacidad(); i++){
             enemies.getDato(i).collide(i, player, enemies);
         }
 
         hasDirectionChange(delta);
+
+
 
     }
 
@@ -60,15 +69,21 @@ public class ClaseB implements SuperLevel {
         for(int i = 0; i < enemies.capacidad(); i++){
             if(enemies.getDato(i).isOutOfBounds()){
                 changeDurectionAllEnemys(delta);
+                if(flag%2==1){
+                    enemies.vaciar();
+                    addEnemies();
+                }
             }
         }
     }
+
 
     @Override
     public void changeDurectionAllEnemys(double delta) {
         for(int i = 0; i < enemies.capacidad(); i++){
             enemies.getDato(i).changeDirection(delta);
         }
+        flag++;
         if (beepboop) {
             beepboop = false;
             boop.play();
@@ -98,22 +113,28 @@ public class ClaseB implements SuperLevel {
     }
 
     public void addEnemies() {
-        int xpos = (int) Math.floor(Math.random()*10);
-        System.out.println(xpos);
-        for (int x = 0; x < 10; x++) {
-            if(x==xpos){
-                EnemyType e = new Jefe(150+(x*40),65,1,3,5,2.5d);
+        int pos = (int) Math.floor(Math.random()*10);
+        for (int x=0; x < cant; x++) {
+            if(x==pos){
+                EnemyType e = new Jefe(0+(x*40),65+x2,1,3,5,2.5d);
                 enemies.agregar(e);
             }else {
-                EnemyType e = new Subdito(150 + (x * 40), 65, 1, 3, 2, 2.5d);
+                EnemyType e = new Subdito(0 + (x * 40), 65+x2, 1, 3, 2, 2.5d);
                 enemies.agregar(e);
             }
-        }
+        }x2+=20;
+
     }
 
 
     @Override
     public boolean isComplete() {
-        return enemies.isEmpty();
+        return enemies.estaVacia();
+    }
+    public static int getCant(){
+        return cant;
+    }
+    public static void setCant(int i){
+        cant = i;
     }
 }

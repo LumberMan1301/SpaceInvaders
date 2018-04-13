@@ -15,6 +15,8 @@ public class Basic implements SuperLevel{
 
 	private Sound beep, boop;
 	private boolean beepboop;
+
+
 	
 	public Basic(Player player){
 		this.player = player;
@@ -49,6 +51,7 @@ public class Basic implements SuperLevel{
 		}
 		hasDirectionChange(delta);
 
+
 	}
 
 	@Override
@@ -59,8 +62,10 @@ public class Basic implements SuperLevel{
 		for(int i = 0; i < enemies.capacidad(); i++){
 			if(enemies.getDato(i).isOutOfBounds()){
 				changeDurectionAllEnemys(delta);
+				isGameOver();
 			}
 		}
+
 	}
 
 	@Override
@@ -75,10 +80,15 @@ public class Basic implements SuperLevel{
 			beepboop = true;
 			beep.play();
 		}
+
 	}
 
 	@Override
 	public boolean isGameOver() {
+		for(int i =0; i<enemies.capacidad();i++){
+			if(enemies.getDato(i).passPlayer())
+				return true;
+		}
 		return false;
 	}
 
@@ -98,8 +108,8 @@ public class Basic implements SuperLevel{
 	
 	public void addEnemies() {
 			for (int y = 0; y < 2; y++) {
-				for (int x = 0; x < 10; x++) {
-					EnemyType e = new Subdito(150 + (x * 40), 25 + (y * 40), 1, 3, 2,1.5d);
+				for (int x = 0; x < 20; x++) {
+					EnemyType e = new Subdito(150 + (x * 40), 35 + (y * 40), 1, 3, 2,1.5d);
 					enemies.agregar(e);
 			}
 		}

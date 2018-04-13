@@ -9,15 +9,16 @@ import com.marianoProgra.display.Display;
 import com.marianoProgra.levels.Basic;
 import com.marianoProgra.State.StateMachine;
 import com.marianoProgra.State.SuperStateMachine;
-import com.marianoProgra.levels.ClaseA;
+import com.marianoProgra.levels.ClaseB;
+import com.marianoProgra.levels.SuperLevel;
 import com.marianoProgra.timer.TickTimer;
 
 
 public class GameScreen extends SuperStateMachine {
 	
 	private Player player;
-	private Basic levelBasic;
-	private ClaseA levelA;
+	private SuperLevel level;
+
 
 	private static int SCORE = 0;
 	private Font gameScreen = new Font("Berlin Sans FB Demi", Font.PLAIN, 48);
@@ -31,8 +32,8 @@ public class GameScreen extends SuperStateMachine {
 		super(stateMachine);
 
 		player = new Player(Display.getWIDTH()/2-50, Display.getHEIGHT()-75, 50, 50);
-		levelBasic = new Basic(player);
-		levelA = new ClaseA(player);
+		level = new Basic(player);
+
 	}
 
 
@@ -40,22 +41,22 @@ public class GameScreen extends SuperStateMachine {
 	@Override
 	public void update(double delta) {
 		player.update(delta);
-		levelBasic.update(delta);
+		level.update(delta);
 		
-		if (levelBasic.isGameOver()) {
+		if (level.isGameOver()) {
 			gameOverTimer.tick(delta);
 			if (gameOverTimer.isEventReady()) {
-				levelBasic.reset();
+				level.reset();
 
 				getStateMachine().setState((byte) 0);
 				SCORE = 0;
 			}
 		}
 		
-		if (levelBasic.isComplete()) {
+		if (level.isComplete()) {
 			completeTimer.tick(delta);
 			if (completeTimer.isEventReady()) {
-				levelBasic.reset();
+				level.reset();
 			}
 		}
 	}
@@ -66,9 +67,9 @@ public class GameScreen extends SuperStateMachine {
 		g.drawString("PUNTUACION: " + SCORE, 5, 15);
 
 		player.draw(g);
-		levelBasic.draw(g);
+		level.draw(g);
 		
-		if (levelBasic.isGameOver()) {
+		if (level.isGameOver()) {
 			g.setColor(Color.red);
 			g.setFont(gameScreen);
 			String gameOver = "FIN DEL JUEGO MACHO!";
@@ -76,7 +77,7 @@ public class GameScreen extends SuperStateMachine {
 			g.drawString(gameOver, (Display.getWIDTH()/2)-(gameOverWidth/2), Display.getHEIGHT()/2);
 		}
 		
-		if (levelBasic.isComplete()) {
+		if (level.isComplete()) {
 			g.setColor(Color.lightGray);
 			g.setFont(gameScreen);
 			String complete = "NIVEL EXTERMINADO, ERES UN MAJO!";

@@ -6,7 +6,7 @@ public class Main {
         ld.agregar(1);
         ld.agregar(2);
         ld.agregar(3);
-        System.out.println(ld.getCapacidad());
+        System.out.println(ld.capacidad());
         ld.imprimirL();
 
 

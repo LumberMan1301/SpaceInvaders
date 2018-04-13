@@ -13,9 +13,8 @@ import javax.imageio.ImageIO;
 import com.marianoProgra.display.Display;
 
 public class Player implements KeyListener{
-		private final double speed = 5.0d;
+	private final double speed = 5.0d;
 
-	
 	private BufferedImage pSprite;
 	private Rectangle rect;
 	private double xPos, yPos, startXPos, startYPos;

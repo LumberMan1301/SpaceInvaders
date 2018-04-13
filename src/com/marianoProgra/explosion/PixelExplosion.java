@@ -9,7 +9,7 @@ public class PixelExplosion implements ExplosionType{
 	private double[] xPos, yPos, xPosVol, yPosVol, angle, energy;
 	
 	public PixelExplosion(double xPos, double yPos) {
-		int index = 12;
+		int index = 20;
 		this.xPos = new double[index];
 		this.yPos = new double[index];
 		this.xPosVol = new double[index];

@@ -1,6 +1,7 @@
 package com.marianoProgra.enemy_types;
 
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaDoble;
 import com.marianoProgra.Game_Screen.GameScreen;
 import com.marianoProgra.Game_Screen.Player;
 import com.marianoProgra.display.Display;
@@ -45,7 +46,7 @@ public class Jefe extends EnemyType{
     public void update(double delta, Player player) {
         enemySprite.update(delta);
 
-        enemySprite.setxPos(enemySprite.getxPos() - (delta * speed));
+        enemySprite.setxPos(enemySprite.getxPos() + (delta * speed));
         this.getRect().x = (int) enemySprite.getxPos();
 
 
@@ -101,6 +102,30 @@ public class Jefe extends EnemyType{
         return false;
     }
 
+    @Override
+    public boolean collide(int i, Player player, ListaDoble<EnemyType> enemys) {
+        if(enemySprite.isPlay()) {
+            if(enemys.getDato(i).deathScene()) {
+                enemys.eliminarPos(i);
+            }
+            return false;
+        }
+
+        for(int w = 0; w < player.playerWeapons.weapons.size(); w++) {
+
+            if (enemys != null && player.playerWeapons.weapons.get(w).collisionRect(((Jefe) enemys.getDato(i)).getRect())) {
+                this.vida--;
+            }if(vida==0){
+                enemySprite.resetLimit();
+                enemySprite.setAnimationSpeed(120);
+                enemySprite.setPlay(true, true);
+                GameScreen.aumentarSCORE(15);
+                enemys.vaciar();
+                return true;
+            }
+        }
+        return false;
+    }
 
 
     @Override
@@ -108,6 +133,13 @@ public class Jefe extends EnemyType{
         if(rect.x > 0 && rect.x < Display.getWIDTH() - rect.width)
             return false;
         return true;
+    }
+
+    @Override
+    public boolean passPlayer() {
+        if(rect.y > Display.getHEIGHT()-80)
+            return true;
+        return false;
     }
 
     public Rectangle getRect() {
