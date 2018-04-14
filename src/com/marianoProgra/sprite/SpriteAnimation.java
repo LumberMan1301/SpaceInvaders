@@ -10,8 +10,13 @@ import javax.imageio.ImageIO;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 import com.marianoProgra.timer.Timer;
 
+/**
+ * Clase para realizar las diferentes animaciones
+ */
 public class SpriteAnimation {
-
+	/**
+	 * Atributos de la clase
+	 */
 	private Lista<BufferedImage> sprites = new Lista<BufferedImage>();
 	private byte currentSprite;
 
@@ -25,6 +30,15 @@ public class SpriteAnimation {
 	private int width, height;
 	private int limit;
 
+	/**
+	 * Constructor de la clase
+	 * @param xPos
+	 * @param yPos
+	 * @param rows
+	 * @param columns
+	 * @param animationSpeed
+	 * @param imgPath
+	 */
 	public SpriteAnimation(double xPos, double yPos, int rows, int columns, int animationSpeed, String imgPath) {
 		this.animationSpeed = animationSpeed;
 		this.xPos = xPos;
@@ -52,6 +66,10 @@ public class SpriteAnimation {
 		limit = sprites.capacidad() - 1;
 	}
 
+	/**
+	 * metodo para dibujar el objeto
+	 * @param g
+	 */
 	public void draw(Graphics2D g) {
 		if (isSpriteAnimDestroyed())
 			return;
@@ -59,6 +77,10 @@ public class SpriteAnimation {
 		g.drawImage(sprites.getDato(currentSprite), (int) getxPos(), (int) getyPos(), width, height, null);
 	}
 
+	/**
+	 * metoodo para actualizar el objeto
+	 * @param delta
+	 */
 	public void update(double delta) {
 		if (isSpriteAnimDestroyed())
 			return;
@@ -69,17 +91,9 @@ public class SpriteAnimation {
 			playAnimation();
 	}
 
-	public void stopAnimation() {
-		loop = false;
-		play = false;
-	}
-
-	public void resetSprite() {
-		loop = false;
-		play = false;
-		currentSprite = 0;
-	}
-
+	/**
+	 * metodo para rebobinar la animacion
+	 */
 	private void loopAnimation() {
 		if (timer.isTimerReady(animationSpeed) && currentSprite == limit) {
 			currentSprite = 0;
@@ -89,6 +103,9 @@ public class SpriteAnimation {
 		} 
 	}
 
+	/**
+	 * metodo para iniciar la animacion
+	 */
 	private void playAnimation() {
 		if (timer.isTimerReady(animationSpeed) && currentSprite != limit && !isDestoryAfterAnim()) {
 			play = false;
@@ -100,17 +117,11 @@ public class SpriteAnimation {
 		}
 	}
 	
-	public byte getCurrentSprite() {
-		return currentSprite;
-	}
+	/*
+	Getters and Setters
+	 */
 
-	public void setCurrentSprite(byte currentSprite) {
-		this.currentSprite = currentSprite;
-	}
 
-	public boolean isLoop() {
-		return loop;
-	}
 
 	public void setLoop(boolean loop) {
 		this.loop = loop;
@@ -177,17 +188,12 @@ public class SpriteAnimation {
 		this.height = height;
 	}
 
-	public int getAnimationSpeed() {
-		return animationSpeed;
-	}
 
 	public void setAnimationSpeed(int animationSpeed) {
 		this.animationSpeed = animationSpeed;
 	}
 
-	public int getLimit() {
-		return limit;
-	}
+
 
 	public void setLimit(int limit) {
 		if(limit > 0) {

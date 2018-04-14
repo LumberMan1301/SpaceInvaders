@@ -11,13 +11,22 @@ import com.marianoProgra.display.Display;
 import com.marianoProgra.State.StateMachine;
 import com.marianoProgra.State.SuperStateMachine;
 
+/**
+ * Clase para recibir al jugador con un menu
+ */
 public class MenuScreen extends SuperStateMachine implements KeyListener {
-
+	/**
+	 * Atributos de la clase
+	 */
 	private Font tittleFont = new Font("Arial", Font.PLAIN, 64);
 	private Font startFont = new Font("Arial", Font.PLAIN, 32);
 	private String tittle = "Space Invaders";
 	private String start = "Press Enter";
-	
+
+	/**
+	 * Constructor de la clase
+	 * @param stateMachine
+	 */
 	public MenuScreen(StateMachine stateMachine) {
 		super(stateMachine);
 	}

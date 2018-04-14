@@ -9,6 +9,9 @@ import com.marianoProgra.sound.Sound;
 
 import java.awt.*;
 
+/**
+ * Clase de la Hilera tipo A
+ */
 public class ClaseA implements SuperLevel {
     private Player player;
     private Lista<EnemyType> enemies = new Lista<EnemyType>();
@@ -84,10 +87,7 @@ public class ClaseA implements SuperLevel {
         return false;
     }
 
-    @Override
-    public void destory() {
 
-    }
 
     @Override
     public void reset() {
@@ -97,7 +97,9 @@ public class ClaseA implements SuperLevel {
 
 
     }
-
+    /**
+     * metodo para agregar enemigos
+     */
     public void addEnemies() {
         int xpos = (int) Math.floor(Math.random()*10);
         System.out.println(xpos);

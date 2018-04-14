@@ -12,23 +12,29 @@ import com.marianoProgra.State.SuperStateMachine;
 import com.marianoProgra.levels.SuperLevel;
 import com.marianoProgra.timer.TickTimer;
 
-
+/**
+ * Clase para inicializar los valores de player y los respectivos nivlees
+ */
 public class GameScreen extends SuperStateMachine {
 	
 	private Player player;
 	private SuperLevel level;
 
-
+	/**
+	 * atributos de la Clase
+	 */
 	private static int Puntuacion = 0;
 	private static int Nivel = 1;
 	private static double speed = 1.0d;
 	private Font gameScreen = new Font("Berlin Sans FB Demi", Font.PLAIN, 48);
 
-
-
 	private TickTimer gameOverTimer = new TickTimer(180);
 	private TickTimer completeTimer = new TickTimer(180);
-	
+
+	/**
+	 * Constructor de la Clase
+	 * @param stateMachine
+	 */
 	public GameScreen(StateMachine stateMachine){
 		super(stateMachine);
 
@@ -99,10 +105,15 @@ public class GameScreen extends SuperStateMachine {
 		canvas.addKeyListener(player);
 	}
 
+
+	/**
+	 * metodo para aumentar el Score
+	 * @param aumento
+	 */
 	public static void aumentarSCORE(int aumento) {
 		Puntuacion +=aumento;
 	}
-
+// getters y Setters
 	public static int getNivel() {
 		return Nivel;
 	}

@@ -11,10 +11,19 @@ import javax.sound.sampled.DataLine.Info;
 import javax.sound.sampled.LineEvent;
 import javax.sound.sampled.LineListener;
 
+/**
+ * Calse para reproducir sonido
+ */
 public class Sound implements LineListener {
-
+	/**
+	 * Atributos de la clase
+	 */
 	private Clip soundClip;
-	
+
+	/**
+	 * Constructor de la clase
+	 * @param path
+	 */
 	public Sound(String path) {
 		try {
 			URL url = getClass().getResource(path);

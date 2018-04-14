@@ -1,5 +1,8 @@
 package com.marianoProgra.timer;
 
+/**
+ * Clase para controlar el isComplete o is GameOver
+ */
 public class TickTimer {
 
 	private float tick, tickTarget;

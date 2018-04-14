@@ -12,19 +12,28 @@ import javax.imageio.ImageIO;
 
 import com.marianoProgra.display.Display;
 
+/**
+ * Clase de tipo jugador
+ */
 public class Player implements KeyListener{
 	private final double speed = 5.0d;
-
+	/**
+	 * Atributos de la clase
+	 */
 	private BufferedImage pSprite;
 	private Rectangle rect;
 	private double xPos, yPos, startXPos, startYPos;
 	private int width, height;
-
-	
 	private boolean left = false, right = false, shoot = false;
-	
 	public PlayerWeapons playerWeapons;
-	
+
+	/**
+	 * Constructor de la clase
+	 * @param xPos
+	 * @param yPos
+	 * @param width
+	 * @param height
+	 */
 	public Player(double xPos, double yPos, int width, int height){
 		this.xPos = xPos;
 		this.yPos = yPos;
@@ -43,12 +52,20 @@ public class Player implements KeyListener{
 
 		playerWeapons = new PlayerWeapons();
 	}
-	
+
+	/**
+	 * metodo para dibujar el jugador
+	 * @param g
+	 */
 	public void draw(Graphics2D g){
 		g.drawImage(pSprite,(int) xPos,(int) yPos, width, height, null);
 		playerWeapons.draw(g);
 	}
-	
+
+	/**
+	 * metodo para actualizar la pos del jugador
+	 * @param delta
+	 */
 	public void update(double delta){
 		if(right && !left && xPos < Display.getWIDTH()-width){
 			xPos += speed * delta*2;
@@ -64,7 +81,7 @@ public class Player implements KeyListener{
 			playerWeapons.shootBullet(xPos, yPos, 5, 5);
 		}
 	}
-	
+	//metodos propios de KeyEvent
 	@Override
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();

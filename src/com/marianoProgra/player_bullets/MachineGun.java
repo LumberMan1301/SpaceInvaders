@@ -6,11 +6,23 @@ import java.awt.Rectangle;
 
 import com.marianoProgra.display.Display;
 
+/**
+ * Clase deivada, especificamente creada para poder inicializar valores
+ */
 public class MachineGun extends PlayerWeaponType{
-
+	/**
+	 * Atributos de la clase
+	 */
 	private Rectangle bullet;
 	private final double speed = 3.5d;
-	
+
+	/**
+	 * Costructor de la clase
+	 * @param xPos
+	 * @param yPos
+	 * @param width
+	 * @param height
+	 */
 	public MachineGun(double xPos, double yPos, int width,int height){
 		this.setxPos(xPos);
 		this.setyPos(yPos);
@@ -40,18 +52,7 @@ public class MachineGun extends PlayerWeaponType{
 		isOutofBounds();
 	}
 
-	@Override
-	public boolean collisionRect(Rectangle rect) {
-		if(this.bullet == null)
-			return false;
-		
-		if(bullet.intersects(rect)){
-			this.bullet = null;
-			return true;
-		}
-		
-		return false;
-	}
+
 
 
 

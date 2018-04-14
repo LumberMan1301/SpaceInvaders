@@ -7,12 +7,21 @@ import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 import com.marianoProgra.Game_Screen.GameScreen;
 import com.marianoProgra.menu_screen.MenuScreen;
 
+/**
+ * Clase para trabajr en Canvas
+ */
 public class StateMachine {
-
+	/**
+	 * atributos de la clase
+	 */
 	private Lista<SuperStateMachine> states = new Lista<SuperStateMachine>();
 	private Canvas canvas;
 	private byte selectState = 0;
-	
+
+	/**
+	 * constructor de la clase
+	 * @param canvas
+	 */
 	public StateMachine(Canvas canvas){
 		SuperStateMachine game = new GameScreen(this);
 		SuperStateMachine menu = new MenuScreen(this);
@@ -21,15 +30,27 @@ public class StateMachine {
 		
 		this.canvas = canvas;
 	}
-	
+
+	/**
+	 * metodo para dibujar
+	 * @param g
+	 */
 	public void draw(Graphics2D g){
 		states.getDato(selectState).draw(g);
 	}
-	
+
+	/**
+	 * metodo para actualñizar
+	 * @param delta
+	 */
 	public void update(double delta){
 		states.getDato(selectState).update(delta);
 	}
-	
+
+	/**
+	 * metoodo que asigna en estate
+	 * @param i
+	 */
 	public void setState(byte i){
 		for(int r = 0; r < canvas.getKeyListeners().length; r++)
 			canvas.removeKeyListener(canvas.getKeyListeners()[r]);
@@ -37,7 +58,5 @@ public class StateMachine {
 		states.getDato(selectState).init(canvas);
 	}
 
-	public byte getStates() {
-		return selectState;
-	}
+
 }

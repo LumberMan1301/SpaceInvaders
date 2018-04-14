@@ -1,58 +1,84 @@
 package com.marianoProgra.Game_Screen;
 
 import java.awt.Graphics2D;
-import java.util.ArrayList;
 
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 import com.marianoProgra.explosion.ExplosionManager;
 import com.marianoProgra.player_bullets.MachineGun;
 import com.marianoProgra.player_bullets.PlayerWeaponType;
 import com.marianoProgra.sound.Sound;
 import com.marianoProgra.timer.Timer;
 
+/**
+ * Clase que controla las balas del jugador
+ */
 public class PlayerWeapons {
-
+	/**
+	 * Atributos de la Clase
+	 */
 	private Timer timer;
 	private ExplosionManager explosionManager;
-	public ArrayList<PlayerWeaponType> weapons = new ArrayList<PlayerWeaponType>();
+	public Lista<PlayerWeaponType> weapons = new Lista<>();
 	private Sound shootSound;
-	
+
+	/**
+	 * Constructor de la clase
+	 */
 	public PlayerWeapons(){
 		explosionManager = new ExplosionManager();
 		timer = new Timer();
 		shootSound = new Sound("/com/marianoProgra/sounds/shoot.wav");
 	}
-	
+
+	/**
+	 * metodo para dibujas las balas
+	 * @param g
+	 */
 	public void draw(Graphics2D g){
 		
 		explosionManager.draw(g);
-		for(int i = 0; i < weapons.size(); i++){
-			weapons.get(i).draw(g);
+		for(int i = 0; i < weapons.capacidad(); i++){
+			weapons.getDato(i).draw(g);
 		}
 	}
-	
+
+	/**
+	 * metodo para actualiazr las balas
+	 * @param delta
+	 */
 	public void update(double delta){
 		
 		explosionManager.update(delta);
-		for(int i = 0; i < weapons.size(); i++){
-			weapons.get(i).update(delta);
-			if(weapons.get(i).destory()) {
-				ExplosionManager.createPixelExplosion(weapons.get(i).getxPos(), weapons.get(i).getyPos());
-				weapons.remove(i);
+		for(int i = 0; i < weapons.capacidad(); i++){
+			weapons.getDato(i).update(delta);
+			if(weapons.getDato(i).destory()) {
+				ExplosionManager.createPixelExplosion(weapons.getDato(i).getxPos(), weapons.getDato(i).getyPos());
+				weapons.eliminar(i);
 			}
 		}
 	}
-	
+
+	/**
+	 * metodo para controlar la velocidad de las balas
+	 * @param xPos
+	 * @param yPos
+	 * @param width
+	 * @param height
+	 */
 	public void shootBullet(double xPos, double yPos, int width, int height){
 		if(timer.timerEvent(100)) {
 			if (shootSound.isPlaying()) {
 				shootSound.stop();
 			}
 			shootSound.play();
-			weapons.add(new MachineGun(xPos + 22, yPos + 15, width, height));
+			weapons.agregar(new MachineGun(xPos + 22, yPos + 15, width, height));
 		}
 	}
 
+	/**
+	 * metodo para reiniciar el PlayerWeapons
+	 */
 	public void reset() {
-		weapons.clear();
+		weapons.vaciar();
 	}
 }

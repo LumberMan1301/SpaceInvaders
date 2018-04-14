@@ -9,16 +9,23 @@ import com.marianoProgra.enemy_types.Subdito;
 import com.marianoProgra.Game_Screen.Player;
 import com.marianoProgra.sound.Sound;
 
+/**
+ * Clase de la hilera Basica
+ */
 public class Basic implements SuperLevel{
-
+	/**
+	 * Atributos de la clase
+	 */
 	private Player player;
 	private Lista<EnemyType> enemies = new Lista<EnemyType>();
-
 	private Sound beep, boop;
 	private boolean beepboop;
 
 
-	
+	/**
+	 * Contrusctor de la clase
+	 * @param player
+	 */
 	public Basic(Player player){
 		this.player = player;
 
@@ -93,10 +100,7 @@ public class Basic implements SuperLevel{
 		return false;
 	}
 
-	@Override
-	public void destory() {
-		
-	}
+
 
 	@Override
 	public void reset() {
@@ -106,7 +110,10 @@ public class Basic implements SuperLevel{
 		
 
 	}
-	
+
+	/**
+	 * metodo para agregar enemigos
+	 */
 	public void addEnemies() {
 			for (int y = 0; y <1+ GameScreen.getNivel(); y++) {
 				for (int x = 0; x < 10; x++) {

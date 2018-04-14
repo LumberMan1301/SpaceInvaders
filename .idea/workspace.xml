@@ -2,44 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="969bcdf8-55b2-45bc-b325-a2c88aeb745e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/Display/Display.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/Display/Display.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/EstructurasDeDatosLineales/Listas/Lista.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/EstructurasDeDatosLineales/Listas/Lista.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaDoble.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaDoble.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/EstructurasDeDatosLineales/Listas/Main.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/EstructurasDeDatosLineales/Listas/Main.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/EstructurasDeDatosLineales/Nodo/Nodo.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/EstructurasDeDatosLineales/Nodo/Nodo.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/GameScreen.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/GameScreen.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/Player.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/Player.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/PlayerWeapons.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/PlayerWeapons.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/State/StateMachine.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/State/StateMachine.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/State/SuperStateMachine.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/State/SuperStateMachine.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/enemy_types/EnemyType.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/enemy_types/EnemyType.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/enemy_types/Jefe.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/enemy_types/Jefe.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/enemy_types/Subdito.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/enemy_types/Subdito.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/explosion/ExplosionManager.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/explosion/ExplosionManager.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/explosion/ExplosionType.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/explosion/ExplosionType.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/explosion/PixelExplosion.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/explosion/PixelExplosion.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/images/space.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/levels/Basic.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/levels/Basic.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/levels/ClaseA.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/levels/ClaseA.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/levels/ClaseB.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/levels/ClaseB.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/levels/ClaseD.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/levels/ClaseD.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/levels/SuperLevel.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/levels/SuperLevel.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/menu_screen/MenuScreen.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/menu_screen/MenuScreen.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/player_bullets/MachineGun.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/player_bullets/MachineGun.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/player_bullets/PlayerWeaponType.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/player_bullets/PlayerWeaponType.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/sound/Sound.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/sound/Sound.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/sprite/SpriteAnimation.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/sprite/SpriteAnimation.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/timer/TickTimer.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/timer/TickTimer.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/timer/Timer.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/timer/Timer.class" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/Lista.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/Lista.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaDoble.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaDoble.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/display/Display.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/display/Display.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/EnemyType.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/EnemyType.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Jefe.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Jefe.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Subdito.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Subdito.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/explosion/ExplosionManager.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/explosion/ExplosionManager.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/GameScreen.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/GameScreen.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/Player.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/Player.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/PlayerWeapons.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/PlayerWeapons.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/State/StateMachine.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/State/StateMachine.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/State/SuperStateMachine.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/State/SuperStateMachine.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/levels/Basic.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/levels/Basic.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/levels/ClaseA.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/levels/ClaseA.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/levels/SuperLevel.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/levels/SuperLevel.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/menu_screen/MenuScreen.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/menu_screen/MenuScreen.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/player_bullets/MachineGun.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/player_bullets/MachineGun.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/player_bullets/PlayerWeaponType.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/player_bullets/PlayerWeaponType.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/sound/Sound.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/sound/Sound.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/sprite/SpriteAnimation.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/sprite/SpriteAnimation.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/timer/TickTimer.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/timer/TickTimer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,61 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameScreen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/GameScreen.java">
+      <file leaf-file-name="TickTimer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/timer/TickTimer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="63" column="27" lean-forward="false" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2426#2427#0" expanded="true" />
-                <element signature="e#2453#2454#0" expanded="true" />
-                <element signature="e#2486#2487#0" expanded="true" />
-                <element signature="e#2505#2506#0" expanded="true" />
-                <element signature="e#2541#2542#0" expanded="true" />
-                <element signature="e#2560#2561#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SuperLevel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/levels/SuperLevel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="51">
+              <caret line="3" column="51" lean-forward="false" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClaseA.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/levels/ClaseA.java">
+      <file leaf-file-name="Timer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/timer/Timer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="51" column="21" lean-forward="false" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerWeapons.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/PlayerWeapons.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+            <state relative-caret-position="34">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -131,25 +68,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/marianoProgra/sprite/SpriteAnimation.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/enemy_type/EnemyTypeBasic.java" />
-        <option value="$PROJECT_DIR$/src/com/marianoProgra/State/SuperStateMachine.java" />
-        <option value="$PROJECT_DIR$/src/com/marianoProgra/State/StateMachine.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/Display/Display.java" />
-        <option value="$PROJECT_DIR$/src/com/marianoProgra/menu_screen/MenuScreen.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/EnemyTypeBasic.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseB.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseA.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/levels/Level1.java" />
-        <option value="$PROJECT_DIR$/src/com/marianoProgra/player_bullets/MachineGun.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/Main.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/explosion/PixelExplosion.java" />
-        <option value="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/Player.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/levels/ClaseB.java" />
-        <option value="$PROJECT_DIR$/src/com/marianoProgra/levels/ClaseA.java" />
-        <option value="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/PlayerWeapons.java" />
-        <option value="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/GameScreen.java" />
-        <option value="$PROJECT_DIR$/src/com/marianoProgra/levels/Basic.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/display/Display.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/EnemyType.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Subdito.java" />
@@ -157,6 +84,20 @@
         <option value="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/Lista.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaDoble.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/explosion/ExplosionManager.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/GameScreen.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/Player.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/PlayerWeapons.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/levels/SuperLevel.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/levels/Basic.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/levels/ClaseA.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/menu_screen/MenuScreen.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/player_bullets/PlayerWeaponType.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/player_bullets/MachineGun.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/sound/Sound.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/sprite/SpriteAnimation.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/State/SuperStateMachine.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/State/StateMachine.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/timer/TickTimer.java" />
       </list>
     </option>
   </component>
@@ -209,21 +150,7 @@
               <item name="SpaceInvaders" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="marianoProgra" type="462c0819:PsiDirectoryNode" />
-              <item name="explosion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpaceInvaders" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpaceInvaders" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="marianoProgra" type="462c0819:PsiDirectoryNode" />
-              <item name="Game_Screen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpaceInvaders" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpaceInvaders" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="marianoProgra" type="462c0819:PsiDirectoryNode" />
-              <item name="levels" type="462c0819:PsiDirectoryNode" />
+              <item name="timer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -448,7 +375,7 @@
       <workItem from="1523493846717" duration="44771000" />
       <workItem from="1523651101165" duration="2570000" />
       <workItem from="1523653759517" duration="713000" />
-      <workItem from="1523702354510" duration="7566000" />
+      <workItem from="1523702354510" duration="9041000" />
     </task>
     <task id="LOCAL-00001" summary="Comienzo de la introduccion de diferentes tipos de enemigos">
       <created>1523495248235</created>
@@ -492,14 +419,22 @@
       <option name="project" value="LOCAL" />
       <updated>1523653868817</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="JavaDoc">
+      <created>1523711462169</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1523711462170</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57517000" />
+    <option name="totallyTimeSpent" value="58992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -514,7 +449,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -543,7 +478,8 @@
     <MESSAGE value="hemos hecho el swap tio" />
     <MESSAGE value="Ya se muere el Player" />
     <MESSAGE value="Revision General, se detecta una falla&#10;no hace push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revision General, se detecta una falla&#10;no hace push" />
+    <MESSAGE value="JavaDoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="JavaDoc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -552,44 +488,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Subdito.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3848#3849#0" expanded="false" />
-            <element signature="e#3866#3867#0" expanded="false" />
-            <element signature="e#3906#3907#0" expanded="false" />
-            <element signature="e#3929#3930#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/display/Display.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/sprite/SpriteAnimation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="41" column="39" lean-forward="false" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/levels/Basic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2356#2357#0" expanded="false" />
-            <element signature="e#2387#2388#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2482#2483#0" expanded="false" />
+            <element signature="e#2513#2514#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -615,9 +521,9 @@
         <state relative-caret-position="85">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2356#2357#0" expanded="false" />
-            <element signature="e#2387#2388#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2482#2483#0" expanded="false" />
+            <element signature="e#2513#2514#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -632,43 +538,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/enemy_type/EnemyTypeBasic.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/menu_screen/MenuScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/State/SuperStateMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#434#435#0" expanded="false" />
-            <element signature="e#460#461#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/sprite/SpriteAnimation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/enemy_types/ClaseB.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/player_bullets/PlayerWeaponType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Dropbox/AirWar/src/Progra1/enemy_types/EnemyTypeBasic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1428">
@@ -711,14 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/player_bullets/MachineGun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -739,48 +601,6 @@
           <settings layout="Hierarchic Group" zoom="1.0" x="79.5" y="15.0" />
           <SelectedNodes />
           <Categories />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/State/StateMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/GameScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="63" column="27" lean-forward="false" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2426#2427#0" expanded="true" />
-            <element signature="e#2453#2454#0" expanded="true" />
-            <element signature="e#2486#2487#0" expanded="true" />
-            <element signature="e#2505#2506#0" expanded="true" />
-            <element signature="e#2541#2542#0" expanded="true" />
-            <element signature="e#2560#2561#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/PlayerWeapons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/levels/Basic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="121" column="33" lean-forward="false" selection-start-line="121" selection-start-column="33" selection-end-line="121" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,37 +826,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/levels/SuperLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/levels/ClaseA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="51" column="21" lean-forward="false" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/levels/ClaseB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#477#488#0" expanded="true" />
-            <element signature="e#2443#2444#0" expanded="true" />
-            <element signature="e#2471#2472#0" expanded="true" />
-            <element signature="e#3117#3118#0" expanded="true" />
-            <element signature="e#3159#3160#0" expanded="true" />
-            <element signature="e#3192#3193#0" expanded="true" />
-            <element signature="e#3219#3220#0" expanded="true" />
-            <element signature="e#3258#3259#0" expanded="true" />
-            <element signature="e#3282#3283#0" expanded="true" />
+            <element signature="e#477#488#0" expanded="false" />
+            <element signature="e#2443#2444#0" expanded="false" />
+            <element signature="e#2471#2472#0" expanded="false" />
+            <element signature="e#3117#3118#0" expanded="false" />
+            <element signature="e#3159#3160#0" expanded="false" />
+            <element signature="e#3192#3193#0" expanded="false" />
+            <element signature="e#3219#3220#0" expanded="false" />
+            <element signature="e#3258#3259#0" expanded="false" />
+            <element signature="e#3282#3283#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1049,13 +853,216 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/GameScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="115" column="20" lean-forward="false" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#update#0;class#GameScreen#0" expanded="false" />
+            <element signature="method#draw#0;class#GameScreen#0" expanded="false" />
+            <element signature="e#2665#2666#0" expanded="true" />
+            <element signature="e#2692#2693#0" expanded="true" />
+            <element signature="e#2745#2746#0" expanded="true" />
+            <element signature="e#2764#2765#0" expanded="true" />
+            <element signature="e#2800#2801#0" expanded="true" />
+            <element signature="e#2819#2820#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="158">
+          <caret line="83" column="33" lean-forward="false" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Player#0;class#Player#0" expanded="false" />
+            <element signature="method#update#0;class#Player#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#Player#0" expanded="false" />
+            <element signature="method#keyReleased#0;class#Player#0" expanded="false" />
+            <element signature="e#2626#2627#0" expanded="true" />
+            <element signature="e#2644#2645#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/PlayerWeapons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#update#0;class#PlayerWeapons#0" expanded="false" />
+            <element signature="method#shootBullet#0;class#PlayerWeapons#0" expanded="false" />
+            <element signature="e#1923#1924#0" expanded="true" />
+            <element signature="e#1946#1947#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/levels/Basic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="115" column="7" lean-forward="true" selection-start-line="113" selection-start-column="4" selection-end-line="115" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/levels/ClaseA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="101" column="7" lean-forward="false" selection-start-line="101" selection-start-column="7" selection-end-line="101" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/levels/SuperLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="45" column="28" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/menu_screen/MenuScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-526">
+          <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#1561#1562#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/player_bullets/PlayerWeaponType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+          <folding>
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#967#968#0" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1046#1047#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+            <element signature="e#1129#1130#0" expanded="true" />
+            <element signature="e#1156#1157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/player_bullets/MachineGun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-774">
+          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/sound/Sound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="e#1186#1187#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1234#1235#0" expanded="true" />
+            <element signature="e#1279#1280#0" expanded="true" />
+            <element signature="e#1390#1391#0" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/sprite/SpriteAnimation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="120" column="23" lean-forward="false" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
+          <folding>
+            <element signature="e#2882#2883#0" expanded="true" />
+            <element signature="e#2905#2906#0" expanded="true" />
+            <element signature="e#3374#3375#0" expanded="true" />
+            <element signature="e#3392#3393#0" expanded="true" />
+            <element signature="e#3429#3430#0" expanded="true" />
+            <element signature="e#3452#3453#0" expanded="true" />
+            <element signature="e#3480#3481#0" expanded="true" />
+            <element signature="e#3498#3499#0" expanded="true" />
+            <element signature="e#3535#3536#0" expanded="true" />
+            <element signature="e#3558#3559#0" expanded="true" />
+            <element signature="e#3598#3599#0" expanded="true" />
+            <element signature="e#3628#3629#0" expanded="true" />
+            <element signature="e#3690#3691#0" expanded="true" />
+            <element signature="e#3737#3738#0" expanded="true" />
+            <element signature="e#3763#3764#0" expanded="true" />
+            <element signature="e#3782#3783#0" expanded="true" />
+            <element signature="e#3818#3819#0" expanded="true" />
+            <element signature="e#3843#3844#0" expanded="true" />
+            <element signature="e#3870#3871#0" expanded="true" />
+            <element signature="e#3890#3891#0" expanded="true" />
+            <element signature="e#3928#3929#0" expanded="true" />
+            <element signature="e#3955#3956#0" expanded="true" />
+            <element signature="e#4010#4011#0" expanded="true" />
+            <element signature="e#4053#4054#0" expanded="true" />
+            <element signature="e#4207#4208#0" expanded="true" />
+            <element signature="e#4245#4246#0" expanded="true" />
+            <element signature="e#4273#4274#0" expanded="true" />
+            <element signature="e#4291#4292#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/State/StateMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="51" column="15" lean-forward="true" selection-start-line="51" selection-start-column="15" selection-end-line="51" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/State/SuperStateMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/timer/TickTimer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="51" lean-forward="false" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/timer/Timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
