@@ -11,6 +11,9 @@ public class ListaDoble<T>
     private Nodo<T> primero;
     private int capacidad;
 
+    /**
+     * Constructor de la clase
+     */
     public ListaDoble()
     {
         this.primero = null;
@@ -18,6 +21,10 @@ public class ListaDoble<T>
 
     }
 
+    /**
+     * metodo para agregar un valor al final de la lista
+     * @param data
+     */
     public void agregar(T data)
     {
         if (this.capacidad == 0)
@@ -41,6 +48,12 @@ public class ListaDoble<T>
             this.capacidad += 1;
         }
     }
+
+    /**
+     * metodo para agregar un valor en una posicion dada
+     * @param pos
+     * @param dato
+     */
     public void agregar(int pos, T dato){
         if (this.estaVacia()) {
             if (pos==0) {
@@ -81,6 +94,10 @@ public class ListaDoble<T>
         }
     }
 
+    /**
+     * metodo para eliminar una posicion dada
+     * @param posicion
+     */
     public void eliminarPos(int posicion)
     {
         int pos_aux = posicion;
@@ -152,6 +169,11 @@ public class ListaDoble<T>
         }
     }
 
+    /**
+     * metodo para obtener el valor de un nodo en una posicion dada
+     * @param i
+     * @return
+     */
     public T getDato(int i)
     {
         Nodo<T> aux = getPrimero();
@@ -168,6 +190,12 @@ public class ListaDoble<T>
         }
         return (T)aux.getDato();
     }
+
+    /**
+     * metodo para obtener un noodo
+     * @param i
+     * @return
+     */
     public Nodo getNodo(int i)
     {
         Nodo<T> aux = getPrimero();
@@ -222,6 +250,9 @@ public class ListaDoble<T>
         return false;
     }
 
+    /**
+     * metodo para imprimir
+     */
     public void imprimirL() {
         if(this.estaVacia())
             System.out.println("La Lista Esta Vacia");
@@ -235,6 +266,11 @@ public class ListaDoble<T>
         }
     }
 
+    /**
+     * metodo que hace el cambio de posicion
+     * @param pos1
+     * @param pos2
+     */
     public void swap(int pos1, int pos2){
         if(estaVacia())
             return;

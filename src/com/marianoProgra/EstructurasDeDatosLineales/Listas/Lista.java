@@ -209,7 +209,10 @@ public class Lista<T> {
         }
         return aux.getDato();
     }
-    
+
+    /**
+     * metodo para vaciar la lista
+     */
     public void vaciar() {
     	this.setPrimero(null);
     	this.setCapacidad(0);

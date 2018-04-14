@@ -10,15 +10,28 @@ import com.marianoProgra.sprite.SpriteAnimation;
 
 import java.awt.*;
 
+/**
+ * clase derivada de EnemyType, que se encarga de recrear el jefe
+ */
 public class Jefe extends EnemyType{
+    /**
+     * Atributos de la clase
+     */
+    private double speed;//velocidad del enemigo
+    private int vida;// vida del enemigo
+    private Rectangle rect;// variable que nos permite comparar posiciones
+    private SpriteAnimation enemySprite; // variable para almacenar imagenes
+    private Sound explosionSound;//Sonido de la explosion
 
-    private double speed;
-    private int vida;
-    private Rectangle rect;
-    private SpriteAnimation enemySprite;
-
-    private Sound explosionSound;
-
+    /**
+     * Constructor de la Clase Jefe
+     * @param xPos
+     * @param yPos
+     * @param rows
+     * @param columns
+     * @param vida
+     * @param speed
+     */
     public Jefe(double xPos, double yPos, int rows, int columns, int vida, double speed){
 
         this.vida = vida;
@@ -142,10 +155,18 @@ public class Jefe extends EnemyType{
         return false;
     }
 
+    /**
+     * metodo para obtener el rectangulo
+     * @return
+     */
     public Rectangle getRect() {
         return rect;
     }
 
+    /**
+     * metodo para definir el rectangulo
+     * @param rect
+     */
     public void setRect(Rectangle rect) {
         this.rect = rect;
     }

@@ -4,12 +4,31 @@ import java.awt.*;
 import java.awt.image.BufferStrategy;
 
 import javax.swing.*;
-
+/**
+ * Clase Display, en esta clase se crea el JFrame va a contener el canvas
+ */
 import com.marianoProgra.State.StateMachine;
 
 public class Display extends Canvas implements Runnable {
-
+	/**
+	 * atributo propio de Runnable
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * atributos
+	 * running: este nos dice si la aplicacion esta ejecutandose
+	 * thread: este nos dividir el tiempo de procesador para varias tareas
+	 * WIDTH y HEIGHT son las variables para el tamaño de la ventana
+	 * FPS: es una variable que nos permite controlar cuando el programa esta consumiendo demasiados recursos
+	 */
+
+	private boolean running = false;
+	private Thread thread;
+	private static int WIDTH = (int)(Toolkit.getDefaultToolkit().getScreenSize().width)-50;;
+	private static int HEIGHT = (int)(Toolkit.getDefaultToolkit().getScreenSize().height)-80;;
+	private int FPS;
+
+	private static StateMachine state;
 
 
 	public static void main(String[] args) {
@@ -26,9 +45,10 @@ public class Display extends Canvas implements Runnable {
 
 	}
 
-	private boolean running = false;
-	private Thread thread;
 
+	/**
+	 * metodo que inicia la ejecucion de los threads
+	 */
 	public synchronized void start() {
 		if (running)
 			return;
@@ -39,25 +59,10 @@ public class Display extends Canvas implements Runnable {
 		thread.start();
 	}
 
-	public synchronized void stop() {
-		if (!running)
-			return;
-
-		running = false;
-
-		try {
-			thread.join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-	private static int WIDTH = (int)(Toolkit.getDefaultToolkit().getScreenSize().width)-50;;
-	private static int HEIGHT = (int)(Toolkit.getDefaultToolkit().getScreenSize().height)-80;;
-
-	private int FPS;
-
-	private static StateMachine state;
-
+	/**
+	 * constructor de la clase Display
+	 *
+	 */
 	public Display() {
 		this.setSize(WIDTH, HEIGHT);
 		this.setFocusable(true);
@@ -66,6 +71,9 @@ public class Display extends Canvas implements Runnable {
 		state.setState((byte) 0); 
 	}
 
+	/**
+	 * metodo propio de la clase Runnable
+	 */
 	@Override
 	public void run() {
 		long timer = System.currentTimeMillis();
@@ -102,6 +110,10 @@ public class Display extends Canvas implements Runnable {
 		}
 	}
 
+	/**
+	 * metodo para dibujar sobre el Jframe
+	 * @param bs
+	 */
 	public void draw(BufferStrategy bs) {
 		do {
 			do {
@@ -117,14 +129,26 @@ public class Display extends Canvas implements Runnable {
 		} while (bs.contentsLost());
 	}
 
+	/**
+	 * metodo que actualiza la pantalla
+	 * @param delta
+	 */
 	public void update(double delta) {
 		state.update(delta);
 	}
 
+	/**
+	 * metodo que obtiene el ancho de la pantalla
+	 * @return WIDTH
+	 */
 	public static int getWIDTH() {
 		return WIDTH;
 	}
 
+	/**
+	 * metodo que obtiene el alto de la pantalla
+	 * @return HEIGHT
+	 */
 	public static int getHEIGHT() {
 		return HEIGHT;
 	}

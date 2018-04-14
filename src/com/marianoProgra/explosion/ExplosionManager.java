@@ -4,6 +4,9 @@ import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 
 import java.awt.Graphics2D;
 
+/**
+ * Clase para el control de explosiones, su precencia no afecta el curso normal edl juego
+ */
 public class ExplosionManager {
 
 	private static Lista<ExplosionType> explosions = new Lista<ExplosionType>();

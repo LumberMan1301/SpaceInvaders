@@ -15,12 +15,14 @@ import com.marianoProgra.sprite.SpriteAnimation;
 
 public class Subdito extends EnemyType{
 
-	private double speed;
-	private int vida;
-	private Rectangle rect;
-	private SpriteAnimation enemySprite;
-
-	private Sound explosionSound;
+	/**
+	 * Atributos de la clase
+	 */
+	private double speed;//velocidad del enemigo
+	private int vida;// vida del enemigo
+	private Rectangle rect;// variable que nos permite comparar posiciones
+	private SpriteAnimation enemySprite; // variable para almacenar imagenes
+	private Sound explosionSound;//Sonido de la explosion
 	
 	public Subdito(double xPos, double yPos, int rows, int columns, int vida, double speed){
 
