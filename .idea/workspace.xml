@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="969bcdf8-55b2-45bc-b325-a2c88aeb745e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/GameScreen.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/GameScreen.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/Player.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/Player.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/PlayerWeapons.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/PlayerWeapons.class" />
-    </list>
+    <list default="true" id="969bcdf8-55b2-45bc-b325-a2c88aeb745e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -137,7 +132,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -411,7 +406,7 @@
       <workItem from="1523492762112" duration="1045000" />
       <workItem from="1523493846717" duration="44771000" />
       <workItem from="1523651101165" duration="2570000" />
-      <workItem from="1523653759517" duration="122000" />
+      <workItem from="1523653759517" duration="711000" />
     </task>
     <task id="LOCAL-00001" summary="Comienzo de la introduccion de diferentes tipos de enemigos">
       <created>1523495248235</created>
@@ -459,10 +454,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49360000" />
+    <option name="totallyTimeSpent" value="49949000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
