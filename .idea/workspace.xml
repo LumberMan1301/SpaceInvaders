@@ -2,38 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="969bcdf8-55b2-45bc-b325-a2c88aeb745e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/marianoProgra/images/Jefe.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/marianoProgra/images/Subdito.png" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/GameScreen.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/GameScreen.class" />
       <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/Player.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/Player.class" />
       <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/PlayerWeapons.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/PlayerWeapons.class" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/GameScreen.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/GameScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/Player.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/Player.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/PlayerWeapons.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/PlayerWeapons.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/State/StateMachine.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/State/StateMachine.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/State/SuperStateMachine.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/State/SuperStateMachine.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/display/Display.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/display/Display.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/EnemyType.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/EnemyType.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Jefe.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Jefe.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Subdito.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Subdito.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/explosion/ExplosionManager.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/explosion/ExplosionManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/explosion/ExplosionType.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/explosion/ExplosionType.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/explosion/PixelExplosion.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/explosion/PixelExplosion.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/levels/Basic.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/levels/Basic.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/levels/ClaseA.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/levels/ClaseA.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/levels/SuperLevel.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/levels/SuperLevel.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/menu_screen/MenuScreen.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/menu_screen/MenuScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/player_bullets/MachineGun.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/player_bullets/MachineGun.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/player_bullets/PlayerWeaponType.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/player_bullets/PlayerWeaponType.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/sound/Sound.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/sound/Sound.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/sprite/SpriteAnimation.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/sprite/SpriteAnimation.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/timer/TickTimer.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/timer/TickTimer.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/timer/Timer.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/timer/Timer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -165,7 +137,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -439,7 +411,7 @@
       <workItem from="1523492762112" duration="1045000" />
       <workItem from="1523493846717" duration="44771000" />
       <workItem from="1523651101165" duration="2570000" />
-      <workItem from="1523653759517" duration="87000" />
+      <workItem from="1523653759517" duration="122000" />
     </task>
     <task id="LOCAL-00001" summary="Comienzo de la introduccion de diferentes tipos de enemigos">
       <created>1523495248235</created>
@@ -476,14 +448,21 @@
       <option name="project" value="LOCAL" />
       <updated>1523614785153</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Revision General, se detecta una falla&#10;no hace push">
+      <created>1523653868817</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1523653868817</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49325000" />
+    <option name="totallyTimeSpent" value="49360000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -565,6 +544,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -584,6 +566,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -613,6 +596,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -620,6 +604,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="41" column="39" lean-forward="false" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -639,6 +624,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -646,6 +632,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -675,6 +662,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -707,6 +695,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1045">
           <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -715,6 +704,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -752,6 +742,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
           <caret line="182" column="28" lean-forward="false" selection-start-line="182" selection-start-column="28" selection-end-line="182" selection-end-column="28" />
+          <folding>
+            <element signature="e#4779#4780#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -759,6 +752,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -766,6 +760,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -773,6 +768,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -780,6 +778,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -824,6 +823,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-16">
           <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -831,6 +833,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
           <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -876,6 +879,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-422">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -895,6 +901,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="48" column="51" lean-forward="false" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4228#4229#0" expanded="true" />
+            <element signature="e#4255#4256#0" expanded="true" />
+            <element signature="e#4298#4299#0" expanded="true" />
+            <element signature="e#4330#4331#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
