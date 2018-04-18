@@ -98,10 +98,8 @@ public class ClaseB implements SuperLevel {
         return false;
     }
 
-    @Override
-    public void destory() {
 
-    }
+
 
     @Override
     public void reset() {

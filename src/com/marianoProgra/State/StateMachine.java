@@ -36,7 +36,7 @@ public class StateMachine {
 	 * @param g
 	 */
 	public void draw(Graphics2D g){
-		states.getDato(selectState).draw(g);
+		states.getData(selectState).draw(g);
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class StateMachine {
 	 * @param delta
 	 */
 	public void update(double delta){
-		states.getDato(selectState).update(delta);
+		states.getData(selectState).update(delta);
 	}
 
 	/**
@@ -55,7 +55,7 @@ public class StateMachine {
 		for(int r = 0; r < canvas.getKeyListeners().length; r++)
 			canvas.removeKeyListener(canvas.getKeyListeners()[r]);
 		selectState = i;
-		states.getDato(selectState).init(canvas);
+		states.getData(selectState).init(canvas);
 	}
 
 

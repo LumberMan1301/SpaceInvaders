@@ -38,7 +38,7 @@ public class PlayerWeapons {
 		
 		explosionManager.draw(g);
 		for(int i = 0; i < weapons.capacidad(); i++){
-			weapons.getDato(i).draw(g);
+			weapons.getData(i).draw(g);
 		}
 	}
 
@@ -50,9 +50,9 @@ public class PlayerWeapons {
 		
 		explosionManager.update(delta);
 		for(int i = 0; i < weapons.capacidad(); i++){
-			weapons.getDato(i).update(delta);
-			if(weapons.getDato(i).destory()) {
-				ExplosionManager.createPixelExplosion(weapons.getDato(i).getxPos(), weapons.getDato(i).getyPos());
+			weapons.getData(i).update(delta);
+			if(weapons.getData(i).destory()) {
+				ExplosionManager.createPixelExplosion(weapons.getData(i).getxPos(), weapons.getData(i).getyPos());
 				weapons.eliminar(i);
 			}
 		}
@@ -80,5 +80,9 @@ public class PlayerWeapons {
 	 */
 	public void reset() {
 		weapons.vaciar();
+	}
+
+	public Lista<PlayerWeaponType> getWeapons() {
+		return weapons;
 	}
 }

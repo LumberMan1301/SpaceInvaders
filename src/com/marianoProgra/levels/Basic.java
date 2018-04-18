@@ -41,7 +41,7 @@ public class Basic implements SuperLevel{
 			return;
 		
 		for(int i = 0; i < enemies.capacidad(); i++){
-			enemies.getDato(i).draw(g);
+			enemies.getData(i).draw(g);
 		}
 
 	}
@@ -52,10 +52,10 @@ public class Basic implements SuperLevel{
 			return;
 		
 		for(int i = 0; i < enemies.capacidad(); i++){
-			enemies.getDato(i).update(delta, player);
+			enemies.getData(i).update(delta, player);
 		}
 		for(int i = 0; i < enemies.capacidad(); i++){
-			enemies.getDato(i).collide(i, player, enemies);
+			enemies.getData(i).collide(i, player, enemies);
 		}
 		hasDirectionChange(delta);
 
@@ -68,7 +68,7 @@ public class Basic implements SuperLevel{
 			return;
 		
 		for(int i = 0; i < enemies.capacidad(); i++){
-			if(enemies.getDato(i).isOutOfBounds()){
+			if(enemies.getData(i).isOutOfBounds()){
 				changeDurectionAllEnemys(delta);
 				isGameOver();
 			}
@@ -79,7 +79,7 @@ public class Basic implements SuperLevel{
 	@Override
 	public void changeDurectionAllEnemys(double delta) {
 		for(int i = 0; i < enemies.capacidad(); i++){
-			enemies.getDato(i).changeDirection(delta);
+			enemies.getData(i).changeDirection(delta);
 		}
 		if (beepboop) {
 			beepboop = false;
@@ -94,7 +94,7 @@ public class Basic implements SuperLevel{
 	@Override
 	public boolean isGameOver() {
 		for(int i =0; i<enemies.capacidad();i++){
-			if(enemies.getDato(i).passPlayer())
+			if(enemies.getData(i).passPlayer())
 				return true;
 		}
 		return false;

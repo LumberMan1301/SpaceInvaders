@@ -200,7 +200,7 @@ public class Lista<T> {
      * @param i
      * @return Dato
      */
-    public T getDato(int i){
+    public T getData(int i){
         Nodo<T> aux = this.getPrimero();
         int x = 0;
         while(x != i){

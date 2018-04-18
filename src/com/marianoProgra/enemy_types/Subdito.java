@@ -41,12 +41,10 @@ public class Subdito extends EnemyType{
 
 		explosionSound = new Sound("/com/marianoProgra/sounds/explosion.wav");
 	}
-	
 	@Override
 	public void draw(Graphics2D g) {
 		enemySprite.draw(g);
 	}
-
 	@Override
 	public void update(double delta, Player player) {
 		enemySprite.update(delta);
@@ -56,7 +54,6 @@ public class Subdito extends EnemyType{
 		
 
 	}
-
 	@Override
 	public void changeDirection(double delta) {
 		speed *= -1.15d;
@@ -66,7 +63,6 @@ public class Subdito extends EnemyType{
 		enemySprite.setyPos(enemySprite.getyPos() + (delta * 25));
 		this.getRect().y = (int) enemySprite.getyPos();
 	}
-
 	@Override
 	public boolean deathScene() {
 		if(!enemySprite.isPlay())
@@ -81,20 +77,16 @@ public class Subdito extends EnemyType{
 		
 		return false;
 	}
-
 	@Override
 	public boolean collide(int i, Player player, Lista<EnemyType> enemys) {
 		if(enemySprite.isPlay()) {
-			if(enemys.getDato(i).deathScene()) {
+			if(enemys.getData(i).deathScene()) {
 				enemys.eliminar(i);
-
 			}
 			return false;
 		}
-
-		for(int w = 0; w < player.playerWeapons.weapons.size(); w++) {
-
-				if (enemys != null && player.playerWeapons.weapons.get(w).collisionRect(((Subdito) enemys.getDato(i)).getRect())) {
+		for(int w = 0; w < player.playerWeapons.weapons.capacidad(); w++) {
+				if (enemys != null && player.playerWeapons.weapons.getData(w).collisionRect(((Subdito) enemys.getData(i)).getRect())) {
 					this.vida--;
 				}if(vida==0){
 					enemySprite.resetLimit();
@@ -102,12 +94,10 @@ public class Subdito extends EnemyType{
 					enemySprite.setPlay(true, true);
 					GameScreen.aumentarSCORE(5);
 					return true;
-
 			}
-			}
+		}
 		return false;
 	}
-
 	@Override
 	public boolean collide(int i, Player player, ListaDoble<EnemyType> enemys) {
 		if(enemySprite.isPlay()) {
@@ -116,10 +106,8 @@ public class Subdito extends EnemyType{
 			}
 			return false;
 		}
-
-		for(int w = 0; w < player.playerWeapons.weapons.size(); w++) {
-
-			if (enemys != null && player.playerWeapons.weapons.get(w).collisionRect(((Subdito) enemys.getDato(i)).getRect())) {
+		for(int w = 0; w < player.playerWeapons.weapons.capacidad(); w++) {
+			if (enemys != null && player.playerWeapons.weapons.getData(w).collisionRect(((Subdito) enemys.getDato(i)).getRect())) {
 				this.vida--;
 			}if(vida==0){
 				enemySprite.resetLimit();
@@ -128,33 +116,27 @@ public class Subdito extends EnemyType{
 				GameScreen.aumentarSCORE(8);
 				ClaseB.setCant(ClaseB.getCant()-1);
 				return true;
-
 			}
 		}
 		return false;
 	}
-
-
 	@Override
 	public boolean isOutOfBounds() {
 		if(rect.x > 0 && rect.x < Display.getWIDTH() - rect.width)
 			return false;
 		return true;
 	}
-
 	@Override
 	public boolean passPlayer() {
 		if(rect.y > Display.getHEIGHT()-80)
 			return true;
 		return false;
 	}
-
+//###########Getters y Setters#############################################
 	public Rectangle getRect() {
 		return rect;
 	}
-
 	public void setRect(Rectangle rect) {
 		this.rect = rect;
 	}
-
 }

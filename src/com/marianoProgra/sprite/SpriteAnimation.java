@@ -74,7 +74,7 @@ public class SpriteAnimation {
 		if (isSpriteAnimDestroyed())
 			return;
 		
-		g.drawImage(sprites.getDato(currentSprite), (int) getxPos(), (int) getyPos(), width, height, null);
+		g.drawImage(sprites.getData(currentSprite), (int) getxPos(), (int) getyPos(), width, height, null);
 	}
 
 	/**

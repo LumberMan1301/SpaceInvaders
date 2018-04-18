@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
 
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 import com.marianoProgra.display.Display;
 import com.marianoProgra.levels.Basic;
 import com.marianoProgra.State.StateMachine;
@@ -30,6 +31,8 @@ public class GameScreen extends SuperStateMachine {
 
 	private TickTimer gameOverTimer = new TickTimer(180);
 	private TickTimer completeTimer = new TickTimer(180);
+
+	private Lista<SuperLevel> leves = new Lista <>();
 
 	/**
 	 * Constructor de la Clase

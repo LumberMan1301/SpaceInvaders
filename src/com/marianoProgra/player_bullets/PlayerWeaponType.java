@@ -37,6 +37,8 @@ public abstract class PlayerWeaponType {
 	 */
 	protected abstract void isOutofBounds();
 
+	public abstract boolean collisionRect(Rectangle rect);
+
 	/**
 	 * Getters Y Setters
 	 *

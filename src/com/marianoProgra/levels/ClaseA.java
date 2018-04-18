@@ -34,7 +34,7 @@ public class ClaseA implements SuperLevel {
             return;
 
         for(int i = 0; i < enemies.capacidad(); i++){
-            enemies.getDato(i).draw(g);
+            enemies.getData(i).draw(g);
         }
 
     }
@@ -45,10 +45,10 @@ public class ClaseA implements SuperLevel {
             return;
 
         for(int i = 0; i < enemies.capacidad(); i++){
-            enemies.getDato(i).update(delta, player);
+            enemies.getData(i).update(delta, player);
         }
         for(int i = 0; i < enemies.capacidad(); i++){
-            enemies.getDato(i).collide(i, player, enemies);
+            enemies.getData(i).collide(i, player, enemies);
         }
         hasDirectionChange(delta);
         enemies.vaciar();
@@ -62,7 +62,7 @@ public class ClaseA implements SuperLevel {
             return;
 
         for(int i = 0; i < enemies.capacidad(); i++){
-            if(enemies.getDato(i).isOutOfBounds()){
+            if(enemies.getData(i).isOutOfBounds()){
                 changeDurectionAllEnemys(delta);
             }
         }
@@ -71,7 +71,7 @@ public class ClaseA implements SuperLevel {
     @Override
     public void changeDurectionAllEnemys(double delta) {
         for(int i = 0; i < enemies.capacidad(); i++){
-            enemies.getDato(i).changeDirection(delta);
+            enemies.getData(i).changeDirection(delta);
         }
         if (beepboop) {
             beepboop = false;

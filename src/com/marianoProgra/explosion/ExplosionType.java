@@ -3,9 +3,7 @@ package com.marianoProgra.explosion;
 import java.awt.Graphics2D;
 
 public interface ExplosionType {
-
-	public void draw(Graphics2D g);
-	public void update(double delta);
-	
-	public boolean destory();
+	void draw(Graphics2D g);
+	void update(double delta);
+	boolean destory();
 }

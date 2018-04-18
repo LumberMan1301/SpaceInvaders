@@ -76,4 +76,18 @@ public class MachineGun extends PlayerWeaponType{
 		}
 	}
 
+	@Override
+	public boolean collisionRect(Rectangle rect) {
+		if(this.bullet == null)
+			return false;
+
+		if(bullet.intersects(rect)){
+			this.bullet = null;
+			return true;
+		}
+
+
+		return false;
+	}
+
 }

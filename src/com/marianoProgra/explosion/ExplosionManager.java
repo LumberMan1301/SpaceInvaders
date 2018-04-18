@@ -13,14 +13,14 @@ public class ExplosionManager {
 	
 	public void draw (Graphics2D g) {
 		for (int i = 0; i < explosions.capacidad(); i++) {
-			explosions.getDato(i).draw(g);
+			explosions.getData(i).draw(g);
 		}
 	}
 	
 	public void update(double delta) {
 		for (int i = 0; i < explosions.capacidad(); i++) {
-			explosions.getDato(i).update(delta);
-			if(explosions.getDato(i).destory()) {
+			explosions.getData(i).update(delta);
+			if(explosions.getData(i).destory()) {
 				explosions.eliminar(i);
 			}
 		}

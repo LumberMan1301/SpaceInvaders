@@ -1,15 +1,14 @@
 package com.marianoProgra.display;
-
+//#############Importaciones###########################
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-
 import javax.swing.*;
+import com.marianoProgra.State.StateMachine;
 /**
  * Clase Display, en esta clase se crea el JFrame va a contener el canvas
  */
-import com.marianoProgra.State.StateMachine;
-
 public class Display extends Canvas implements Runnable {
+//#########################Atributos######################################################
 	/**
 	 * atributo propio de Runnable
 	 */
@@ -21,7 +20,6 @@ public class Display extends Canvas implements Runnable {
 	 * WIDTH y HEIGHT son las variables para el tamaño de la ventana
 	 * FPS: es una variable que nos permite controlar cuando el programa esta consumiendo demasiados recursos
 	 */
-
 	private boolean running = false;
 	private Thread thread;
 	private static int WIDTH = (int)(Toolkit.getDefaultToolkit().getScreenSize().width)-50;;
@@ -29,8 +27,11 @@ public class Display extends Canvas implements Runnable {
 	private int FPS;
 
 	private static StateMachine state;
-
-
+//#####################Metodos###########################################################
+	/**
+	 *metodo ejecutable
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Display display = new Display();
 		JFrame frame = new JFrame();
@@ -40,39 +41,32 @@ public class Display extends Canvas implements Runnable {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
 		frame.setVisible(true);
-
 		display.start();
-
 	}
-
-
-	/**
-	 * metodo que inicia la ejecucion de los threads
-	 */
-	public synchronized void start() {
-		if (running)
-			return;
-
-		running = true;
-
-		thread = new Thread(this);
-		thread.start();
-	}
-
 	/**
 	 * constructor de la clase Display
-	 *
 	 */
 	public Display() {
 		this.setSize(WIDTH, HEIGHT);
 		this.setFocusable(true);
 
 		state = new StateMachine(this);
-		state.setState((byte) 0); 
+		state.setState((byte) 0);
 	}
-
+	/**
+	 * metodo que inicia la ejecucion de los threads
+	 */
+	public synchronized void start() {
+		if (running)
+			return;
+		running = true;
+		thread = new Thread(this);
+		thread.start();
+	}
 	/**
 	 * metodo propio de la clase Runnable
+     * este metodo esta asociado al manejo de los hilos, es el encargado de administrar
+     * el tiempo dado a cada hilo
 	 */
 	@Override
 	public void run() {
@@ -81,7 +75,6 @@ public class Display extends Canvas implements Runnable {
 		final int TARGET_FPS = 60;
 		final long OPTIMAL_TIME = 1000000000 / TARGET_FPS;
 		int frames = 0;
-
 		this.createBufferStrategy(3);
 		BufferStrategy bs = this.getBufferStrategy();
 		while (running) {
@@ -89,27 +82,17 @@ public class Display extends Canvas implements Runnable {
 			long updateLength = now - lastLoopTime;
 			lastLoopTime = now;
 			double delta = updateLength / ((double) OPTIMAL_TIME);
-
 			frames++;
-
 			if (System.currentTimeMillis() - timer > 1000) {
 				timer += 1000;
 				FPS = frames;
 				frames = 0;
-
 			}
-
 			draw(bs);
 			update(delta);
-
-			try {
-				Thread.sleep(((lastLoopTime - System.nanoTime()) + OPTIMAL_TIME) / 1000000);
-			} catch (Exception e) {
-			}
-			;
+			try {Thread.sleep(((lastLoopTime - System.nanoTime()) + OPTIMAL_TIME) / 1000000);} catch (Exception e){}
 		}
 	}
-
 	/**
 	 * metodo para dibujar sobre el Jframe
 	 * @param bs
@@ -120,15 +103,12 @@ public class Display extends Canvas implements Runnable {
 				Graphics2D g = (Graphics2D) bs.getDrawGraphics();
 				g.setColor(Color.BLACK);
 				g.fillRect(0, 0, WIDTH + 50, HEIGHT + 50);
-				
 				state.draw(g);
-
 				g.dispose();
 			} while (bs.contentsRestored());
 			bs.show();
 		} while (bs.contentsLost());
 	}
-
 	/**
 	 * metodo que actualiza la pantalla
 	 * @param delta
@@ -136,7 +116,7 @@ public class Display extends Canvas implements Runnable {
 	public void update(double delta) {
 		state.update(delta);
 	}
-
+//############ Getters y Setters##########################################
 	/**
 	 * metodo que obtiene el ancho de la pantalla
 	 * @return WIDTH
@@ -144,7 +124,6 @@ public class Display extends Canvas implements Runnable {
 	public static int getWIDTH() {
 		return WIDTH;
 	}
-
 	/**
 	 * metodo que obtiene el alto de la pantalla
 	 * @return HEIGHT
