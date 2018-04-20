@@ -1,6 +1,6 @@
 package com.marianoProgra.enemy_types;
 
-import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaSimple;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaDoble;
 import com.marianoProgra.Game_Screen.GameScreen;
 import com.marianoProgra.Game_Screen.Player;
@@ -71,14 +71,14 @@ public class Jefe extends EnemyType{
         return false;
     }
     @Override
-    public boolean collide(int i, Player player, Lista<EnemyType> enemys) {
+    public boolean collide(int i, Player player, ListaSimple<EnemyType> enemys) {
         if(enemySprite.isPlay()) {
             if(enemys.getData(i).deathScene()) {
                 enemys.eliminar(i);
             }
             return false;
         }
-        for(int w = 0; w < player.playerWeapons.weapons.capacidad(); w++) {
+        for(int w = 0; w < player.playerWeapons.weapons.getCapacidad(); w++) {
             if (enemys != null && player.playerWeapons.weapons.getData(w).collisionRect(((Jefe) enemys.getData(i)).getRect())) {
                 this.vida--;
             }if(vida==0){
@@ -95,13 +95,13 @@ public class Jefe extends EnemyType{
     @Override
     public boolean collide(int i, Player player, ListaDoble<EnemyType> enemys) {
         if(enemySprite.isPlay()) {
-            if(enemys.getDato(i).deathScene()) {
+            if(enemys.obtenerDato(i).deathScene()) {
                 enemys.eliminarPos(i);
             }
             return false;
         }
-        for(int w = 0; w < player.playerWeapons.weapons.capacidad(); w++) {
-            if (enemys != null && player.playerWeapons.getWeapons().getData(w).collisionRect(((Jefe) enemys.getDato(i)).getRect())) {
+        for(int w = 0; w < player.playerWeapons.weapons.getCapacidad(); w++) {
+            if (enemys != null && player.playerWeapons.getWeapons().getData(w).collisionRect(((Jefe) enemys.obtenerDato(i)).getRect())) {
                 this.vida--;
             }if(vida==0){
                 enemySprite.resetLimit();

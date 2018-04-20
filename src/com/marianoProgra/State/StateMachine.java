@@ -3,7 +3,7 @@ package com.marianoProgra.State;
 import java.awt.Canvas;
 import java.awt.Graphics2D;
 
-import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaSimple;
 import com.marianoProgra.Game_Screen.GameScreen;
 import com.marianoProgra.menu_screen.MenuScreen;
 
@@ -14,7 +14,7 @@ public class StateMachine {
 	/**
 	 * atributos de la clase
 	 */
-	private Lista<SuperStateMachine> states = new Lista<SuperStateMachine>();
+	private ListaSimple<SuperStateMachine> states = new ListaSimple<SuperStateMachine>();
 	private Canvas canvas;
 	private byte selectState = 0;
 

@@ -1,4 +1,4 @@
-package com.marianoProgra.levels;
+package com.marianoProgra.hileras;
 
 import java.awt.Graphics2D;
 
@@ -6,6 +6,8 @@ import java.awt.Graphics2D;
  * Interface para la creacion de Hileras
  */
 public interface SuperLevel {
+
+	String nombre = null;
 	/**
 	 * metodo para dibujar las hileras
 	 * @param g
@@ -46,4 +48,6 @@ public interface SuperLevel {
 	 * metodo para reiniciar
 	 */
 	void reset();
+
+	String getNombre();
 }

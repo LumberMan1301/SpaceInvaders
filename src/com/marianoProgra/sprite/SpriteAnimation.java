@@ -7,7 +7,7 @@ import java.net.URL;
 
 import javax.imageio.ImageIO;
 
-import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaSimple;
 import com.marianoProgra.timer.Timer;
 
 /**
@@ -17,7 +17,7 @@ public class SpriteAnimation {
 	/**
 	 * Atributos de la clase
 	 */
-	private Lista<BufferedImage> sprites = new Lista<BufferedImage>();
+	private ListaSimple<BufferedImage> sprites = new ListaSimple<BufferedImage>();
 	private byte currentSprite;
 
 	private boolean loop = false;
@@ -63,7 +63,7 @@ public class SpriteAnimation {
 		}catch(IOException e){};
 
 		timer = new Timer();
-		limit = sprites.capacidad() - 1;
+		limit = sprites.getCapacidad() - 1;
 	}
 
 	/**
@@ -204,7 +204,7 @@ public class SpriteAnimation {
 	}
 	
 	public void resetLimit() {
-		limit = sprites.capacidad() - 1;
+		limit = sprites.getCapacidad() - 1;
 	}
 
 	public boolean isPlay() {
