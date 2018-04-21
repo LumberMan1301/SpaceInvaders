@@ -1,9 +1,13 @@
 package com.marianoProgra.enemy_types;
 //###############Importaciones###########################################
 import java.awt.Graphics2D;
+<<<<<<< HEAD
 
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaCircular;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaSimple;
+=======
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
+>>>>>>> parent of 47cbb82... Trabajando en la Clase D
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaDoble;
 import com.marianoProgra.Game_Screen.Player;
 /**
@@ -38,8 +42,12 @@ public abstract class EnemyType {
 	 * @param enemys
 	 * @return
 	 */
+<<<<<<< HEAD
 	public abstract boolean collide(int i, Player player, ListaSimple<EnemyType> enemys);
 
+=======
+	public abstract boolean collide(int i, Player player, Lista<EnemyType> enemys);
+>>>>>>> parent of 47cbb82... Trabajando en la Clase D
 	/**
 	 * metodo para saber si hubo una colision con el Jefe
 	 * @param i

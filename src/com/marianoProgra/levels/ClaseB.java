@@ -1,4 +1,4 @@
-package com.marianoProgra.hileras;
+package com.marianoProgra.levels;
 
 
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaDoble;
@@ -16,15 +16,18 @@ public class ClaseB implements SuperLevel {
 
     private Sound beep, boop;
     private boolean beepboop;
-
-    private int posR = (int) Math.floor((Math.random()*4)+1);
     private int posJefe = (int) Math.floor(Math.random()*10);
+    private int posR = (int) Math.floor((Math.random()*4)+1);
 
-
+    private static int x2 = 0;
+    private static int flag = 0;
+    private static int cant = 10;
 
     public ClaseB(Player player){
         this.player = player;
+
         addEnemies();
+
         beep = new Sound("/com/marianoProgra/sounds/beep.wav");
         boop = new Sound("/com/marianoProgra/sounds/boop.wav");
     }
@@ -33,9 +36,11 @@ public class ClaseB implements SuperLevel {
     public void draw(Graphics2D g) {
         if(enemies == null)
             return;
+
         for(int i = 0; i < enemies.capacidad(); i++){
-            enemies.obtenerDato(i).draw(g);
+            enemies.getDato(i).draw(g);
         }
+
     }
 
     @Override
@@ -43,11 +48,13 @@ public class ClaseB implements SuperLevel {
         if(enemies == null)
             return;
         for(int i = 0; i < enemies.capacidad(); i++){
-            enemies.obtenerDato(i).update(delta, player);
+            enemies.getDato(i).update(delta, player);
+
         }
         for(int i = 0; i < enemies.capacidad(); i++){
-            enemies.obtenerDato(i).collide(i, player, enemies);
+            enemies.getDato(i).collide(i, player, enemies);
         }
+
         hasDirectionChange(delta);
 
 
@@ -60,8 +67,12 @@ public class ClaseB implements SuperLevel {
             return;
 
         for(int i = 0; i < enemies.capacidad(); i++){
-            if(enemies.obtenerDato(i).isOutOfBounds()){
+            if(enemies.getDato(i).isOutOfBounds()){
                 changeDurectionAllEnemys(delta);
+                if(flag%2==1){
+                    enemies.vaciar();
+                    addEnemies();
+                }
             }
         }
     }
@@ -70,8 +81,9 @@ public class ClaseB implements SuperLevel {
     @Override
     public void changeDurectionAllEnemys(double delta) {
         for(int i = 0; i < enemies.capacidad(); i++){
-            enemies.obtenerDato(i).changeDirection(delta);
+            enemies.getDato(i).changeDirection(delta);
         }
+        flag++;
         if (beepboop) {
             beepboop = false;
             boop.play();
@@ -91,24 +103,24 @@ public class ClaseB implements SuperLevel {
 
     @Override
     public void reset() {
+        player.reset();
         enemies.vaciar();
         addEnemies();
 
 
     }
 
-
-
     public void addEnemies() {
-        for (int x=0; x <15 ; x++) {
-            if(x==posJefe){
-                EnemyType e = new Jefe(0+(x*40),65,1,3,5,2.5d);
+        int pos = (int) Math.floor(Math.random()*10);
+        for (int x=0; x < cant; x++) {
+            if(x==pos){
+                EnemyType e = new Jefe(0+(x*40),65+x2,1,3,5,2.5d);
                 enemies.agregar(e);
             }else {
-                EnemyType e = new Subdito(0 + (x * 40), 65, 1, 3, 2, 2.5d);
+                EnemyType e = new Subdito(0 + (x * 40), 65+x2, 1, 3, 2, 2.5d);
                 enemies.agregar(e);
             }
-        }
+        }x2+=20;
 
     }
 
@@ -117,9 +129,10 @@ public class ClaseB implements SuperLevel {
     public boolean isComplete() {
         return enemies.estaVacia();
     }
-    @Override
-    public String getNombre() {
-        return "Clase B";
+    public static int getCant(){
+        return cant;
     }
-
+    public static void setCant(int i){
+        cant = i;
+    }
 }

@@ -5,11 +5,18 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
 
-import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaSimple;
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 import com.marianoProgra.display.Display;
+<<<<<<< HEAD
 import com.marianoProgra.hileras.*;
 import com.marianoProgra.State.StateMachine;
 import com.marianoProgra.State.SuperStateMachine;
+=======
+import com.marianoProgra.levels.Basic;
+import com.marianoProgra.State.StateMachine;
+import com.marianoProgra.State.SuperStateMachine;
+import com.marianoProgra.levels.SuperLevel;
+>>>>>>> parent of 47cbb82... Trabajando en la Clase D
 import com.marianoProgra.timer.TickTimer;
 
 /**
@@ -24,16 +31,14 @@ public class GameScreen extends SuperStateMachine {
 	 * atributos de la Clase
 	 */
 	private static int Puntuacion = 0;
-	private static int Nivel =1;
+	private static int Nivel = 1;
 	private static double speed = 1.0d;
 	private Font gameScreen = new Font("Berlin Sans FB Demi", Font.PLAIN, 48);
 
 	private TickTimer gameOverTimer = new TickTimer(180);
 	private TickTimer completeTimer = new TickTimer(180);
 
-	private ListaSimple levels = new ListaSimple();
-	private boolean agregar = false;
-	private static int cant_hileras=0;
+	private Lista<SuperLevel> leves = new Lista <>();
 
 	/**
 	 * Constructor de la Clase
@@ -43,10 +48,7 @@ public class GameScreen extends SuperStateMachine {
 		super(stateMachine);
 
 		player = new Player(Display.getWIDTH()/2-50, Display.getHEIGHT()-75, 50, 50);
-		addLevel();
-		level = (SuperLevel) levels.getData(Nivel-1);
-
-
+		level = new Basic(player);
 
 	}
 
@@ -66,8 +68,11 @@ public class GameScreen extends SuperStateMachine {
 				Puntuacion = 0;
 				Nivel = 1;
 				speed=1.0d;
+<<<<<<< HEAD
 				levels.vaciar();
 				addLevel();
+=======
+>>>>>>> parent of 47cbb82... Trabajando en la Clase D
 			}
 		}
 		
@@ -76,18 +81,14 @@ public class GameScreen extends SuperStateMachine {
 			if (completeTimer.isEventReady()) {
 				level.reset();
 				Nivel++;
-				level = (SuperLevel) levels.getData(Nivel-1);
+				speed+=0.5d;
 			}
-		}if(Nivel%9!=0){
-			agregar = true;
-		}if(Nivel%9==0 && agregar){
-			addLevel();
-			agregar = false;
 		}
 	}
 	
 	@Override
 	public void draw(Graphics2D g) {
+<<<<<<< HEAD
 		g.setColor(Color.white);
 		g.drawString("PUNTUACION: " + Puntuacion, 5, 15);
 
@@ -100,10 +101,16 @@ public class GameScreen extends SuperStateMachine {
 		g.setColor(Color.white);
 		g.drawString("Nivel Siguiente: "+levels.getData(Nivel).getClass().getSimpleName(), 605, 15);
 
+=======
+		g.setColor(Color.CYAN);
+		g.drawString("PUNTUACION: " + Puntuacion, 5, 15);
+
+		g.setColor(Color.CYAN);
+		g.drawString("NIVEL: "+Nivel, 5,25 );
+>>>>>>> parent of 47cbb82... Trabajando en la Clase D
 
 		player.draw(g);
 		level.draw(g);
-
 		
 		if (level.isGameOver()) {
 			g.setColor(Color.red);
@@ -111,13 +118,12 @@ public class GameScreen extends SuperStateMachine {
 			String gameOver = "FIN DEL JUEGO MACHO!";
 			int gameOverWidth = g.getFontMetrics().stringWidth(gameOver);
 			g.drawString(gameOver, (Display.getWIDTH()/2)-(gameOverWidth/2), Display.getHEIGHT()/2);
-
 		}
 		
 		if (level.isComplete()) {
 			g.setColor(Color.lightGray);
 			g.setFont(gameScreen);
-			String complete = "ENEMIGOS EXTERMINDADOS\n OLEADA APROXIMANDOSE";
+			String complete = "NIVEL EXTERMINADO, ERES UN MAJO!";
 			int completeWidth = g.getFontMetrics().stringWidth(complete);
 			g.drawString(complete, (Display.getWIDTH()/2)-(completeWidth/2), Display.getHEIGHT()/2);
 		}
@@ -128,6 +134,7 @@ public class GameScreen extends SuperStateMachine {
 		canvas.addKeyListener(player);
 	}
 
+
 	/**
 	 * metodo para aumentar el Score
 	 * @param aumento
@@ -135,6 +142,7 @@ public class GameScreen extends SuperStateMachine {
 	public static void aumentarSCORE(int aumento) {
 		Puntuacion +=aumento;
 	}
+<<<<<<< HEAD
 
 	public void addLevel(){
 		int random;
@@ -159,6 +167,11 @@ public class GameScreen extends SuperStateMachine {
 
 	public static int getCant_hileras() {
 		return cant_hileras;
+=======
+// getters y Setters
+	public static int getNivel() {
+		return Nivel;
+>>>>>>> parent of 47cbb82... Trabajando en la Clase D
 	}
 
 	public static double getSpeed() {

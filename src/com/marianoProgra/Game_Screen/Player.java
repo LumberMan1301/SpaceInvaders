@@ -16,13 +16,13 @@ import com.marianoProgra.display.Display;
  * Clase de tipo jugador
  */
 public class Player implements KeyListener{
-	private final double speed = 5.5d;
+	private final double speed = 5.0d;
 	/**
 	 * Atributos de la clase
 	 */
 	private BufferedImage pSprite;
 	private Rectangle rect;
-	private double xPos, yPos;
+	private double xPos, yPos, startXPos, startYPos;
 	private int width, height;
 	private boolean left = false, right = false, shoot = false;
 	public PlayerWeapons playerWeapons;
@@ -37,8 +37,8 @@ public class Player implements KeyListener{
 	public Player(double xPos, double yPos, int width, int height){
 		this.xPos = xPos;
 		this.yPos = yPos;
-
-
+		this.startXPos = xPos;
+		this.startYPos = yPos;
 		this.width = width;
 		this.height = height;
 
@@ -115,8 +115,30 @@ public class Player implements KeyListener{
 		// TODO Auto-generated method stub
 		
 	}
+	
 
+	
+
+<<<<<<< HEAD
 	public PlayerWeapons getPlayerWeapons() {
 		return playerWeapons;
+=======
+
+	public Rectangle getRect() {
+		return rect;
+	}
+
+	public void reset() {
+
+		left = false;
+		right = false;
+		shoot = false;
+		
+		xPos = startXPos;
+		yPos = startYPos;
+		rect.x = (int) xPos;
+		rect.y = (int) yPos+25;
+		playerWeapons.reset();
+>>>>>>> parent of 47cbb82... Trabajando en la Clase D
 	}
 }

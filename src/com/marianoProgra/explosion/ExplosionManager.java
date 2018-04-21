@@ -1,6 +1,6 @@
 package com.marianoProgra.explosion;
 
-import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaSimple;
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 
 import java.awt.Graphics2D;
 
@@ -9,16 +9,16 @@ import java.awt.Graphics2D;
  */
 public class ExplosionManager {
 
-	private static ListaSimple<ExplosionType> explosions = new ListaSimple<ExplosionType>();
+	private static Lista<ExplosionType> explosions = new Lista<ExplosionType>();
 	
 	public void draw (Graphics2D g) {
-		for (int i = 0; i < explosions.getCapacidad(); i++) {
+		for (int i = 0; i < explosions.capacidad(); i++) {
 			explosions.getData(i).draw(g);
 		}
 	}
 	
 	public void update(double delta) {
-		for (int i = 0; i < explosions.getCapacidad(); i++) {
+		for (int i = 0; i < explosions.capacidad(); i++) {
 			explosions.getData(i).update(delta);
 			if(explosions.getData(i).destory()) {
 				explosions.eliminar(i);

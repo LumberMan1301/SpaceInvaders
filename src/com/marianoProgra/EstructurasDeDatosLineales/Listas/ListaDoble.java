@@ -4,7 +4,7 @@ import com.marianoProgra.EstructurasDeDatosLineales.Nodo.Nodo;
 
 
 /**
- * Se crea la clase ListaSimple Doble que es una derivada de la clase ListaSimple
+ * Se crea la clase Lista Doble que es una derivada de la clase Lista
  */
 public class ListaDoble<T>
 {
@@ -174,7 +174,7 @@ public class ListaDoble<T>
      * @param i
      * @return
      */
-    public T obtenerDato(int i)
+    public T getDato(int i)
     {
         Nodo<T> aux = getPrimero();
         int x = 0;
@@ -255,7 +255,7 @@ public class ListaDoble<T>
      */
     public void imprimirL() {
         if(this.estaVacia())
-            System.out.println("La ListaSimple Esta Vacia");
+            System.out.println("La Lista Esta Vacia");
         else {
             Nodo aux = this.primero;
             System.out.print("[");

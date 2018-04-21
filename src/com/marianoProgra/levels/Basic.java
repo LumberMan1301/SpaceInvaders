@@ -1,8 +1,8 @@
-package com.marianoProgra.hileras;
+package com.marianoProgra.levels;
 
 import java.awt.Graphics2D;
 
-import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaSimple;
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 import com.marianoProgra.Game_Screen.GameScreen;
 import com.marianoProgra.enemy_types.EnemyType;
 import com.marianoProgra.enemy_types.Subdito;
@@ -17,11 +17,10 @@ public class Basic implements SuperLevel{
 	 * Atributos de la clase
 	 */
 	private Player player;
-	private ListaSimple<EnemyType> enemies = new ListaSimple<EnemyType>();
+	private Lista<EnemyType> enemies = new Lista<EnemyType>();
 	private Sound beep, boop;
 	private boolean beepboop;
 
-	private String nombre = "Basic";
 
 	/**
 	 * Contrusctor de la clase
@@ -41,7 +40,7 @@ public class Basic implements SuperLevel{
 		if(enemies == null)
 			return;
 		
-		for(int i = 0; i < enemies.getCapacidad(); i++){
+		for(int i = 0; i < enemies.capacidad(); i++){
 			enemies.getData(i).draw(g);
 		}
 
@@ -52,10 +51,10 @@ public class Basic implements SuperLevel{
 		if(enemies == null)
 			return;
 		
-		for(int i = 0; i < enemies.getCapacidad(); i++){
+		for(int i = 0; i < enemies.capacidad(); i++){
 			enemies.getData(i).update(delta, player);
 		}
-		for(int i = 0; i < enemies.getCapacidad(); i++){
+		for(int i = 0; i < enemies.capacidad(); i++){
 			enemies.getData(i).collide(i, player, enemies);
 		}
 		hasDirectionChange(delta);
@@ -68,7 +67,7 @@ public class Basic implements SuperLevel{
 		if(enemies == null)
 			return;
 		
-		for(int i = 0; i < enemies.getCapacidad(); i++){
+		for(int i = 0; i < enemies.capacidad(); i++){
 			if(enemies.getData(i).isOutOfBounds()){
 				changeDurectionAllEnemys(delta);
 				isGameOver();
@@ -79,7 +78,7 @@ public class Basic implements SuperLevel{
 
 	@Override
 	public void changeDurectionAllEnemys(double delta) {
-		for(int i = 0; i < enemies.getCapacidad(); i++){
+		for(int i = 0; i < enemies.capacidad(); i++){
 			enemies.getData(i).changeDirection(delta);
 		}
 		if (beepboop) {
@@ -94,7 +93,7 @@ public class Basic implements SuperLevel{
 
 	@Override
 	public boolean isGameOver() {
-		for(int i = 0; i<enemies.getCapacidad(); i++){
+		for(int i =0; i<enemies.capacidad();i++){
 			if(enemies.getData(i).passPlayer())
 				return true;
 		}
@@ -105,6 +104,7 @@ public class Basic implements SuperLevel{
 
 	@Override
 	public void reset() {
+		player.reset();
 		enemies.vaciar();
 		addEnemies();
 		
@@ -115,7 +115,7 @@ public class Basic implements SuperLevel{
 	 * metodo para agregar enemigos
 	 */
 	public void addEnemies() {
-			for (int y = 0; y <1+ GameScreen.getCant_hileras(); y++) {
+			for (int y = 0; y <1+ GameScreen.getNivel(); y++) {
 				for (int x = 0; x < 10; x++) {
 					EnemyType e = new Subdito(150 + (x * 40), 35 + (y * 40), 1, 3, 2,1.5d+GameScreen.getSpeed());
 					enemies.agregar(e);
@@ -126,11 +126,8 @@ public class Basic implements SuperLevel{
 
 	@Override
 	public boolean isComplete() {
-		return enemies.estaVacia();
+		return enemies.isEmpty();
 	}
 
-	@Override
-	public String getNombre() {
-		return nombre;
-	}
+
 }

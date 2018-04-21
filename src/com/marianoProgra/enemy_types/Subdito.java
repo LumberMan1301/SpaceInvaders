@@ -4,12 +4,20 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
 
+<<<<<<< HEAD
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaCircular;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaSimple;
+=======
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
+>>>>>>> parent of 47cbb82... Trabajando en la Clase D
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaDoble;
 import com.marianoProgra.display.Display;
 import com.marianoProgra.Game_Screen.GameScreen;
 import com.marianoProgra.Game_Screen.Player;
+<<<<<<< HEAD
+=======
+import com.marianoProgra.levels.ClaseB;
+>>>>>>> parent of 47cbb82... Trabajando en la Clase D
 import com.marianoProgra.sound.Sound;
 import com.marianoProgra.sprite.SpriteAnimation;
 
@@ -78,15 +86,20 @@ public class Subdito extends EnemyType{
 		return false;
 	}
 	@Override
-	public boolean collide(int i, Player player, ListaSimple<EnemyType> enemys) {
+	public boolean collide(int i, Player player, Lista<EnemyType> enemys) {
 		if(enemySprite.isPlay()) {
 			if(enemys.getData(i).deathScene()) {
 				enemys.eliminar(i);
 			}
 			return false;
 		}
+<<<<<<< HEAD
 		for(int w = 0; w < player.getPlayerWeapons().getWeapons().getCapacidad(); w++) {
 				if (enemys != null && player.getPlayerWeapons().getWeapons().getData(w).collisionRect(((Subdito) enemys.getData(i)).getRect())) {
+=======
+		for(int w = 0; w < player.playerWeapons.weapons.capacidad(); w++) {
+				if (enemys != null && player.playerWeapons.weapons.getData(w).collisionRect(((Subdito) enemys.getData(i)).getRect())) {
+>>>>>>> parent of 47cbb82... Trabajando en la Clase D
 					this.vida--;
 				}if(vida==0){
 					enemySprite.resetLimit();
@@ -101,19 +114,25 @@ public class Subdito extends EnemyType{
 	@Override
 	public boolean collide(int i, Player player, ListaDoble<EnemyType> enemys) {
 		if(enemySprite.isPlay()) {
-			if(enemys.obtenerDato(i).deathScene()) {
+			if(enemys.getDato(i).deathScene()) {
 				enemys.eliminarPos(i);
 			}
 			return false;
 		}
+<<<<<<< HEAD
 		for(int w = 0; w < player.getPlayerWeapons().getWeapons().getCapacidad(); w++) {
 			if (enemys != null && player.getPlayerWeapons().getWeapons().getData(w).collisionRect(((Subdito) enemys.obtenerDato(i)).getRect())) {
+=======
+		for(int w = 0; w < player.playerWeapons.weapons.capacidad(); w++) {
+			if (enemys != null && player.playerWeapons.weapons.getData(w).collisionRect(((Subdito) enemys.getDato(i)).getRect())) {
+>>>>>>> parent of 47cbb82... Trabajando en la Clase D
 				this.vida--;
 			}if(vida==0){
 				enemySprite.resetLimit();
 				enemySprite.setAnimationSpeed(120);
 				enemySprite.setPlay(true, true);
 				GameScreen.aumentarSCORE(8);
+				ClaseB.setCant(ClaseB.getCant()-1);
 				return true;
 			}
 		}

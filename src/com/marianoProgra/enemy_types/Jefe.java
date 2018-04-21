@@ -1,7 +1,11 @@
 package com.marianoProgra.enemy_types;
 
+<<<<<<< HEAD
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaCircular;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaSimple;
+=======
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
+>>>>>>> parent of 47cbb82... Trabajando en la Clase D
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaDoble;
 import com.marianoProgra.Game_Screen.GameScreen;
 import com.marianoProgra.Game_Screen.Player;
@@ -72,15 +76,20 @@ public class Jefe extends EnemyType{
         return false;
     }
     @Override
-    public boolean collide(int i, Player player, ListaSimple<EnemyType> enemys) {
+    public boolean collide(int i, Player player, Lista<EnemyType> enemys) {
         if(enemySprite.isPlay()) {
             if(enemys.getData(i).deathScene()) {
                 enemys.eliminar(i);
             }
             return false;
         }
+<<<<<<< HEAD
         for(int w = 0; w < player.getPlayerWeapons().getWeapons().getCapacidad(); w++) {
             if (enemys != null && player.getPlayerWeapons().getWeapons().getData(w).collisionRect(((Jefe) enemys.getData(i)).getRect())) {
+=======
+        for(int w = 0; w < player.playerWeapons.weapons.capacidad(); w++) {
+            if (enemys != null && player.playerWeapons.weapons.getData(w).collisionRect(((Jefe) enemys.getData(i)).getRect())) {
+>>>>>>> parent of 47cbb82... Trabajando en la Clase D
                 this.vida--;
             }if(vida==0){
                 enemySprite.resetLimit();
@@ -96,13 +105,18 @@ public class Jefe extends EnemyType{
     @Override
     public boolean collide(int i, Player player, ListaDoble<EnemyType> enemys) {
         if(enemySprite.isPlay()) {
-            if(enemys.obtenerDato(i).deathScene()) {
+            if(enemys.getDato(i).deathScene()) {
                 enemys.eliminarPos(i);
             }
             return false;
         }
+<<<<<<< HEAD
         for(int w = 0; w < player.getPlayerWeapons().getWeapons().getCapacidad(); w++) {
             if (enemys != null && player.getPlayerWeapons().getWeapons().getData(w).collisionRect(((Jefe) enemys.obtenerDato(i)).getRect())) {
+=======
+        for(int w = 0; w < player.playerWeapons.weapons.capacidad(); w++) {
+            if (enemys != null && player.playerWeapons.getWeapons().getData(w).collisionRect(((Jefe) enemys.getDato(i)).getRect())) {
+>>>>>>> parent of 47cbb82... Trabajando en la Clase D
                 this.vida--;
             }if(vida==0){
                 enemySprite.resetLimit();

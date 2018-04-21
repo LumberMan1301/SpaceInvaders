@@ -2,7 +2,7 @@ package com.marianoProgra.Game_Screen;
 
 import java.awt.Graphics2D;
 
-import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaSimple;
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.Lista;
 import com.marianoProgra.explosion.ExplosionManager;
 import com.marianoProgra.player_bullets.MachineGun;
 import com.marianoProgra.player_bullets.PlayerWeaponType;
@@ -18,7 +18,7 @@ public class PlayerWeapons {
 	 */
 	private Timer timer;
 	private ExplosionManager explosionManager;
-	public ListaSimple<PlayerWeaponType> weapons = new ListaSimple<>();
+	public Lista<PlayerWeaponType> weapons = new Lista<>();
 	private Sound shootSound;
 
 	/**
@@ -37,7 +37,7 @@ public class PlayerWeapons {
 	public void draw(Graphics2D g){
 		
 		explosionManager.draw(g);
-		for(int i = 0; i < weapons.getCapacidad(); i++){
+		for(int i = 0; i < weapons.capacidad(); i++){
 			weapons.getData(i).draw(g);
 		}
 	}
@@ -49,7 +49,7 @@ public class PlayerWeapons {
 	public void update(double delta){
 		
 		explosionManager.update(delta);
-		for(int i = 0; i < weapons.getCapacidad(); i++){
+		for(int i = 0; i < weapons.capacidad(); i++){
 			weapons.getData(i).update(delta);
 			if(weapons.getData(i).destory()) {
 				ExplosionManager.createPixelExplosion(weapons.getData(i).getxPos(), weapons.getData(i).getyPos());
@@ -82,7 +82,7 @@ public class PlayerWeapons {
 		weapons.vaciar();
 	}
 
-	public ListaSimple<PlayerWeaponType> getWeapons() {
+	public Lista<PlayerWeaponType> getWeapons() {
 		return weapons;
 	}
 }
