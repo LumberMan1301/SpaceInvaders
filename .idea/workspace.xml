@@ -3,19 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="969bcdf8-55b2-45bc-b325-a2c88aeb745e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/GameScreen.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/GameScreen.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/Player.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/Game_Screen/Player.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/enemy_types/EnemyType.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/enemy_types/EnemyType.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/enemy_types/Jefe.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/enemy_types/Jefe.class" />
-      <change beforePath="$PROJECT_DIR$/bin/com/marianoProgra/enemy_types/Subdito.class" afterPath="$PROJECT_DIR$/bin/com/marianoProgra/enemy_types/Subdito.class" />
       <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaCircular.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaCircular.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaSimple.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaSimple.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/GameScreen.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/GameScreen.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/Player.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/Player.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/EnemyType.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/EnemyType.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Jefe.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Jefe.java" />
       <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Subdito.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Subdito.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/marianoProgra/hileras/ClaseD.java" afterPath="$PROJECT_DIR$/src/com/marianoProgra/hileras/ClaseD.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Subdito.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Subdito.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Subdito.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="89" column="111" lean-forward="false" selection-start-line="89" selection-start-column="111" selection-end-line="89" selection-end-column="111" />
+            <state relative-caret-position="142">
+              <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
               <folding>
                 <element signature="method#Subdito#0;class#Subdito#0" expanded="false" />
                 <element signature="method#update#0;class#Subdito#0" expanded="false" />
@@ -39,9 +28,47 @@
                 <element signature="method#deathScene#0;class#Subdito#0" expanded="false" />
                 <element signature="method#isOutOfBounds#0;class#Subdito#0" expanded="false" />
                 <element signature="method#passPlayer#0;class#Subdito#0" expanded="false" />
-                <element signature="e#4747#4748#0" expanded="true" />
-                <element signature="e#4765#4766#0" expanded="true" />
+                <element signature="e#4693#4694#0" expanded="true" />
+                <element signature="e#4711#4712#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListaCircular.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaCircular.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="103" column="20" lean-forward="false" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#eliminarPos#0;class#ListaCircular#0" expanded="false" />
+                <element signature="method#eliminarDato#0;class#ListaCircular#0" expanded="false" />
+                <element signature="e#3254#3255#0" expanded="true" />
+                <element signature="e#3292#3293#0" expanded="true" />
+                <element signature="method#clear#0;class#ListaCircular#0" expanded="false" />
+                <element signature="method#estaVacia#0;class#ListaCircular#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClaseD.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/hileras/ClaseD.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-837">
+              <caret line="43" column="23" lean-forward="false" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClaseB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/hileras/ClaseB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-645">
+              <caret line="20" column="61" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -49,7 +76,7 @@
       <file leaf-file-name="Jefe.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Jefe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
+            <state relative-caret-position="527">
               <caret line="82" column="72" lean-forward="false" selection-start-line="82" selection-start-column="72" selection-end-line="82" selection-end-column="72" />
               <folding>
                 <element signature="docComment;class#Jefe#0" expanded="false" />
@@ -74,8 +101,8 @@
       <file leaf-file-name="GameScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/GameScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="140" column="32" lean-forward="true" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
+            <state relative-caret-position="2142">
+              <caret line="140" column="32" lean-forward="false" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3099#3100#0" expanded="true" />
@@ -92,10 +119,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Basic.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Basic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/hileras/Basic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1704">
+            <state relative-caret-position="216">
               <caret line="119" column="41" lean-forward="false" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
               <folding>
                 <element signature="e#2544#2545#0" expanded="true" />
@@ -167,14 +194,14 @@
         <option value="$PROJECT_DIR$/src/com/marianoProgra/hileras/ClaseA.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/hileras/ClaseB.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/EnemyType.java" />
-        <option value="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaCircular.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaDoble.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaSimple.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/Player.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/hileras/ClaseD.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Jefe.java" />
-        <option value="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Subdito.java" />
         <option value="$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/GameScreen.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaCircular.java" />
+        <option value="$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Subdito.java" />
       </list>
     </option>
   </component>
@@ -207,7 +234,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,21 +289,12 @@
               <item name="SpaceInvaders" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="marianoProgra" type="462c0819:PsiDirectoryNode" />
-              <item name="Game_Screen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpaceInvaders" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpaceInvaders" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="marianoProgra" type="462c0819:PsiDirectoryNode" />
               <item name="hileras" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -500,6 +520,7 @@
       <workItem from="1524087158267" duration="2822000" />
       <workItem from="1524155298398" duration="21078000" />
       <workItem from="1524283304695" duration="345000" />
+      <workItem from="1524284156460" duration="457000" />
     </task>
     <task id="LOCAL-00001" summary="Comienzo de la introduccion de diferentes tipos de enemigos">
       <created>1523495248235</created>
@@ -575,10 +596,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88119000" />
+    <option name="totallyTimeSpent" value="88576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -593,7 +615,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -632,7 +654,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -986,14 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/hileras/ClaseB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="20" column="61" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/hileras/ClaseA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
@@ -1079,39 +1093,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaCircular.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="179" column="19" lean-forward="false" selection-start-line="179" selection-start-column="19" selection-end-line="179" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#eliminarPos#0;class#ListaCircular#0" expanded="false" />
-            <element signature="method#eliminarDato#0;class#ListaCircular#0" expanded="false" />
-            <element signature="method#obtenerDato#0;class#ListaCircular#0" expanded="false" />
-            <element signature="e#3261#3262#0" expanded="true" />
-            <element signature="e#3299#3300#0" expanded="true" />
-            <element signature="method#clear#0;class#ListaCircular#0" expanded="false" />
-            <element signature="method#estaVacia#0;class#ListaCircular#0" expanded="false" />
-            <element signature="method#print#0;class#ListaCircular#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/hileras/ClaseD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="123" column="12" lean-forward="false" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/State/StateMachine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#895#896#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1136,7 +1121,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Jefe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
+        <state relative-caret-position="527">
           <caret line="82" column="72" lean-forward="false" selection-start-line="82" selection-start-column="72" selection-end-line="82" selection-end-column="72" />
           <folding>
             <element signature="docComment;class#Jefe#0" expanded="false" />
@@ -1157,27 +1142,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Subdito.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="89" column="111" lean-forward="false" selection-start-line="89" selection-start-column="111" selection-end-line="89" selection-end-column="111" />
-          <folding>
-            <element signature="method#Subdito#0;class#Subdito#0" expanded="false" />
-            <element signature="method#update#0;class#Subdito#0" expanded="false" />
-            <element signature="method#changeDirection#0;class#Subdito#0" expanded="false" />
-            <element signature="method#deathScene#0;class#Subdito#0" expanded="false" />
-            <element signature="method#isOutOfBounds#0;class#Subdito#0" expanded="false" />
-            <element signature="method#passPlayer#0;class#Subdito#0" expanded="false" />
-            <element signature="e#4747#4748#0" expanded="true" />
-            <element signature="e#4765#4766#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/Game_Screen/GameScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="140" column="32" lean-forward="true" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
+        <state relative-caret-position="2142">
+          <caret line="140" column="32" lean-forward="false" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3099#3100#0" expanded="true" />
@@ -1195,13 +1163,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/hileras/Basic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1704">
+        <state relative-caret-position="216">
           <caret line="119" column="41" lean-forward="false" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
           <folding>
             <element signature="e#2544#2545#0" expanded="true" />
             <element signature="e#2577#2578#0" expanded="true" />
             <element signature="e#2618#2619#0" expanded="true" />
             <element signature="e#2638#2639#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/hileras/ClaseD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-837">
+          <caret line="43" column="23" lean-forward="false" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/hileras/ClaseB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-645">
+          <caret line="20" column="61" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/EstructurasDeDatosLineales/Listas/ListaCircular.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="103" column="20" lean-forward="false" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#eliminarPos#0;class#ListaCircular#0" expanded="false" />
+            <element signature="method#eliminarDato#0;class#ListaCircular#0" expanded="false" />
+            <element signature="e#3254#3255#0" expanded="true" />
+            <element signature="e#3292#3293#0" expanded="true" />
+            <element signature="method#clear#0;class#ListaCircular#0" expanded="false" />
+            <element signature="method#estaVacia#0;class#ListaCircular#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/marianoProgra/enemy_types/Subdito.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+          <folding>
+            <element signature="method#Subdito#0;class#Subdito#0" expanded="false" />
+            <element signature="method#update#0;class#Subdito#0" expanded="false" />
+            <element signature="method#changeDirection#0;class#Subdito#0" expanded="false" />
+            <element signature="method#deathScene#0;class#Subdito#0" expanded="false" />
+            <element signature="method#isOutOfBounds#0;class#Subdito#0" expanded="false" />
+            <element signature="method#passPlayer#0;class#Subdito#0" expanded="false" />
+            <element signature="e#4693#4694#0" expanded="true" />
+            <element signature="e#4711#4712#0" expanded="true" />
           </folding>
         </state>
       </provider>

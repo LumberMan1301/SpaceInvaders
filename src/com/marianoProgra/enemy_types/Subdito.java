@@ -10,7 +10,6 @@ import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaDoble;
 import com.marianoProgra.display.Display;
 import com.marianoProgra.Game_Screen.GameScreen;
 import com.marianoProgra.Game_Screen.Player;
-import com.marianoProgra.hileras.ClaseB;
 import com.marianoProgra.sound.Sound;
 import com.marianoProgra.sprite.SpriteAnimation;
 
@@ -132,13 +131,13 @@ public class Subdito extends EnemyType{
 	@Override
 	public boolean collide(int i, Player player, ListaCircular<EnemyType> enemys) {
 		if(enemySprite.isPlay()) {
-			if(enemys.obtenerDato(i).deathScene()) {
+			if(enemys.getData(i).deathScene()) {
 				enemys.eliminarPos(i);
 			}
 			return false;
 		}
 		for(int w = 0; w < player.getPlayerWeapons().getWeapons().getCapacidad(); w++) {
-			if (enemys != null && player.getPlayerWeapons().getWeapons().getData(w).collisionRect(((Subdito) enemys.obtenerDato(i)).getRect())) {
+			if (enemys != null && player.getPlayerWeapons().getWeapons().getData(w).collisionRect(((Subdito) enemys.getData(i)).getRect())) {
 				this.vida--;
 			}if(vida==0){
 				enemySprite.resetLimit();
@@ -147,10 +146,7 @@ public class Subdito extends EnemyType{
 				GameScreen.aumentarSCORE(8);
 				return true;
 			}
-		}
-		return false;
-
-
+		}return false;
 }
 
 	@Override

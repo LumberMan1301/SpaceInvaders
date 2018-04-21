@@ -101,7 +101,7 @@ public class ListaCircular<T>
         }
     }
 
-    public T obtenerDato(int i)
+    public T getData(int i)
     {
         Nodo<T> aux = getPrimero();
         int x = 0;
@@ -115,7 +115,7 @@ public class ListaCircular<T>
             System.out.println("El elemento no se encuentra en la lista");
             return null;
         }
-        return (T)aux.getDato();
+        return aux.getDato();
     }
 
     //#################Getters and Setters##############################
@@ -148,44 +148,7 @@ public class ListaCircular<T>
         return false;
     }
 
-    public String print()
-    {
-        String fin = "[";
-        Nodo<T> aux = this.primero;
-        if (aux == null)
-        {
-            fin = fin + "]";
-            return fin;
-        }
-        int a = 0;
-        while (a != this.capacidad)
-        {
-            int b = a;
-            if (b++ == this.capacidad - 1)
-            {
-                fin = fin + aux.getDato().toString();
-                aux = aux.getSiguiente();
-                a++;
-            }
-            else
-            {
-                fin = fin + aux.getDato().toString() + ",";
-                aux = aux.getSiguiente();
-                a++;
-            }
-        }
-        fin = fin + "]";
-        return fin;
-    }
-    public T getData(int i){
-        Nodo<T> aux = this.getPrimero();
-        int x = 0;
-        while(x != i){
-            aux = aux.getSiguiente();
-            x++;
-        }
-        return aux.getDato();
-    }
+
 
     public Nodo getNodo(int i){
         Nodo<T> aux = this.getPrimero();
