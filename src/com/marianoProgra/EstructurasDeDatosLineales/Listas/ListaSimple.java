@@ -16,8 +16,7 @@ public class ListaSimple<T>{
     /**
      * constructor de la clase lista
      */
-    public ListaSimple()
-    {
+    public ListaSimple() {
         this.capacidad=0;
         this.primero = null;
     }
@@ -25,8 +24,7 @@ public class ListaSimple<T>{
      * metodo para revisar si la lista esta vacia
      */
 
-    public boolean estaVacia()
-    {
+    public boolean estaVacia(){
         if (this.capacidad==0)
             return true;
         else
@@ -36,8 +34,7 @@ public class ListaSimple<T>{
      * metodo para comprobar si un nodo Existe
      * @param nodo
      */
-    public boolean existe(Nodo nodo)
-    {
+    public boolean existe(Nodo nodo){
         if (this.estaVacia()){
             return false;
         }else{
@@ -54,8 +51,7 @@ public class ListaSimple<T>{
      * metodo para agregar al final de la lista
      * @param data
      */
-    public void agregar(T data)
-    {
+    public void agregar(T data){
         Nodo nodo = new Nodo(data);
         if (this.estaVacia()) {
             this.primero = nodo;
@@ -74,8 +70,7 @@ public class ListaSimple<T>{
     /**
      * metodo para imprimir la ListaSimple
      */
-    public void imprimirL()
-    {
+    public void imprimirL(){
         if(this.estaVacia())
             System.out.println("La ListaSimple Esta Vacia");
         else {
@@ -91,8 +86,7 @@ public class ListaSimple<T>{
      *metodo para eliminar un nodo por referencia
      * @param indice
      */
-    public void eliminar(int indice)
-    {
+    public void eliminar(int indice){
         if (this.estaVacia())
             System.out.println("ListaSimple Vacia");
         else{
@@ -118,8 +112,7 @@ public class ListaSimple<T>{
      * metodo para eliminar por valor
      * @param data
      */
-    public void eliminarDato(T data)
-    {
+    public void eliminarDato(T data){
         if(this.estaVacia()){
             System.out.println("ListaSimple Vacia");
         }else{

@@ -1,6 +1,8 @@
 package com.marianoProgra.enemy_types;
 //###############Importaciones###########################################
 import java.awt.Graphics2D;
+
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaCircular;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaSimple;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaDoble;
 import com.marianoProgra.Game_Screen.Player;
@@ -37,6 +39,7 @@ public abstract class EnemyType {
 	 * @return
 	 */
 	public abstract boolean collide(int i, Player player, ListaSimple<EnemyType> enemys);
+
 	/**
 	 * metodo para saber si hubo una colision con el Jefe
 	 * @param i
@@ -45,6 +48,14 @@ public abstract class EnemyType {
 	 * @return
 	 */
 	public abstract boolean collide(int i ,Player player, ListaDoble<EnemyType> enemys);
+	/**
+	 * metodo para saber si hubo una colision con el Jefe
+	 * @param i
+	 * @param player
+	 * @param enemys
+	 * @return
+	 */
+	public abstract boolean collide(int i ,Player player, ListaCircular<EnemyType> enemys);
 	/**
 	 * Nos indica si el enemigo esta fuera de los limites de la pantalla de juego
 	 * @return
@@ -55,6 +66,8 @@ public abstract class EnemyType {
 	 * @return
 	 */
 	public abstract boolean passPlayer();
+
+
 
 
 }

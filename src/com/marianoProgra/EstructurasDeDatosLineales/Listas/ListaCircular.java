@@ -1,6 +1,7 @@
 package com.marianoProgra.EstructurasDeDatosLineales.Listas;
 
 import com.marianoProgra.EstructurasDeDatosLineales.Nodo.Nodo;
+import com.marianoProgra.enemy_types.Subdito;
 
 
 public class ListaCircular<T>
@@ -176,4 +177,55 @@ public class ListaCircular<T>
         fin = fin + "]";
         return fin;
     }
+    public T getData(int i){
+        Nodo<T> aux = this.getPrimero();
+        int x = 0;
+        while(x != i){
+            aux = aux.getSiguiente();
+            x++;
+        }
+        return aux.getDato();
+    }
+
+    public Nodo getNodo(int i){
+        Nodo<T> aux = this.getPrimero();
+        int x = 0;
+        while(x != i){
+            aux = aux.getSiguiente();
+            x++;
+        }
+        return aux;
+    }
+    public void vaciar(){
+        this.capacidad=0;
+        this.primero=null;
+    }
+    public void bubbleSort(){
+        for(int i=0; i < this.getCapacidad(); i++) {
+            for (int j = 1; j < (this.getCapacidad() - i); j++) {
+                Subdito saux = (Subdito) this.getData(j);
+                Subdito saux2 = (Subdito) this.getData(j+1);
+                if (saux.getVida()>saux2.getVida()){
+                    this.intercambiar(j, j+1);
+                }
+            }
+        }
+    }
+    private void intercambiar(int a, int b){
+        if(a==0){
+            this.getNodo(this.capacidad-1).setSiguiente(this.getNodo(b));
+            this.getNodo(a).setSiguiente(this.getNodo(b).getSiguiente());
+            this.getNodo(b).setSiguiente(this.getNodo(a));
+            this.setPrimero(this.getNodo(b));
+        }else{
+            Nodo aux = this.getNodo(a-1);
+            Nodo actual = this.getNodo(a);
+            actual.setSiguiente(this.getNodo(b).getSiguiente());
+            this.getNodo(b).setSiguiente(aux.getSiguiente());
+            aux.setSiguiente(this.getNodo(b));
+
+        }
+
+    }
+
 }

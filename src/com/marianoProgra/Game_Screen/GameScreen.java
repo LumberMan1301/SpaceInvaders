@@ -7,12 +7,9 @@ import java.awt.Graphics2D;
 
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaSimple;
 import com.marianoProgra.display.Display;
-import com.marianoProgra.hileras.Basic;
+import com.marianoProgra.hileras.*;
 import com.marianoProgra.State.StateMachine;
 import com.marianoProgra.State.SuperStateMachine;
-import com.marianoProgra.hileras.ClaseA;
-import com.marianoProgra.hileras.ClaseB;
-import com.marianoProgra.hileras.SuperLevel;
 import com.marianoProgra.timer.TickTimer;
 
 /**
@@ -70,6 +67,7 @@ public class GameScreen extends SuperStateMachine {
 				Nivel = 1;
 				speed=1.0d;
 				levels.vaciar();
+				addLevel();
 			}
 		}
 		
@@ -90,17 +88,17 @@ public class GameScreen extends SuperStateMachine {
 	
 	@Override
 	public void draw(Graphics2D g) {
-		g.setColor(Color.yellow);
+		g.setColor(Color.white);
 		g.drawString("PUNTUACION: " + Puntuacion, 5, 15);
 
-		g.setColor(Color.CYAN);
-		g.drawString("NIVEL: "+Nivel, 5,30 );
+		g.setColor(Color.WHITE);
+		g.drawString("NIVEL: "+Nivel, 205, 15);
 
-		g.setColor(Color.CYAN);
-		g.drawString("Nivel Actual: "+level.getNombre(), 5, 45);
+		g.setColor(Color.white);
+		g.drawString("Nivel Actual: "+level.getNombre(), 405, 15);
 
-		g.setColor(Color.RED);
-		g.drawString("Nivel Siguiente: "+levels.getData(Nivel).getClass().getSimpleName(), 5, 60);
+		g.setColor(Color.white);
+		g.drawString("Nivel Siguiente: "+levels.getData(Nivel).getClass().getSimpleName(), 605, 15);
 
 
 		player.draw(g);
@@ -147,7 +145,7 @@ public class GameScreen extends SuperStateMachine {
 				levelaux = new Basic(player);
 				levels.agregar(levelaux);
 			}else{
-				levelaux = new ClaseA(player);
+				levelaux = new Basic(player);
 				levels.agregar(levelaux);
 			}
 			speed+=1.0d;

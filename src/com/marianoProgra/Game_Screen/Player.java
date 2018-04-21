@@ -116,4 +116,7 @@ public class Player implements KeyListener{
 		
 	}
 
+	public PlayerWeapons getPlayerWeapons() {
+		return playerWeapons;
+	}
 }

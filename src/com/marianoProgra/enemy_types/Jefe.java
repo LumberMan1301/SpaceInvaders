@@ -1,5 +1,6 @@
 package com.marianoProgra.enemy_types;
 
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaCircular;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaSimple;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaDoble;
 import com.marianoProgra.Game_Screen.GameScreen;
@@ -78,8 +79,8 @@ public class Jefe extends EnemyType{
             }
             return false;
         }
-        for(int w = 0; w < player.playerWeapons.weapons.getCapacidad(); w++) {
-            if (enemys != null && player.playerWeapons.weapons.getData(w).collisionRect(((Jefe) enemys.getData(i)).getRect())) {
+        for(int w = 0; w < player.getPlayerWeapons().getWeapons().getCapacidad(); w++) {
+            if (enemys != null && player.getPlayerWeapons().getWeapons().getData(w).collisionRect(((Jefe) enemys.getData(i)).getRect())) {
                 this.vida--;
             }if(vida==0){
                 enemySprite.resetLimit();
@@ -100,8 +101,8 @@ public class Jefe extends EnemyType{
             }
             return false;
         }
-        for(int w = 0; w < player.playerWeapons.weapons.getCapacidad(); w++) {
-            if (enemys != null && player.playerWeapons.getWeapons().getData(w).collisionRect(((Jefe) enemys.obtenerDato(i)).getRect())) {
+        for(int w = 0; w < player.getPlayerWeapons().getWeapons().getCapacidad(); w++) {
+            if (enemys != null && player.getPlayerWeapons().getWeapons().getData(w).collisionRect(((Jefe) enemys.obtenerDato(i)).getRect())) {
                 this.vida--;
             }if(vida==0){
                 enemySprite.resetLimit();
@@ -114,6 +115,20 @@ public class Jefe extends EnemyType{
         }
         return false;
     }
+
+    /**
+     * metodo para saber si hubo una colision con el Jefe
+     *
+     * @param i
+     * @param player
+     * @param enemys
+     * @return
+     */
+    @Override
+    public boolean collide(int i, Player player, ListaCircular<EnemyType> enemys) {
+        return false;
+    }
+
     @Override
     public boolean isOutOfBounds() {
         if(rect.x > 0 && rect.x < Display.getWIDTH() - rect.width)
@@ -125,6 +140,11 @@ public class Jefe extends EnemyType{
         if(rect.y > Display.getHEIGHT()-80)
             return true;
         return false;
+    }
+
+
+    public int getVida() {
+        return vida;
     }
 //##############Getters y Setters################################################
     /**

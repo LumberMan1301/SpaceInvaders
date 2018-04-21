@@ -4,6 +4,7 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
 
+import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaCircular;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaSimple;
 import com.marianoProgra.EstructurasDeDatosLineales.Listas.ListaDoble;
 import com.marianoProgra.display.Display;
@@ -19,7 +20,7 @@ public class Subdito extends EnemyType{
 	 * Atributos de la clase
 	 */
 	private double speed;//velocidad del enemigo
-	private int vida;// vida del enemigo
+	private static int vida;// vida del enemigo
 	private Rectangle rect;// variable que nos permite comparar posiciones
 	private SpriteAnimation enemySprite; // variable para almacenar imagenes
 	private Sound explosionSound;//Sonido de la explosion
@@ -85,8 +86,8 @@ public class Subdito extends EnemyType{
 			}
 			return false;
 		}
-		for(int w = 0; w < player.playerWeapons.weapons.getCapacidad(); w++) {
-				if (enemys != null && player.playerWeapons.weapons.getData(w).collisionRect(((Subdito) enemys.getData(i)).getRect())) {
+		for(int w = 0; w < player.getPlayerWeapons().getWeapons().getCapacidad(); w++) {
+				if (enemys != null && player.getPlayerWeapons().getWeapons().getData(w).collisionRect(((Subdito) enemys.getData(i)).getRect())) {
 					this.vida--;
 				}if(vida==0){
 					enemySprite.resetLimit();
@@ -106,8 +107,8 @@ public class Subdito extends EnemyType{
 			}
 			return false;
 		}
-		for(int w = 0; w < player.playerWeapons.weapons.getCapacidad(); w++) {
-			if (enemys != null && player.playerWeapons.weapons.getData(w).collisionRect(((Subdito) enemys.obtenerDato(i)).getRect())) {
+		for(int w = 0; w < player.getPlayerWeapons().getWeapons().getCapacidad(); w++) {
+			if (enemys != null && player.getPlayerWeapons().getWeapons().getData(w).collisionRect(((Subdito) enemys.obtenerDato(i)).getRect())) {
 				this.vida--;
 			}if(vida==0){
 				enemySprite.resetLimit();
@@ -119,6 +120,39 @@ public class Subdito extends EnemyType{
 		}
 		return false;
 	}
+
+	/**
+	 * metodo para saber si hubo una colision con el Jefe
+	 *
+	 * @param i
+	 * @param player
+	 * @param enemys
+	 * @return
+	 */
+	@Override
+	public boolean collide(int i, Player player, ListaCircular<EnemyType> enemys) {
+		if(enemySprite.isPlay()) {
+			if(enemys.obtenerDato(i).deathScene()) {
+				enemys.eliminarPos(i);
+			}
+			return false;
+		}
+		for(int w = 0; w < player.getPlayerWeapons().getWeapons().getCapacidad(); w++) {
+			if (enemys != null && player.getPlayerWeapons().getWeapons().getData(w).collisionRect(((Subdito) enemys.obtenerDato(i)).getRect())) {
+				this.vida--;
+			}if(vida==0){
+				enemySprite.resetLimit();
+				enemySprite.setAnimationSpeed(120);
+				enemySprite.setPlay(true, true);
+				GameScreen.aumentarSCORE(8);
+				return true;
+			}
+		}
+		return false;
+
+
+}
+
 	@Override
 	public boolean isOutOfBounds() {
 		if(rect.x > 0 && rect.x < Display.getWIDTH() - rect.width)
@@ -131,7 +165,12 @@ public class Subdito extends EnemyType{
 			return true;
 		return false;
 	}
-//###########Getters y Setters#############################################
+
+	public static int getVida() {
+		return vida;
+	}
+
+	//###########Getters y Setters#############################################
 	public Rectangle getRect() {
 		return rect;
 	}
